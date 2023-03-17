@@ -1,0 +1,138 @@
+{
+"materials":[
+  ["name", "colorR", "colorG", "colorB"],
+  ["METAL", 192, 192, 192] // 2
+  ["PLASTIC", 0, 0, 255]
+  ["RUBBER", 0, 0, 0]
+  ["GLASS", 0, 255, 255]   // 5
+  ["WOOD", 128, 96, 64]
+  ["FOLIAGE", 64, 255, 64]
+  ["CLOTH", 192, 192, 128]
+  ["WATER", 0, 0, 255]
+  ["ASPHALT", 128, 128, 0] // 10
+  ["ASPHALT_WET", 128, 128, 255]
+  ["SLIPPERY", 255, 255, 225]
+  ["ROCK", 64, 64, 128]
+  ["DIRT_DUSTY", 118, 130, 96]
+  ["DIRT", 120, 100, 80]  // 15
+  ["SAND", 200, 195, 140]
+  ["SANDY_ROAD", 150, 145, 100]
+  ["MUD", 100, 80, 0]
+  ["GRAVEL", 96, 80, 0]
+  ["GRASS", 96, 80, 0]    // 20
+  ["ICE", 196, 255, 237]
+  ["SNOW", 255, 255, 255]
+  ["FIRESMALL", 100, 100, 100]
+  ["FIREMEDIUM", 100, 100, 100]
+  ["FIRELARGE", 100, 100, 100] // 25
+  ["SMOKESMALLBLACK", 100, 100, 100]
+  ["SMOKEMEDIUMBLACK", 100, 100, 100]
+  ["STEAM", 100, 100, 100]
+  ["RUMBLE_STRIP", 100, 100, 100]
+  ["COBBLESTONE", 64, 64, 128] // 30
+  ["FOLIAGE_THIN", 64, 255, 64]
+],
+"particles":[
+/*
+    existing particles on the torque side:
+    0 = UNDEF - not emitted
+    1 = SPARKS
+    2 = DUST_LIGHT
+    3 = DUST_DARK
+    4 = DUST_DIRT
+    5 = DIRT
+    6 = SMOKE_WHITE
+    7 = SMOKE_BLACK
+    8 = DUST_SAND
+    9 = SPLASH_MUD
+    10 = LEAVES
+    11 = BARK
+    12 = SPLASH_WATER
+    13 = CHUNKS
+    14 = CHUNKS_SPARKS
+    15 = SHATTER_GLASS
+    16 = GRAVEL
+    17 = SAND
+    18 = MUD
+    18 = GLASSBREAK
+    20 = SMOKE_WHITE2
+    21 = GRASS
+    22 = ICE
+    23 = SNOW
+    25 = FIRESMALL
+    26 = SMOKESMALLBLACK
+    27 = FIREMEDIUM
+    29 = FIRELARGE
+*/
+    ["materialID1", "materialID2" , "slipVel" , "perpendicularVel", "width", "veloMult", "count", "particleType"]
+    //friction particles
+    ["RUBBER"     , "ASPHALT"     , "X>18"    , ""                , 0.1    , 1         , 1      , 6]
+    ["RUBBER"     , "ASPHALT"     , "X>12"    , ""                , 0.1    , 1         , 1      , 22]
+    ["METAL"      , "ASPHALT"     , "X>2.5"   , ""                , 0.1    , 1         , 1      , 1]
+    ["METAL"      , "METAL"       , "X>2.5"   , ""                , 0.1    , 1         , 1      , 1]
+    //wood
+    ["METAL"      , "WOOD"        , "X>2.5"   , ""                , 0.1    , 1         , 3      , 12]
+    ["METAL"      , "WOOD"        , "X>2.5"   , ""                , 0.1    , 1         , 3      , 11]
+    ["METAL"      , "WOOD"        , "X>6.5"   , ""                , 0.1    , 1         , 5      , 14]
+    //dusty dirt road
+    ["METAL"      , "DIRT_DUSTY"  , "X>2.5"   , ""                , 0.1    , 1         , 1      , 4]
+    ["PLASTIC"    , "DIRT_DUSTY"  , "X>2.5"   , ""                , 0.1    , 1         , 1      , 4]
+    ["RUBBER"     , "DIRT_DUSTY"  , "X>2.5"   , ""                , 0.1    , 1         , 1      , 4]
+    ["GLASS"      , "DIRT_DUSTY"  , "X>2.5"   , ""                , 0.1    , 1         , 1      , 4]
+    //wet mud
+    ["METAL"      , "MUD"         , "X>0.6"   , ""                , 0.1    , 1         , 1      , 18]
+    ["PLASTIC"    , "MUD"         , "X>0.6"   , ""                , 0.1    , 1         , 1      , 18]
+    ["RUBBER"     , "MUD"         , "X>5"     , ""                , 0.1    , 1         , 1      , 18]
+    ["RUBBER"     , "MUD"         , "X>0.5"   , ""                , 0.1    , 1         , 2      , 54]
+    ["GLASS"      , "MUD"         , "X>0.6"   , ""                , 0.1    , 1         , 1      , 18]
+    //sand
+    ["METAL"      , "SAND"        , "X>2.5"   , ""                , 0      , 1         , 1      , 10]
+    ["METAL"      , "SAND"        , "X>10"    , ""                , 0.1    , 1         , 1      , 11]
+    ["PLASTIC"    , "SAND"        , "X>2.5"   , ""                , 0      , 1         , 1      , 10]
+    ["RUBBER"     , "SAND"        , "X>10"    , ""                , 0.1    , 1         , 1      , 11]
+    ["RUBBER"     , "SAND"        , "X>2.5"   , ""                , 0      , 1         , 1      , 10]
+    ["GLASS"      , "SAND"        , "X>2.5"   , ""                , 0      , 1         , 1      , 10]
+    ["GLASS"      , "SAND"        , "X>2.5"   , ""                , 0      , 1         , 10     , 8]
+    //grass
+    ["METAL"      , "GRASS"       , "X>5.5"   , ""                , 0.1    , 1         , 1      , 21]
+    ["PLASTIC"    , "GRASS"       , "X>5.5"   , ""                , 0.1    , 1         , 1      , 21]
+    ["RUBBER"     , "GRASS"       , "X>2.5"   , ""                , 0.1    , 1         , 1      , 21]
+    ["RUBBER"     , "GRASS"       , "X>10"    , ""                , 0.1    , 1         , 1      , 11]
+    ["GLASS"      , "GRASS"       , "X>5.5"   , ""                , 0.1    , 1         , 1      , 21]
+    //wet asphalt
+    ["RUBBER"     , "ASPHALT_WET" , "X>1"     , ""                , 0.1    , 1         , 1      , 50]
+    //wet slippery surface in testing area
+    ["RUBBER"     , "SLIPPERY"    , "X>1"     , ""                , 0.1    , 1         , 1      , 50]
+    //darker dirt
+    //fine spray
+    ["METAL"      , "DIRT"        , "X>2.5"   , ""                , 0.1    , 1         , 1      , 5]
+    ["PLASTIC"    , "DIRT"        , "X>2.5"   , ""                , 0.1    , 1         , 1      , 5]
+    ["RUBBER"     , "DIRT"        , "X>2.5"   , ""                , 0.1    , 1         , 1      , 5]
+    ["GLASS"      , "DIRT"        , "X>2.5"   , ""                , 0.1    , 1         , 1      , 5]
+    ["METAL"      , "DIRT"        , "X>2.5"   , ""                , 0.1    , 1         , 1      , 4]
+    ["PLASTIC"    , "DIRT"        , "X>2.5"   , ""                , 0.1    , 1         , 1      , 4]
+    ["RUBBER"     , "DIRT"        , "X>2.5"   , ""                , 0.1    , 1         , 1      , 4]
+    ["GLASS"      , "DIRT"        , "X>2.5"   , ""                , 0.1    , 1         , 1      , 4]
+    //dust
+    ["METAL"      , "DIRT_DUSTY"  , "X>2.5"   , ""                , 0.1    , 1         , 1      , 3]
+    ["PLASTIC"    , "DIRT_DUSTY"  , "X>2.5"   , ""                , 0.1    , 1         , 1      , 3]
+    ["RUBBER"     , "DIRT_DUSTY"  , "X>2.5"   , ""                , 0.1    , 1         , 1      , 3]
+    ["GLASS"      , "DIRT_DUSTY"  , "X>2.5"   , ""                , 0.1    , 1         , 1      , 3]
+    //gravel
+    ["METAL"      , "GRAVEL"      , "X>2.5"   , ""                , 0.1    , 1         , 1      , 16]
+    ["METAL"      , "GRAVEL"      , "X>2.5"   , ""                , 0.1    , 1         , 1      , 2]
+    ["PLASTIC"    , "GRAVEL"      , "X>2.5"   , ""                , 0.1    , 1         , 1      , 16]
+    ["RUBBER"     , "GRAVEL"      , "X>1"     , ""                , 0.1    , 1         , 1      , 16]
+    ["RUBBER"     , "GRAVEL"      , "X>1"     , ""                , 0.1    , 1         , 1      , 2]
+    ["GLASS"      , "GRAVEL"      , "X>2.5"   , ""                , 0.1    , 1         , 1      , 16]
+    //collision particles
+    ["METAL"      , "DIRT"        , ""        , "X>2.5"           , 1.0    , 0         , 2      , 5]
+    ["PLASTIC"    , "DIRT"        , ""        , "X>2.5"           , 1.0    , 0         , 2      , 5]
+    ["METAL"      , "DIRT_DUSTY"  , ""        , "X>2.5"           , 1.0    , 0         , 2      , 3]
+    ["PLASTIC"    , "DIRT_DUSTY"  , ""        , "X>2.5"           , 1.0    , 0         , 2      , 3]
+    ["METAL"      , "DIRT_DUSTY"  , ""        , "X>2.5"           , 1.0    , 0         , 2      , 4]
+    ["PLASTIC"    , "DIRT_DUSTY"  , ""        , "X>2.5"           , 1.0    , 0         , 2      , 4]
+    ["METAL"      , "GRAVEL"      , ""        , "X>2.5"           , 0.1    , 0         , 2      , 16]
+    ["PLASTIC"    , "GRAVEL"      , ""        , "X>2.5"           , 0.1    , 0         , 2      , 16]
+]
+}

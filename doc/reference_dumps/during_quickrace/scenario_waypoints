@@ -1,0 +1,365 @@
+{
+  __extensionName__ = "scenario_waypoints",
+  __extensionPath__ = "scenario/waypoints",
+  __manuallyLoaded__ = true,
+  activateWaypointBranch = <function 1>,
+  deactivateWaypointBranch = <function 2>,
+  dependencies = { "scenario_scenarios" },
+  getVehicleWaypointData = <function 3>,
+  initialise = <function 4>,
+  isFinalWaypoint = <function 5>,
+  onClientEndMission = <function 6>,
+  onDeserialized = <function 7>,
+  onPreRender = <function 8>,
+  onScenarioChange = <function 9>,
+  onScenarioRestarted = <function 10>,
+  onScenarioVehicleTrigger = <function 11>,
+  onSerialize = <function 12>,
+  onVehicleAIStateChanged = <function 13>,
+  state = {
+    branchGraph = {
+      mainPath = { {
+          branch = "mainPath",
+          cpName = "__generated_from_path__7",
+          index = 1,
+          successors = { {
+              branch = "mainPath",
+              cpName = "__generated_from_path__8",
+              index = 2,
+              insertBranch = false
+            } }
+        }, {
+          branch = "mainPath",
+          cpName = "__generated_from_path__8",
+          index = 2,
+          successors = { {
+              branch = "mainPath",
+              cpName = "__generated_from_path__9",
+              index = 3,
+              insertBranch = false
+            } }
+        }, {
+          branch = "mainPath",
+          cpName = "__generated_from_path__9",
+          index = 3,
+          successors = { {
+              branch = "mainPath",
+              cpName = "__generated_from_path__10",
+              index = 4,
+              insertBranch = false
+            } }
+        }, {
+          branch = "mainPath",
+          cpName = "__generated_from_path__10",
+          index = 4,
+          successors = { {
+              branch = "mainPath",
+              cpName = "__generated_from_path__11",
+              index = 5,
+              insertBranch = false
+            } }
+        }, {
+          branch = "mainPath",
+          cpName = "__generated_from_path__11",
+          index = 5,
+          successors = { {
+              branch = "mainPath",
+              cpName = "__generated_from_path__12",
+              index = 6,
+              insertBranch = false
+            } }
+        }, {
+          branch = "mainPath",
+          cpName = "__generated_from_path__12",
+          index = 6,
+          successors = { {
+              branch = "mainPath",
+              cpName = "__generated_from_path__13",
+              index = 7,
+              insertBranch = false
+            } }
+        }, {
+          branch = "mainPath",
+          cpName = "__generated_from_path__13",
+          index = 7,
+          successors = { {
+              branch = "mainPath",
+              cpName = "__generated_from_path__6",
+              index = 8,
+              insertBranch = false
+            } }
+        }, {
+          branch = "mainPath",
+          cpName = "__generated_from_path__6",
+          index = 8,
+          isFinalWaypoint = true,
+          successors = { {
+              branch = "mainPath",
+              cpName = "__generated_from_path__7",
+              index = 1,
+              insertBranch = false
+            } }
+        } }
+    },
+    currentWaypointChoice = {},
+    lapConfigName = "mainPath",
+    nextWpForVehicle = {
+      [71307] = 1
+    },
+    originalBranches = {
+      mainPath = { "__generated_from_path__7", "__generated_from_path__8", "__generated_from_path__9", "__generated_from_path__10", "__generated_from_path__11", "__generated_from_path__12", "__generated_from_path__13", "__generated_from_path__6" }
+    },
+    pathnodes = {
+      __generated_from_path__10 = {
+        _drawMode = "faded",
+        hasNormal = true,
+        id = -1,
+        mode = "manual",
+        name = "__generated_from_path__10",
+        navRadiusScale = 1,
+        normal = vec3(-0.998875776,0.0266304487,0.0392173864),
+        pos = vec3(-25.1602783,-20.3065205,37.3363075),
+        radius = 10.5334293,
+        recovery = -1,
+        reverseRecovery = -1,
+        sidePadding = vec3(1,3,0),
+        sortOrder = 999999,
+        visible = true,
+        <metatable> = <1>{
+          __index = <table 1>,
+          convertRayHitToTransform = <function 14>,
+          drawDebug = <function 15>,
+          getPaddedCenter = <function 16>,
+          getRecovery = <function 17>,
+          getReverseRecovery = <function 18>,
+          getSideTransforms = <function 19>,
+          init = <function 20>,
+          inside = <function 21>,
+          intersectCorners = <function 22>,
+          onDeserialized = <function 23>,
+          onSerialize = <function 24>,
+          setManual = <function 25>,
+          setNavRadiusScale = <function 26>,
+          setNavgraph = <function 27>,
+          setNormal = <function 28>
+        }
+      },
+      __generated_from_path__11 = {
+        _drawMode = "faded",
+        hasNormal = true,
+        id = -1,
+        mode = "manual",
+        name = "__generated_from_path__11",
+        navRadiusScale = 1,
+        normal = vec3(0.841873248,0.539675305,0),
+        pos = vec3(1.01852989,58.7239456,36.0992393),
+        radius = 8.63739429,
+        recovery = -1,
+        reverseRecovery = -1,
+        sidePadding = vec3(1,3,0),
+        sortOrder = 999999,
+        visible = true,
+        <metatable> = <table 1>
+      },
+      __generated_from_path__12 = {
+        _drawMode = "faded",
+        hasNormal = true,
+        id = -1,
+        mode = "manual",
+        name = "__generated_from_path__12",
+        navRadiusScale = 1,
+        normal = vec3(-0.956415515,-0.29185343,0.00953611699),
+        pos = vec3(-34.3614807,101.998512,36.099247),
+        radius = 8.74417414,
+        recovery = -1,
+        reverseRecovery = -1,
+        sidePadding = vec3(1,3,0),
+        sortOrder = 999999,
+        visible = true,
+        <metatable> = <table 1>
+      },
+      __generated_from_path__13 = {
+        _drawMode = "faded",
+        hasNormal = true,
+        id = -1,
+        mode = "manual",
+        name = "__generated_from_path__13",
+        navRadiusScale = 1,
+        normal = vec3(0.765780242,0.639359566,-0.0692817877),
+        pos = vec3(-61.8785706,153.395493,38.0992928),
+        radius = 7.48620527,
+        recovery = -1,
+        reverseRecovery = -1,
+        sidePadding = vec3(1,3,0),
+        sortOrder = 999999,
+        visible = true,
+        <metatable> = <table 1>
+      },
+      __generated_from_path__6 = {
+        _drawMode = "faded",
+        hasNormal = true,
+        id = -1,
+        mode = "manual",
+        name = "__generated_from_path__6",
+        navRadiusScale = 1,
+        normal = vec3(0.999969242,0.00784318669,0),
+        pos = vec3(16.4617386,140.880157,36.126709),
+        radius = 6.5874066,
+        recovery = -1,
+        reverseRecovery = -1,
+        sidePadding = vec3(1,3,0),
+        sortOrder = 999999,
+        visible = true,
+        <metatable> = <table 1>
+      },
+      __generated_from_path__7 = {
+        _drawMode = "faded",
+        hasNormal = true,
+        id = -1,
+        mode = "manual",
+        name = "__generated_from_path__7",
+        navRadiusScale = 1,
+        normal = vec3(-0.209974328,-0.977689242,0.00587608876),
+        pos = vec3(92.7855453,105.104767,36.0207672),
+        radius = 6.49882805,
+        recovery = -1,
+        reverseRecovery = -1,
+        sidePadding = vec3(1,3,0),
+        sortOrder = 999999,
+        visible = true,
+        <metatable> = <table 1>
+      },
+      __generated_from_path__8 = {
+        _drawMode = "faded",
+        hasNormal = true,
+        id = -1,
+        mode = "manual",
+        name = "__generated_from_path__8",
+        navRadiusScale = 1,
+        normal = vec3(0.996164283,-0.0132274472,0.0864971404),
+        pos = vec3(48.6167831,61.3365974,36.4609184),
+        radius = 7.43476,
+        recovery = -1,
+        reverseRecovery = -1,
+        sidePadding = vec3(1,3,0),
+        sortOrder = 999999,
+        visible = true,
+        <metatable> = <table 1>
+      },
+      __generated_from_path__9 = {
+        _drawMode = "faded",
+        hasNormal = true,
+        id = -1,
+        mode = "manual",
+        name = "__generated_from_path__9",
+        navRadiusScale = 1,
+        normal = vec3(-0.994992538,-0.006583848,0.0997321547),
+        pos = vec3(75.169693,8.83288193,36.7929688),
+        radius = 7.28540565,
+        recovery = -1,
+        reverseRecovery = -1,
+        sidePadding = vec3(1,3,0),
+        sortOrder = 999999,
+        visible = true,
+        <metatable> = <table 1>
+      }
+    },
+    vehicleWaypointsData = {
+      [71307] = {
+        cur = 0,
+        currentCorners = { vec3(-34.2290838,138.61968,36.6977069), vec3(-31.5518467,138.689303,36.5996753), vec3(-34.2737517,140.463603,36.7151775), vec3(-31.5968789,140.525977,36.6153273) },
+        historicalLapConfig = {},
+        lap = 0,
+        next = 1,
+        nextWps = { <2>{
+            branch = "mainPath",
+            cpName = "__generated_from_path__7",
+            index = 1,
+            successors = { {
+                branch = "mainPath",
+                cpName = "__generated_from_path__8",
+                index = 2,
+                insertBranch = false
+              } }
+          } },
+        previousCorners = { vec3(-34.0842962,138.622636,36.6912257), vec3(-31.4071842,138.691879,36.589574), vec3(-34.1285223,140.466526,36.7128308), vec3(-31.4517789,140.528523,36.609345) },
+        waypointConfig = { <table 2>, {
+            branch = "mainPath",
+            cpName = "__generated_from_path__8",
+            index = 2,
+            successors = { {
+                branch = "mainPath",
+                cpName = "__generated_from_path__9",
+                index = 3,
+                insertBranch = false
+              } }
+          }, {
+            branch = "mainPath",
+            cpName = "__generated_from_path__9",
+            index = 3,
+            successors = { {
+                branch = "mainPath",
+                cpName = "__generated_from_path__10",
+                index = 4,
+                insertBranch = false
+              } }
+          }, {
+            branch = "mainPath",
+            cpName = "__generated_from_path__10",
+            index = 4,
+            successors = { {
+                branch = "mainPath",
+                cpName = "__generated_from_path__11",
+                index = 5,
+                insertBranch = false
+              } }
+          }, {
+            branch = "mainPath",
+            cpName = "__generated_from_path__11",
+            index = 5,
+            successors = { {
+                branch = "mainPath",
+                cpName = "__generated_from_path__12",
+                index = 6,
+                insertBranch = false
+              } }
+          }, {
+            branch = "mainPath",
+            cpName = "__generated_from_path__12",
+            index = 6,
+            successors = { {
+                branch = "mainPath",
+                cpName = "__generated_from_path__13",
+                index = 7,
+                insertBranch = false
+              } }
+          }, {
+            branch = "mainPath",
+            cpName = "__generated_from_path__13",
+            index = 7,
+            successors = { {
+                branch = "mainPath",
+                cpName = "__generated_from_path__6",
+                index = 8,
+                insertBranch = false
+              } }
+          }, {
+            branch = "mainPath",
+            cpName = "__generated_from_path__6",
+            index = 8,
+            isFinalWaypoint = true,
+            successors = { {
+                branch = "mainPath",
+                cpName = "__generated_from_path__7",
+                index = 1,
+                insertBranch = false
+              } }
+          } },
+        wheelOffsets = { vec3(0.762175456,-1.6988813,0.116668829), vec3(0.758413006,0.98105148,0.115127237), vec3(-1.08236874,-1.69882701,0.119673477), vec3(-1.07887908,0.980629118,0.116351822) }
+      }
+    },
+    waypointBranches = {},
+    waypointsConfigData = {}
+  },
+  updateResetVehicleData = <function 29>
+}

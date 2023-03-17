@@ -1,0 +1,52 @@
+{
+  cur = 0,
+  currentCorners = { vec3(-1692.22274,1079.23321,170.78504), vec3(-1689.57924,1078.78889,170.75472), vec3(-1691.91308,1081.05058,170.834446), vec3(-1689.27106,1080.59554,170.800663) },
+  historicalLapConfig = {},
+  lap = 0,
+  next = 1,
+  nextWps = { <1>{
+      branch = "mainPath",
+      cpName = "quickrace_wp1",
+      index = 1,
+      successors = { {
+          branch = "mainPath",
+          cpName = "quickrace_wp2",
+          index = 2,
+          insertBranch = false
+        } }
+    } },
+  previousCorners = { vec3(-1692.22274,1079.23321,170.78504), vec3(-1689.57924,1078.78889,170.75472), vec3(-1691.91308,1081.05058,170.834446), vec3(-1689.27106,1080.59554,170.800663) },
+  waypointConfig = { <table 1>, {
+      branch = "mainPath",
+      cpName = "quickrace_wp2",
+      index = 2,
+      successors = { {
+          branch = "mainPath",
+          cpName = "quickrace_wp3",
+          index = 3,
+          insertBranch = false
+        } }
+    }, {
+      branch = "mainPath",
+      cpName = "quickrace_wp3",
+      index = 3,
+      successors = { {
+          branch = "mainPath",
+          cpName = "quickrace_wp4",
+          index = 4,
+          insertBranch = false
+        } }
+    }, {
+      branch = "mainPath",
+      cpName = "quickrace_wp4",
+      index = 4,
+      isFinalWaypoint = true,
+      successors = { {
+          branch = "mainPath",
+          cpName = "quickrace_wp1",
+          index = 1,
+          insertBranch = false
+        } }
+    } },
+  wheelOffsets = { vec3(0.7622876,-1.69803338,0.117764872), vec3(0.756299595,0.982640246,0.137252929), vec3(-1.08193445,-1.69858072,0.117979888), vec3(-1.07702549,0.9824969,0.134301876) }
+}

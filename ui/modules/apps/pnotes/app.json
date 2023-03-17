@@ -1,0 +1,16 @@
+{
+  "name": "Rally Mode UI",
+    "types": [
+    "ui.apps.categories.utility"
+  ],
+  "css": {
+    "height": "800px",
+    "width": "1040px",
+    "top": "0px"
+  },
+  "description": "User interface for Rally Mode.",
+  "author": "Lello Lillili",
+  "version": "0.1",
+  "directive": "pnotes",
+  "domElement": "<pnotes></pnotes>"
+}

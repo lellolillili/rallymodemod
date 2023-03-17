@@ -1,0 +1,29 @@
+// DOT NOT EDIT THIS FILE.
+// it binds the actions names to what they do
+// the bindings file contains the actions to keys, etc mapping
+
+// this is lazy json (comments, missing commas). It does not evaluate against strict json
+// the available contexts:
+// "ctx": "vlua" - active vehicle lua
+// "ctx": "elua" - engine lua (async)
+// "ctx": "tlua" - engine lua (sync)
+
+// "isCentered":true has two consequences:
+// first it transforms the values from 0..1 range, to -1..+1 range
+// the binding settings (linearity, deadzone) are then applied on the new -1..+1 range (that is, they are applied on the center of axes values)
+
+// "actionMap":"xxx" makes sure the binding is sent to an specific action map:
+//    'Global' (highest priority): overrides lower priority bindings and CEF forwarding, no matter what (highest priority)
+//    'Menu'    (medium priority): overrides lower priority bindings and CEF forwarding, if the dashboard is active (medium priority)
+//    'Normal'  (lowest priority): rest of bindings
+
+// "These bindings are meant to be used only with BeamNG.tech. Attempting to force BeamNG.drive to load them can result in errors, subtle misbehaviours, missing/broken features, loss of customized bindings, etc. For technical details on how this file is ignored, check input/bindings.lua and tech/license.lua -- bruno",
+
+{
+"toggleLidar"       :{"cat":"vehicle_debug", "order": 50, "ctx": "tlua", "onDown":"extensions.tech_utils.toggleLidar()", "title": "ui.inputActions.vehicle_debug.toggleLIDAR.title", "desc": "ui.inputActions.vehicle_debug.toggleLIDAR.description" },
+"toggleAnnotations" :{"cat":"debug", "order": 50, "ctx": "tlua", "onDown":"extensions.tech_utils.toggleAnnotations()", "title": "ui.inputActions.debug.toggleAnnotations.title", "desc": "ui.inputActions.debug.toggleAnnotations.description" },
+"toggleInstanceAnnotations" :{"cat":"debug", "order": 51, "ctx": "tlua", "onDown":"AnnotationManager.toggleInstanceAnnotations()", "title": "ui.inputActions.debug.toggleInstanceAnnotations.title", "desc": "ui.inputActions.debug.toggleInstanceAnnotations.description" },
+"toggleUltrasonic"  :{"cat":"vehicle_debug", "order": 51, "ctx": "tlua", "onDown":"extensions.tech_utils.toggleUltrasonic()", "title": "ui.inputActions.vehicle_debug.toggleUltrasonic.title", "desc": "ui.inputActions.vehicle_debug.toggleUltrasonic.description" },
+"toggleABSBehavior" :{"cat":"vehicle", "order": 21.9, "ctx": "vlua", "onDown"  :"wheels.toggleABSBehavior()", "title": "ui.inputActions.vehicle.toggleABSBehavior.title", "desc": "ui.inputActions.vehicle.toggleABSBehavior.description" },
+}
+

@@ -1,0 +1,27 @@
+{
+  "cone_oskier_D": {
+    "name": "cone_oskier_D",
+    "mapTo": "cone_oskier_D",
+    "class": "Material",
+    "persistentId": "16f44cc6-fe9f-4598-a516-a2b9741bd123",
+    "Stages": [
+      {
+        "ambientOcclusionMap": "/levels/oskier_nikkoplus/art/shapes/oskier/barriers_plastic/cone_oskier_AO.png",
+        "baseColorFactor": [
+          0.738390028,
+          0.738382995,
+          0.738382995,
+          1
+        ],
+        "baseColorMap": "/levels/oskier_nikkoplus/art/shapes/oskier/barriers_plastic/cone_oskier_D.png",
+        "roughnessFactor": 0.446999997,
+        "roughnessMap": "/levels/oskier_nikkoplus/art/shapes/oskier/barriers_plastic/cone_oskier_AO.png"
+      },
+      {},
+      {},
+      {}
+    ],
+    "translucentBlendOp": "None",
+    "version": 1.5
+  }
+}

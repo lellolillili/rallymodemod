@@ -1,0 +1,5 @@
+{
+  "triggerAction0"             :{"cat": "gameplay", "ctx": "elua", "order":  200, "onChange":"extensions.core_vehicleTriggers.onActionEvent(0, VALUE)", "title": "Use vehicle trigger (action 1)", "desc": "Interact with a 3d trigger element of a vehicle, using the 1st defined action" },
+  "triggerAction1"             :{"cat": "gameplay", "ctx": "elua", "order":  201, "onChange":"extensions.core_vehicleTriggers.onActionEvent(1, VALUE)", "title": "Use vehicle trigger (action 2)", "desc": "Interact with a 3d trigger element of a vehicle, using the 2nd defined action" },
+  "triggerAction2"             :{"cat": "gameplay", "ctx": "elua", "order":  202, "onChange":"extensions.core_vehicleTriggers.onActionEvent(2, VALUE)", "title": "Use vehicle trigger (action 3)", "desc": "Interact with a 3d trigger element of a vehicle, using the 3rd defined action" }
+}

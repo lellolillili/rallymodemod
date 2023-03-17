@@ -1,0 +1,220 @@
+// DOT NOT EDIT THIS FILE.
+// it binds the actions names to what they do
+// the bindings file contains the actions to keys, etc mapping
+
+// this is lazy json (comments, missing commas). It does not evaluate against strict json
+// the available contexts:
+// "ctx": "vlua" - active vehicle lua
+// "ctx": "elua" - engine lua (async)
+// "ctx": "tlua" - engine lua (sync)
+
+// "isCentered":true has two consequences:
+// first it transforms the values from 0..1 range, to -1..+1 range
+// the binding settings (linearity, deadzone) are then applied on the new -1..+1 range (that is, they are applied on the center of axes values)
+
+// "actionMap":"xxx" makes sure the binding is sent to an specific action map:
+//    'Global' (highest priority): overrides lower priority bindings and CEF forwarding, no matter what (highest priority)
+//    'Menu'    (medium priority): overrides lower priority bindings and CEF forwarding, if the dashboard is active (medium priority)
+//    'Normal'  (lowest priority): rest of bindings
+
+// "cat" is crossreferenced with input_categories.lua
+
+// possible action triggers:
+// "onDown"/"onUp": so far, only possible with buttons and keys
+// "onChange": any change of value axes/buttons/keys
+// "onRelative": relative mouse movement while holding right mouse button (with autocentering of mouse cursor)
+{
+//----------------------------------------------------
+// File Menu
+//----------------------------------------------------
+"editorNewLevel": {"cat":"editor", "order": 1, "ctx": "tlua", "onDown" :"editor.doNewLevel()", "actionMap": "Editor", "title": "New Level", "desc": "Create a new level" },
+"editorOpenLevel": {"cat":"editor", "order": 1, "ctx": "tlua", "onDown" :"editor.doOpenLevel()", "actionMap": "Editor", "title": "Open Level", "desc": "Open a level" },
+"editorSaveLevel": {"cat":"editor", "order": 1, "ctx": "tlua", "onDown" :"editor.doSaveLevel()", "actionMap": "Editor", "title": "Save Level", "desc": "Save the level" },
+"editorSaveLevelAs": {"cat":"editor", "order": 1, "ctx": "tlua", "onDown" :"editor.doSaveLevelAs()", "actionMap": "Editor", "title": "Save Level As", "desc": "Save level as new level name" },
+"editorToggle": {"cat":"editor", "order": 1, "ctx": "tlua", "onDown" :"editor.toggleActive()", "actionMap": "Global", "title": "Toggle World Editor", "desc": "Toggle the world editor" },
+"objectEditorToggle": {"cat":"editor", "order": 1, "ctx": "tlua", "onDown" :"editor.toggleActive()", "actionMap": "Global", "title": "Toggle World Editor", "desc": "Toggle the world editor" },
+"editorSafeModeToggle": {"cat":"editor", "order": 1, "ctx": "tlua", "onDown" :"editor.toggleActive(true)", "actionMap": "Global", "title": "Toggle World Editor (Safe Mode)", "desc": "Toggle the world editor in Safe Mode, only vital/core editor extensions are loaded" },
+
+//----------------------------------------------------
+// Edit Menu
+//----------------------------------------------------
+"editorUndo": {"cat":"editor", "order": 1, "ctx": "tlua", "onDown" :"editor.undo()", "actionMap": "Editor", "title": "Undo", "desc": "Undo last action" },
+"editorRedo": {"cat":"editor", "order": 1, "ctx": "tlua", "onDown" :"editor.redo()", "actionMap": "Editor", "title": "Redo", "desc": "Redo last action" },
+"editorCut": {"cat":"editor", "order": 1, "ctx": "tlua", "onDown" :"editor.cut()", "actionMap": "Editor", "title": "Cut", "desc": "Cut selection" },
+"editorCopy": {"cat":"editor", "order": 1, "ctx": "tlua", "onDown" :"editor.copy()", "actionMap": "Editor", "title": "Copy", "desc": "Copy selection" },
+"editorPaste": {"cat":"editor", "order": 1, "ctx": "tlua", "onDown" :"editor.paste()", "actionMap": "Editor", "title": "Paste", "desc": "Paste selection" },
+"editorDuplicate": {"cat":"editor", "order": 1, "ctx": "tlua", "onDown" :"editor.duplicate()", "actionMap": "Editor", "title": "Duplicate", "desc": "Duplicate selection" },
+"editorDuplicateAtCamera": {"cat":"editor", "order": 1, "ctx": "tlua", "onDown" :"editor.duplicateSelectionAtCamera()", "actionMap": "Editor", "title": "Duplicate at camera", "desc": "Duplicate selection and place at camera" },
+"editorSelectAll": {"cat":"editor", "order": 1, "ctx": "tlua", "onDown" :"editor.selectAll()", "actionMap": "Editor", "title": "Select All", "desc": "Select all items" },
+"editorDeselect": {"cat":"editor", "order": 1, "ctx": "tlua", "onDown" :"editor.deselect()", "actionMap": "Editor", "title": "Deselect", "desc": "Deselect selection" },
+"editorDeleteSelection": {"cat":"editor", "order": 1, "ctx": "tlua", "onDown" :"editor.deleteSelection()", "actionMap": "Editor", "title": "Delete Selection", "desc": "Delete the selected items" },
+"editorRebuildCollision": {"cat":"editor", "order": 1, "ctx": "tlua", "onDown" :"editor.rebuildCollision()", "actionMap": "Editor", "title": "Rebuild Collision", "desc": "Rebuild the collision info, used after static meshes were moved around" },
+"editorMoveSelectionAtCamera": {"cat":"editor", "order": 1, "ctx": "tlua", "onDown" :"editor.moveSelectionAtCamera()", "actionMap": "Editor", "title": "Move selection at camera", "desc": "Move selection and place at camera" },
+
+//----------------------------------------------------
+// Camera Menu
+//----------------------------------------------------
+"editorGameCamera": {"cat":"editor", "order": 1, "ctx": "tlua", "onDown" :"editor.selectCamera(editor.CameraType_Game) editor.getCamera():setValidEditOrbitPoint(false)", "actionMap": "Editor", "title": "Game Camera", "desc": "Switch to game camera" },
+"editorFreeCamera": {"cat":"editor", "order": 1, "ctx": "tlua", "onDown" :"editor.selectCamera(editor.CameraType_Free) editor.getCamera():setValidEditOrbitPoint(false)", "actionMap": "Editor", "title": "Free Camera", "desc": "Switch to free camera" },
+"editorToggleFreeCamera": {"cat":"editor", "order": 1, "ctx": "tlua", "onDown" :"editor.toggleFreeCamera()", "actionMap": "Editor", "title": "Toggle Free Camera", "desc": "Toggle Free/Game Cameras" },
+"editorPlaceCameraAtSelection": {"cat":"editor", "order": 1, "ctx": "tlua", "onDown" :"editor.placeCameraAtSelection()", "actionMap": "Editor", "title": "Place Camera At Selection", "desc": "Place free camera at current selection center" },
+"editorPlaceCameraAtPlayer": {"cat":"editor", "order": 1, "ctx": "tlua", "onDown" :"editor.placeCameraAtPlayer()", "actionMap": "Editor", "title": "Place Camera At Player", "desc": "Place free camera at current player position" },
+"editorPlacePlayerAtCamera": {"cat":"editor", "order": 1, "ctx": "tlua", "onDown" :"editor.placePlayerAtCamera()", "actionMap": "Editor", "title": "Place Player At Camera", "desc": "Place player at free camera position" },
+"editorFitViewToSelection": {"cat":"editor", "order": 1, "ctx": "tlua", "onDown" :"editor.fitViewToSelectionSmooth()", "actionMap": "Editor", "title": "Fit View To Selection", "desc": "Fit view to current selected object(s)" },
+"editorCameraZoom": {"cat":"editor", "order": 1, "ctx": "tlua", "onChange" :"local val = VALUE/10 if val ~=0 then setConsoleVariable('$mvAbsYAxis', val) end", "actionMap": "Editor",  "isCentered": true, "title": "Zoom Camera", "desc": "Moves camera forward/backward on mouse wheel" },
+
+//----------------------------------------------------
+// Object Menu
+//----------------------------------------------------
+"editorLockSelection": {"cat":"editor", "order": 1, "ctx": "tlua", "onDown" :"editor.lockObjectSelectionWithUndo()", "actionMap": "Editor", "title": "Lock Object Selection", "desc": "Lock object selection" },
+"editorUnlockSelection": {"cat":"editor", "order": 1, "ctx": "tlua", "onDown" :"editor.unlockObjectSelectionWithUndo()", "actionMap": "Editor", "title": "Unlock Object Selection", "desc": "Unlock object selection" },
+"editorHideSelection": {"cat":"editor", "order": 1, "ctx": "tlua", "onDown" :"editor.hideObjectSelectionWithUndo()", "actionMap": "Editor", "title": "Hide Object Selection", "desc": "Hide object selection" },
+"editorShowSelection": {"cat":"editor", "order": 1, "ctx": "tlua", "onDown" :"editor.showObjectSelectionWithUndo()", "actionMap": "Editor", "title": "Show Object Selection", "desc": "Show object selection" },
+"editorResetTransforms": {"cat":"editor", "order": 1, "ctx": "tlua", "onDown" :"editor.resetObjectSelectionTransformWithUndo()", "actionMap": "Editor", "title": "Reset Object Selection Transform", "desc": "Reset object selection transform" },
+"editorResetRotations": {"cat":"editor", "order": 1, "ctx": "tlua", "onDown" :"editor.resetObjectSelectionRotationWithUndo()", "actionMap": "Editor", "title": "Reset Object Selection Rotations", "desc": "Reset object selection rotation" },
+
+//----------------------------------------------------
+// Editor Misc.
+//----------------------------------------------------
+"editorStopCreatingObjects": {"cat":"editor", "order": 1, "ctx": "tlua", "onDown" :"editor.stopCreatingObjects()", "actionMap": "CreatingObjects", "title": "Stop Creating Objects", "desc": "Exit the create objects loop" },
+"editorPlaceNewObjectAtCamera": {"cat":"editor", "order": 1, "ctx": "tlua", "onDown" :"editor.togglePlaceNewObjectAtCamera()", "actionMap": "CreatingObjects", "isCentered":true, "title": "Toggle to use camera transform", "desc": "Will position/orient the new created object using the camera transform" },
+"editorSetTranslateMode": {"cat":"editor", "order": 1, "ctx": "tlua", "onDown" :"editor.setAxisGizmoMode(editor.AxisGizmoMode_Translate)", "actionMap": "Editor", "title": "Translate Objects", "desc": "Translate Object Selection" },
+"editorSetRotateMode": {"cat":"editor", "order": 1, "ctx": "tlua", "onDown" :"editor.setAxisGizmoMode(editor.AxisGizmoMode_Rotate)", "actionMap": "Editor", "title": "Rotate Objects", "desc": "Rotate Object Selection" },
+"editorSetScaleMode": {"cat":"editor", "order": 1, "ctx": "tlua", "onDown" :"editor.setAxisGizmoMode(editor.AxisGizmoMode_Scale)", "actionMap": "Editor", "title": "Scale Objects", "desc": "Scale Object Selection" },
+"editorToggleAxisGizmoAlignment": {"cat":"editor", "order": 1, "ctx": "tlua", "onDown" :"editor.toggleAxisGizmoAlignment()", "actionMap": "Editor", "title": "Toggle Axis Gizmo", "desc": "Toggle axis gizmo coordinate system" },
+"editorToggleDrawGizmoPlane": {"cat":"editor", "order": 1, "ctx": "tlua", "onDown" :"editor.toggleDrawGizmoPlane()", "actionMap": "Editor", "title": "Toggle Draw Gizmo Plane", "desc": "Toggle draw gizmo plane" },
+"editorToggleDrawObjectIcons": {"cat":"editor", "order": 1, "ctx": "tlua", "onDown" :"editor.toggleDrawObjectIcons()", "actionMap": "Editor", "title": "Toggle Draw Object Icons", "desc": "Toggle draw world object icons" },
+"editorToggleDrawObjectText": {"cat":"editor", "order": 1, "ctx": "tlua", "onDown" :"editor.toggleDrawObjectText()", "actionMap": "Editor", "title": "Toggle Draw Object Text", "desc": "Toggle draw world object text" },
+"editorToggleRotationSnap": {"cat":"editor", "order": 1, "ctx": "tlua", "onChange" :"editor.toggleSnapping(VALUE)", "actionMap": "EditorKeyMods", "title": "Toggle Move or Rotation Snap", "desc": "Toggles move or rotation snapping" },
+"editorModifyFadeIconsDistance": {"cat":"editor", "order": 1, "ctx": "tlua", "onChange" :"editor.modifyFadeIconsDistance(VALUE)", "isCentered": true, "actionMap": "Editor", "title": "Change Icon Fade Distance", "desc": "Changes the Icon Fade Distance" },
+
+//----------------------------------------------------
+// Tool Shortcuts
+//----------------------------------------------------
+"editorHelp": {"cat":"editor", "order": 1, "ctx": "tlua", "onDown" :"editor.openHelp()", "actionMap": "Editor", "title": "Open Help", "desc": "Opens Editor Documentation." },
+"editorTool1": {"cat":"editor", "order": 1, "ctx": "tlua", "onDown" :"editor.openTool1()", "actionMap": "Editor", "title": "Open Tool #1", "desc": "Opens tool #1 from the toolbar." },
+"editorTool2": {"cat":"editor", "order": 1, "ctx": "tlua", "onDown" :"editor.openTool2()", "actionMap": "Editor", "title": "Open Tool #2", "desc": "Opens tool #2 from the toolbar." },
+"editorTool3": {"cat":"editor", "order": 1, "ctx": "tlua", "onDown" :"editor.openTool3()", "actionMap": "Editor", "title": "Open Tool #3", "desc": "Opens tool #3 from the toolbar." },
+"editorTool4": {"cat":"editor", "order": 1, "ctx": "tlua", "onDown" :"editor.openTool4()", "actionMap": "Editor", "title": "Open Tool #4", "desc": "Opens tool #4 from the toolbar." },
+"editorTool5": {"cat":"editor", "order": 1, "ctx": "tlua", "onDown" :"editor.openTool5()", "actionMap": "Editor", "title": "Open Tool #5", "desc": "Opens tool #5 from the toolbar." },
+"editorTool6": {"cat":"editor", "order": 1, "ctx": "tlua", "onDown" :"editor.openTool6()", "actionMap": "Editor", "title": "Open Tool #6", "desc": "Opens tool #6 from the toolbar." },
+"editorTool7": {"cat":"editor", "order": 1, "ctx": "tlua", "onDown" :"editor.openTool7()", "actionMap": "Editor", "title": "Open Tool #7", "desc": "Opens tool #7 from the toolbar." },
+"editorTool8": {"cat":"editor", "order": 1, "ctx": "tlua", "onDown" :"editor.openTool8()", "actionMap": "Editor", "title": "Open Tool #8", "desc": "Opens tool #8 from the toolbar." },
+"editorTool9": {"cat":"editor", "order": 1, "ctx": "tlua", "onDown" :"editor.openTool9()", "actionMap": "Editor", "title": "Open Tool #9", "desc": "Opens tool #9 from the toolbar." },
+"editorTool10": {"cat":"editor", "order": 1, "ctx": "tlua", "onDown" :"editor.openTool10()", "actionMap": "Editor", "title": "Open Tool #10", "desc": "Opens tool #10 from the toolbar." },
+
+//----------------------------------------------------
+// Key modifiers used globally by editor tools,
+// usually in conjuction with the mouse operations
+//----------------------------------------------------
+"editorKeyModLShift": {"cat":"editor", "order": 1, "ctx": "tlua", "onChange" :"if editor and editor.setKeyModifier then editor.setKeyModifier(editor.KeyModifier_LShift, VALUE) end", "actionMap": "EditorKeyMods", "title": "Left Shift Key", "desc": "Please do not change, used for mouse operations" },
+"editorKeyModLCtrl": {"cat":"editor", "order": 1, "ctx": "tlua", "onChange" :"if editor and editor.setKeyModifier then editor.setKeyModifier(editor.KeyModifier_LCtrl, VALUE) end", "actionMap": "EditorKeyMods", "title": "Left Ctrl Key", "desc": "Please do not change, used for mouse operations" },
+"editorKeyModLAlt": {"cat":"editor", "order": 1, "ctx": "tlua", "onChange" :"if editor and editor.setKeyModifier then editor.setKeyModifier(editor.KeyModifier_LAlt, VALUE) end", "actionMap": "EditorKeyMods", "title": "Left Alt Key", "desc": "Please do not change, used for mouse operations" },
+"editorKeyModRShift": {"cat":"editor", "order": 1, "ctx": "tlua", "onChange" :"if editor and editor.setKeyModifier then editor.setKeyModifier(editor.KeyModifier_RShift, VALUE) end", "actionMap": "EditorKeyMods", "title": "Right Shift Key", "desc": "Please do not change, used for mouse operations" },
+"editorKeyModRCtrl": {"cat":"editor", "order": 1, "ctx": "tlua", "onChange" :"if editor and editor.setKeyModifier then editor.setKeyModifier(editor.KeyModifier_RCtrl, VALUE) end", "actionMap": "EditorKeyMods", "title": "Right Ctrl Key", "desc": "Please do not change, used for mouse operations" },
+"editorKeyModRAlt": {"cat":"editor", "order": 1, "ctx": "tlua", "onChange" :"if editor and editor.setKeyModifier then editor.setKeyModifier(editor.KeyModifier_RAlt, VALUE) end", "actionMap": "EditorKeyMods", "title": "Right Alt Key", "desc": "Please do not change, used for mouse operations" },
+
+//----------------------------------------------------
+// Scenetree
+//----------------------------------------------------
+"moveScenetreeSelectionUp": {"cat":"editor", "order": 1, "ctx": "tlua", "onDown" :"editor_sceneTree.moveSelectionIndex(true)", "actionMap": "SceneTree", "title": "Navigate Up The Scenetree", "desc": "Selects the node above the current node." },
+"moveScenetreeSelectionDown": {"cat":"editor", "order": 1, "ctx": "tlua", "onDown" :"editor_sceneTree.moveSelectionIndex(false)", "actionMap": "SceneTree", "title": "Navigate Down The Scenetree", "desc": "Selects the node below the current node." },
+
+//----------------------------------------------------
+// AssetBrowser
+//----------------------------------------------------
+"moveAssetBrowserTreeSelectionUp": {"cat":"editor", "order": 1, "ctx": "tlua", "onDown" :"editor_assetBrowser.moveSelectionIndex(true)", "actionMap": "AssetBrowser", "title": "Navigate Up The AssetBrowser Tree", "desc": "Selects the node above the current node." },
+"moveAssetBrowserTreeSelectionDown": {"cat":"editor", "order": 1, "ctx": "tlua", "onDown" :"editor_assetBrowser.moveSelectionIndex(false)", "actionMap": "AssetBrowser", "title": "Navigate Down The AssetBrowser Tree", "desc": "Selects the node below the current node." },
+
+//----------------------------------------------------
+// Flowgraph Editor
+//----------------------------------------------------
+"flowgraphDeleteSelection": {"cat":"flowgraph", "order": 1, "ctx": "tlua", "onDown"  :"editor_flowgraphEditor.getManager():deleteSelectionButton()", "actionMap": "Flowgraph", "title": "Flowgraph Delete Node", "desc": "Deletes selected nodes" },
+"flowgraphCopySelection": {"cat":"flowgraph", "order": 1, "ctx": "tlua", "onDown"  :"editor_flowgraphEditor.getManager():copyNodes()", "actionMap": "Flowgraph", "title": "Flowgraph Copy Nodes", "desc": "Copies selected nodes" },
+"flowgraphPasteNodes": {"cat":"flowgraph", "order": 1, "ctx": "tlua", "onDown"  :"editor_flowgraphEditor.getManager():pasteNodes()", "actionMap": "Flowgraph", "title": "Flowgraph Paste Node", "desc": "Pastes copied nodes" },
+"flowgraphDuplicateSelection": {"cat":"flowgraph", "order": 1, "ctx": "tlua", "onDown"  :"editor_flowgraphEditor.getManager():copyPasteNodes()", "actionMap": "Flowgraph", "title": "Flowgraph Duplicate Nodes", "desc": "Duplicates selected nodes" },
+"flowgraphCutSelection": {"cat":"flowgraph", "order": 1, "ctx": "tlua", "onDown"  :"editor_flowgraphEditor.getManager():copyNodes() editor_flowgraphEditor.getManager():deleteSelection()", "actionMap": "Flowgraph", "title": "Flowgraph Cut Nodes", "desc": "Cuts selected nodes" },
+"flowgraphUndo": {"cat":"flowgraph", "order": 1, "ctx": "tlua", "onDown"  :"editor_flowgraphEditor.getManager():undo()", "actionMap": "FlowgraphMain", "title": "Flowgraph Undo", "desc": "Undoes last Flowgraph change" },
+"flowgraphRedo": {"cat":"flowgraph", "order": 1, "ctx": "tlua", "onDown"  :"editor_flowgraphEditor.getManager():redo()", "actionMap": "FlowgraphMain", "title": "Flowgraph Redo", "desc": "Redoes last Flowgraph change" },
+"flowgraphSave": {"cat":"flowgraph", "order": 1, "ctx": "tlua", "onDown"  :"editor_flowgraphEditor.saveCurrent()", "actionMap": "FlowgraphMain", "title": "Save All Flowgraphs", "desc": "Saves all graphs" },
+"flowgraphFocusSelection": {"cat":"flowgraph", "order": 1, "ctx": "tlua", "onDown"  :"editor_flowgraphEditor.uiFocusNodesShortcut()", "actionMap": "Flowgraph", "title": "Focus Selection", "desc": "Focuses the viewport on the current selection." },
+"flowgraphHideSelection": {"cat":"flowgraph", "order": 1, "ctx": "tlua", "onDown"  :"editor_flowgraphEditor.uiHideShortcut(true)", "actionMap": "Flowgraph", "title": "Hide Selection", "desc": "Hides the currently selected element." },
+"flowgraphUnHideSelection": {"cat":"flowgraph", "order": 1, "ctx": "tlua", "onDown"  :"editor_flowgraphEditor.uiHideShortcut(false)", "actionMap": "Flowgraph", "title": "Unhide Selection", "desc": "Unhides the currently selected element." },
+"flowgraphShowSource": {"cat":"flowgraph", "order": 1, "ctx": "tlua", "onDown"  :"editor_flowgraphEditor.uiShowSourceShortcut()", "actionMap": "Flowgraph", "title": "Show Source", "desc": "Opens the source code file of the currently selected node." },
+"flowgraphAutoConnect": {"cat":"flowgraph", "order": 1, "ctx": "tlua", "onDown"  :"editor_flowgraphEditor.uiAutoConnectShortcut()", "actionMap": "Flowgraph", "title": "Autoconnect", "desc": "Attempts to connect the currently selected pair of nodes." },
+"flowgraphDisconnect": {"cat":"flowgraph", "order": 1, "ctx": "tlua", "onDown"  :"editor_flowgraphEditor.uiDisconnectShortcut()", "actionMap": "Flowgraph", "title": "Disconnect", "desc": "Disconnects the currently selected nodes." },
+"flowgraphFind": {"cat":"flowgraph", "order": 1, "ctx": "tlua", "onDown"  :"editor_flowgraphEditor.uiFindShortcut()", "actionMap": "Flowgraph", "title": "Search", "desc": "Automatically enters the search window." },
+"flowgraphToggleCategory": {"cat":"flowgraph", "order": 1, "ctx": "tlua", "onDown"  :"editor_flowgraphEditor.uiToggleCategoryShortcut()", "actionMap": "Flowgraph", "title": "Toggle Category", "desc": "Toggles node Category." },
+
+"flowgraphAction": {"cat":"flowgraph", "order": 1, "ctx": "tlua", "onDown"  :"core_flowgraphManager.controls('action')", "actionMap": "FlowgraphActions", "title": "Flowgraph Call Custom Action", "desc": "Calls a custom action" },
+
+//----------------------------------------------------
+// Node library
+//----------------------------------------------------
+"nodelibCreate": {"cat":"flowgraph", "order": 1, "ctx": "tlua", "onDown"  :"editor_flowgraphEditor.arrowControllableWindowCall('createNode')", "actionMap": "NodeLibrary", "title": "Flowgraph Node Lib Create Node", "desc": "Creates the selected node" },
+"nodelibNavUp": {"cat":"flowgraph", "order": 1, "ctx": "tlua", "onDown"  :"editor_flowgraphEditor.arrowControllableWindowCall('navigateList',true)", "actionMap": "NodeLibrary", "title": "Flowgraph Node Lib Navigate Up", "desc": "Navigates up in the list" },
+"nodelibNavDown": {"cat":"flowgraph", "order": 1, "ctx": "tlua", "onDown"  :"editor_flowgraphEditor.arrowControllableWindowCall('navigateList',false)", "actionMap": "NodeLibrary", "title": "Flowgraph Node Lib Navigate Down", "desc": "Navigates down in the list" },
+
+//----------------------------------------------------
+// Create Object Tool
+//----------------------------------------------------
+"objectToolSelect": {"cat":"editor", "order": 1, "ctx": "tlua", "onDown"  :"editor_createObjectTool.selectClass()", "actionMap": "CreateObjectTool", "title": "Create-Object Tool select class", "desc": "Selects the focused class" },
+"objectToolNavUp": {"cat":"editor", "order": 1, "ctx": "tlua", "onDown"  :"editor_createObjectTool.navigateList(true)", "actionMap": "CreateObjectTool", "title": "Create-Object Tool Navigate Up", "desc": "Navigates up in the list" },
+"objectToolNavDown": {"cat":"editor", "order": 1, "ctx": "tlua", "onDown"  :"editor_createObjectTool.navigateList(false)", "actionMap": "CreateObjectTool", "title": "Create-Object Tool Navigate Down", "desc": "Navigates down in the list" },
+
+//----------------------------------------------------
+// Road Editor
+//----------------------------------------------------
+"cycle_hovered_roads": {"cat":"editor", "order": 1, "ctx": "tlua",   "onChange" :"editor_roadEditor.cycleHoveredRoadsAM(VALUE)", "actionMap": "RoadEditor", "title": "Cycle Hovered Roads", "desc": "Cycle through the hovered roads" },
+
+//----------------------------------------------------
+// Camera Path Editor
+//----------------------------------------------------
+"toggle_play": {"cat":"editor", "order": 1, "ctx": "tlua",   "onDown"   :"core_replay.togglePlay()", "actionMap": "CamPathEditor", "title": "Toggle Camera Path Replay", "desc": "Toggles the current replay" },
+
+//----------------------------------------------------
+// Terrain Editor
+//----------------------------------------------------
+"changeTerrainBrushSize": {"cat":"editor", "order": 1, "ctx": "tlua",   "onChange" :"editor_terrainEditor.changeBrushSize(VALUE, editor.getPreference('terrainEditor.general.brushSizeChangeStepWithWheel'))", "actionMap": "terrainTools", "title": "Change Terrain Brush Size", "desc": "Change the size of the brush" },
+"terrainBrushSizeGrow": {"cat":"editor", "order": 1, "ctx": "tlua",   "onDown" :"editor_terrainEditor.beginChangeBrushSizeWithKeys(1)", "onUp" :"editor_terrainEditor.endChangeBrushSizeWithKeys()", "actionMap": "terrainTools", "title": "Grow Terrain Brush Size", "desc": "Grow the size of the brush" },
+"terrainBrushSizeShrink": {"cat":"editor", "order": 1, "ctx": "tlua",   "onDown" :"editor_terrainEditor.beginChangeBrushSizeWithKeys(0)", "onUp" :"editor_terrainEditor.endChangeBrushSizeWithKeys()", "actionMap": "terrainTools", "title": "Shrink Terrain Brush Size", "desc": "Shrink the size of the brush" },
+
+//----------------------------------------------------
+// Forest Editor
+//----------------------------------------------------
+"changeForestBrush": {"cat":"editor", "order": 1, "ctx": "tlua",   "onChange" :"editor_forestEditor.changeBrush(VALUE, editor.getPreference('forestEditor.general.brushSizeChangeStepWithWheel'))", "actionMap": "forestTools", "title": "Change Forest Brush Size", "desc": "Change the size of the brush" },
+"selectForestBrush1": {"cat":"editor", "order": 1, "ctx": "tlua",   "onDown" :"editor_forestEditor.selectBrushByIndex(1)", "actionMap": "forestTools", "title": "Select Forest Brush 1", "desc": "Select Forest Brush 1" },
+"selectForestBrush2": {"cat":"editor", "order": 1, "ctx": "tlua",   "onDown" :"editor_forestEditor.selectBrushByIndex(2)", "actionMap": "forestTools", "title": "Select Forest Brush 2", "desc": "Select Forest Brush 2" },
+"selectForestBrush3": {"cat":"editor", "order": 1, "ctx": "tlua",   "onDown" :"editor_forestEditor.selectBrushByIndex(3)", "actionMap": "forestTools", "title": "Select Forest Brush 3", "desc": "Select Forest Brush 3" },
+"selectForestBrush4": {"cat":"editor", "order": 1, "ctx": "tlua",   "onDown" :"editor_forestEditor.selectBrushByIndex(4)", "actionMap": "forestTools", "title": "Select Forest Brush 4", "desc": "Select Forest Brush 4" },
+"forestBrushSizeGrow": {"cat":"editor", "order": 1, "ctx": "tlua",   "onDown" :"editor_forestEditor.beginChangeBrushSizeWithKeys(1)", "onUp" :"editor_forestEditor.endChangeBrushSizeWithKeys()", "actionMap": "forestTools", "title": "Grow Forest Brush Size", "desc": "Grow the size of the brush" },
+"forestBrushSizeShrink": {"cat":"editor", "order": 1, "ctx": "tlua",   "onDown" :"editor_forestEditor.beginChangeBrushSizeWithKeys(0)", "onUp" :"editor_forestEditor.endChangeBrushSizeWithKeys()", "actionMap": "forestTools", "title": "Shrink Forest Brush Size", "desc": "Shrink the size of the brush" },
+
+//----------------------------------------------------
+// Vehicle Editor
+//----------------------------------------------------
+// None for now
+
+//----------------------------------------------------
+// Raycast Test
+//----------------------------------------------------
+"exitRayCastTest": {"cat":"editor", "order": 1, "ctx": "tlua",   "onChange" :"editor.selectEditMode(editor.editModes.objectSelect)", "actionMap": "RayCastTest", "title": "Exit raycast test mode", "desc": "Exits raycast test mode and goes to object select mode" },
+
+//----------------------------------------------------
+// Dynamic Decals Tool
+//----------------------------------------------------
+"applyDecal": {"cat":"editor", "order": 1, "ctx": "tlua",   "onDown" :"editor_dynamicDecalsTool.applyDecal()", "actionMap": "dynamicDecals", "title": "Apply decal", "desc": "Apply decal" },
+"increaseDecalSize": {"cat":"editor", "order": 1, "ctx": "tlua",   "onDown" :"editor_dynamicDecalsTool.changeDecalSize(true)", "actionMap": "dynamicDecals", "title": "Increase dynamic decal size", "desc": "Increase dynamic decal size" },
+"decreaseDecalSize": {"cat":"editor", "order": 1, "ctx": "tlua",   "onDown" :"editor_dynamicDecalsTool.changeDecalSize(false)", "actionMap": "dynamicDecals", "title": "Decrease dynamic decal size", "desc": "Decrease dynamic decal size" },
+"rotateDecalClockwise": {"cat":"editor", "order": 1, "ctx": "tlua",   "onDown" :"editor_dynamicDecalsTool.changeDecalRotation(true)", "actionMap": "dynamicDecals", "title": "Rotate decal clockwise", "desc": "Rotate decal clockwise" },
+"rotateDecalCounterClockwise": {"cat":"editor", "order": 1, "ctx": "tlua",   "onDown" :"editor_dynamicDecalsTool.changeDecalRotation(false)", "actionMap": "dynamicDecals", "title": "Rotate decal counter-clockwise", "desc": "Rotate decal counter-clockwise" },
+"increaseDecalSizeFine": {"cat":"editor", "order": 1, "ctx": "tlua",   "onDown" :"editor_dynamicDecalsTool.changeDecalSize(true, 0.5)", "actionMap": "dynamicDecals", "title": "Increase dynamic decal size", "desc": "Increase dynamic decal size (fine step)" },
+"decreaseDecalSizeFine": {"cat":"editor", "order": 1, "ctx": "tlua",   "onDown" :"editor_dynamicDecalsTool.changeDecalSize(false, 0.5)", "actionMap": "dynamicDecals", "title": "Decrease dynamic decal size", "desc": "Decrease dynamic decal size (fine step)" },
+"rotateDecalClockwiseFine": {"cat":"editor", "order": 1, "ctx": "tlua",   "onDown" :"editor_dynamicDecalsTool.changeDecalRotation(true, 0.5)", "actionMap": "dynamicDecals", "title": "Rotate decal clockwise", "desc": "Rotate decal clockwise (fine step)" },
+"rotateDecalCounterClockwiseFine": {"cat":"editor", "order": 1, "ctx": "tlua",   "onDown" :"editor_dynamicDecalsTool.changeDecalRotation(false, 0.5)", "actionMap": "dynamicDecals", "title": "Rotate decal counter-clockwise", "desc": "Rotate decal counter-clockwise (fine step)" },
+"dynamicDecalsUndo": {"cat":"editor", "order": 1, "ctx": "tlua",   "onDown" :"editor_dynamicDecalsTool.undo()", "actionMap": "dynamicDecals", "title": "Undo", "desc": "Undo" },
+"dynamicDecalsRedo": {"cat":"editor", "order": 1, "ctx": "tlua",   "onDown" :"editor_dynamicDecalsTool.redo()", "actionMap": "dynamicDecals", "title": "Redo", "desc": "Redo" },
+"dynamicDecalsLockDepth": {"cat":"editor", "order": 1, "ctx": "tlua",   "onChange" :"editor_dynamicDecalsTool.lockDepth(VALUE)", "actionMap": "dynamicDecals", "title": "Lock Depth", "desc": "Redo" },
+"enableBrushStroke": {"cat":"editor", "order": 1, "ctx": "tlua",   "onChange" :"editor_dynamicDecalsTool.enableBrushStroke(VALUE)", "actionMap": "dynamicDecals", "title": "enableBrushStroke", "desc": "enableBrushStroke" },
+"enablePathLayer": {"cat":"editor", "order": 1, "ctx": "tlua",   "onChange" :"editor_dynamicDecalsTool.enablePathLayer(VALUE)", "actionMap": "dynamicDecals", "title": "enablePathLayer", "desc": "enablePathLayer" },
+}

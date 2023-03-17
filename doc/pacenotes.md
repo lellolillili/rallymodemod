@@ -1,0 +1,39 @@
+# Notes
+
+This is all very rough, but all the important stuff is in there. Some minor things are missing (e.g., 8 right).
+
+## Missing
+
+tightens over crest, onto bridge, slot, 550, 650, 8 right
+
+## TODO
+
+# List of available pacenotes
+
+
+## Distance calls
+
+Just FYI, you don't have to add these manually.
+
+10, 20, 30, 40, 50, 60, 70, 80, 100, 110, 120, 130, 140, 150, 160, 170, 180, 190, 200, 250, 300, 350, 400, 450, 500, 600, 700, 750, 800, 900, 1000
+
+## Common corners (more or less Dirt rally convention)
+
+6 right, 6 left, 5 right, 5 left, 4 right, 4 left, 3 right, 3 left, 2 right, 2 left, 1 right, 1 left, square right, square left, open hairpin right, open hairpin left, hairpin right, hairpin left, acute right, acute left, acute hairpin right, acute hairpin left
+
+## Other corners with other conventions
+
+9 right, 9 left, 8 left, 7 right, 7 left, 90 left, 90 right, 10 left, 10 right, 11 left, 11 right, 12 left, 12 right, handbrake right, handbrake left, medium right, medium left, k right, k left, easy right, easy left, fast right, fast left
+
+chicane left entry, left exit, left turn at junction, left turn, left, slight left, drops left, fork left, left around, left entry chicane, left foot braking, left into, left six, left square, left three, left two, turn left, go left, chicane right entry, keep right, right exit, right turn at junction, right turn, right, slight right, drops right, fork right, left right, right around, right entry chicane, right five, right flat, right four, right into, right left, right one, right six, right square, right three, right two, turn right, go right, flat left, flat right, tightens to hairpin right, tightens to hairpin left, tightens to acute, tightens to 6, tightens to 5, tightens to 4, tightens to 3, tightens to 2, tightens to 1, tightens opens, tightens late, tightens early, tightens bad, tightens acute, tightens 6, tightens 5, tightens 4, tightens 3, tightens 1
+
+# Misc
+
+## Note: instead of using these, consider splitting the pacenotes into 2 waypoints instead.
+
+lp  (long pause), p   (medium pause), sp  (short pause)
+
+
+## Everything else
+
+1, 2, 3, 4, 5, 6, 7, 8, 9, 10, very late, very early, two, tightens very late, tightens over dip, tightens over bumps, tightens over bump, tightens extra late, stay out, stay in, six, seven, pole outside, pole inside, over dips, over dip, onto dip, onto crest, onto bump, one, nine, into dip, into crest, into bump, into.bak, five, extra extra long, eight, curve, cross, continues uphill, continues over bumps, continues over bump, and tightens, and tightens bad, and opens wide, and opens, and double tightens, yompy, yomp, wooden fence, wide, wide out, wet, water, wall, walk, very, very short, until, understeer, tyres, twenty, tunnel, triple caution, tree, to sight distance, to finish, to dip, to acute, to 6, to 5, to 4, to 3, to 2, to 1, tightens two, tidy, through, then, ten, tee, tarmac, tape, take, take speed, stump, straight, stop, stone, steep uphill, steep slope, steep out, steep incline, steep in, steep hill, steep drop, steep downhill, start, split, split time, speed, spectators, snow, small, small crest, slowing, slight, slide, sign, sideways, shoulder, short short, shiny, sharp, ruts, rubble, round, round wall, round tree, round pole, round bollards, round bale, rock, road, reverse camber, rails, puddle, post, positive, positive camber, plus, plus plus, path, over, over railway, over rails, outside, opens tightens, onto, onto tarmac, onto snow, onto grit, onto gravel, onto concrete, onto cobbles, on, on split, on exit, off, now, nips, netting, negative, negative camber, near, muddy, much, minus, minus minus, mast, marshals, many, loose gravel, long long, light, light cut, kink, keep, keep centre, junction, jump flat, jump bind, island, inside, in, icy, ice, hug, house, hook, hollow, hole, hold, hidden', hidden, hard, hang, grit, grip, grip through, grip off, good, good grip, go, go wide, go straight, go narrow, go full, full, full cut, ford, for, flat out, flat brow, fence, fast, fakes, exit, exact, entry, entry directly, edge, easy, dry, drops, down, double, double tightens, dont cut late, dont cut early, done, ditch, distance, dirty, dirt, directly, deep ruts, deep cut, damp, curbside, curb, cramped, continues over crest, concrete, cobbles, chicane, check point, caution water, care out, care in, camber, camber up, camber down, bush, bumpy, bumps, brow, bridge, bricks, brake, boulder, border, blind, big, better, better now, behind, before, barrels, at, at tee, around wall, around tree, around pole, around bollards, around bale, armco, after, wrong way, well done, wall outside, wall inside, very long, uphill, unseen, under bridge, twisty, trees outside, tightens, tight, tight chicane, through water splash, through tunnel, through narrow gate, through gate, straight over junction, steep, slow, slippy, short, roundabout, round tyres, round post, round cone, round bail, rocks outside, rocks inside, rocks in road, road dips, post outside, post inside, over jump, over grid, over finish, over crest, over bumps, over bump, over bridge, opens, onto sand, onto dirt, ok, narrows, narrow, maybe, long, logs outside, logs inside, line, late, keep out, keep middle, keep in, jump, jump maybe, into, immediate, ice from here, hole outside, hole inside, gravel, flat, fence outside, fence inside, extra long, early, downhill, double caution, dont cut, ditch outside, ditch inside, dip, deceptive, cut, cut late, curb outside, curb inside, crest, clip, caution, care, bump, big jump, big cut, be brave, barrier outside, bank outside, bank inside, bad, bad landing, bad camber, at tree, at house, asphalt from here, and, 3 k, 2 k, 1 k

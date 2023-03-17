@@ -1,0 +1,17 @@
+// Please refer to modding/input/ documentation for information about input actions
+// DOT NOT EDIT THIS FILE.
+
+{
+// debug (general)
+"cycle_metrics"       :{"cat":"debug", "order":  1, "ctx": "tlua",   "onDown"  :"core_metrics.toggle()", "title": "ui.inputActions.debug.cycle_metrics.title", "desc": "ui.inputActions.debug.cycle_metrics.description"},
+"toggle_performance_graph":{"cat":"debug", "order":  2, "ctx": "tlua",   "onDown"  :"togglePerformanceGraph()", "title": "ui.inputActions.debug.toggle_performance_graph.title", "desc": "ui.inputActions.debug.toggle_performance_graph.description"},
+"toggleTrackBuilder"      :{"cat":"debug", "order": 15, "ctx": "tlua", "onDown"  :"toggleTrackBuilder()", "actionMap": "Global", "title": "ui.inputActions.debug.toggleTrackBuilder.title", "desc": "ui.inputActions.debug.toggleTrackBuilder.description" },
+"toggleConsoleNG"         :{"cat":"debug", "order": 16, "ctx": "tlua", "onDown"  :"extensions.ui_console.toggle()", "actionMap": "Global", "title": "ui.inputActions.debug.toggleConsoleNG.title", "desc": "ui.inputActions.debug.toggleConsoleNG.description" },
+
+"lua_reload"              :{"cat":"debug", "order": 20, "ctx": "tlua", "onDown"  :"Lua:requestReload(); ui_message('engine.lua.reloaded', 2, 'lua', 'refresh')", "actionMap": "Global", "title": "ui.inputActions.debug.lua_reload.title", "desc": "ui.inputActions.debug.lua_reload.description" },
+"cefdev_console_toggle"   :{"cat":"debug", "order": 22, "ctx": "tlua",   "onDown"  :"toggleCEFDevConsole()", "actionMap": "Global", "title": "ui.inputActions.debug.cefdev_console_toggle.title", "desc": "ui.inputActions.debug.cefdev_console_toggle.description" },
+"cefdev_reload_ui"        :{"cat":"debug", "order": 22, "ctx": "tlua",   "onDown"  :"reloadUI()", "actionMap": "Global", "title": "ui.inputActions.debug.cefdev_reload_ui.title", "desc": "ui.inputActions.debug.cefdev_reload_ui.description" },
+"flexmeshDebugSelectionToggle" :{"cat":"debug", "order": 22, "ctx": "tlua",   "onChange"  :"be:setFlexMeshDebugSelection(PLAYER, VALUE ~= 0)", "actionMap": "FlexmeshDebug", "title": "ui.inputActions.debug.flexmeshDebugSelectionToggle.title", "desc": "ui.inputActions.debug.flexmeshDebugSelectionToggle.description" },
+"debugmode_meshvis_incr"  :{"cat":"debug", "order": 16, "ctx": "tlua", "onDown"  :"core_vehicles.changeMeshVisibility(0.1)","title": "ui.inputActions.debug.debugmode_meshvis_incr.title", "desc": "ui.inputActions.debug.debugmode_meshvis_incr.description" },
+"debugmode_meshvis_decr"  :{"cat":"debug", "order": 17, "ctx": "tlua", "onDown"  :"core_vehicles.changeMeshVisibility(-0.1)","title": "ui.inputActions.debug.debugmode_meshvis_decr.title", "desc": "ui.inputActions.debug.debugmode_meshvis_decr.description" }
+}

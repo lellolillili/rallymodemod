@@ -1,0 +1,88 @@
+<html>
+<body>
+  <div class="garden">
+    <div class="ball"></div>
+  </div>
+
+  <pre class="output"></pre>
+
+  <pre class="pingout"></pre>
+
+<style>
+.garden {
+  position: relative;
+  width : 200px;
+  height: 200px;
+  border: 5px solid #CCC;
+  border-radius: 10px;
+}
+
+.ball {
+  position: absolute;
+  top   : 90px;
+  left  : 90px;
+  width : 20px;
+  height: 20px;
+  background: green;
+  border-radius: 100%;
+}
+</style>
+<script>
+var ball   = document.querySelector('.ball');
+var garden = document.querySelector('.garden');
+var output = document.querySelector('.output');
+var pingout = document.querySelector('.pingout');
+
+var maxX = garden.clientWidth  - ball.clientWidth;
+var maxY = garden.clientHeight - ball.clientHeight;
+
+function handleOrientation(event) {
+  var x = event.beta;  // In degree in the range [-180,180)
+  var y = event.gamma; // In degree in the range [-90,90)
+
+  output.textContent  = `beta : ${x}\n`;
+  output.textContent += `gamma: ${y}\n`;
+
+  // Because we don't want to have the device upside down
+  // We constrain the x value to the range [-90,90]
+  if (x >  90) { x =  90};
+  if (x < -90) { x = -90};
+
+  // To make computation easier we shift the range of
+  // x and y to [0,180]
+  x += 90;
+  y += 90;
+
+  // 10 is half the size of the ball
+  // It center the positioning point to the center of the ball
+  ball.style.top  = (maxY*y/180 - 10) + "px";
+  ball.style.left = (maxX*x/180 - 10) + "px";
+}
+window.addEventListener('deviceorientation', handleOrientation);
+
+function testPing() {
+  pingout.textContent = "Latency: ..."
+  var t0 = performance.now();
+  var request = new XMLHttpRequest(); // Create a request variable and assign a new XMLHttpRequest object to it.
+  request.open('GET', '/api/ping'); // Open a new connection, using the GET request on the URL endpoint
+  request.send();
+  request.onload = async function () {
+    var t1 = performance.now();
+    var data = JSON.parse(this.response);
+    if(data[0] == 'pong') {
+      pingout.textContent = "Latency: " + ((t1 - t0) / 2).toFixed(3) + " ms";
+    }
+  }
+}
+testPing();
+function testBtn() {
+  var t0 = performance.now();
+  var request = new XMLHttpRequest(); // Create a request variable and assign a new XMLHttpRequest object to it.
+  request.open('GET', '/api/btn'); // Open a new connection, using the GET request on the URL endpoint
+  request.send();
+}
+</script>
+<button  onclick="testPing();">Test latency</button>
+<button  onclick="testBtn();">Test button</button>
+</body>
+</html>

@@ -1,0 +1,22 @@
+// Please refer to modding/input/ documentation for information about input actions
+// DOT NOT EDIT THIS FILE.
+
+{
+"reload_vehicle"          :{"cat":"vehicle_debug", "order":  1, "ctx": "tlua", "onDown"  :"core_vehicle_manager.reloadVehicle(PLAYER)", "title": "ui.inputActions.vehicle_debug.reload_vehicle.title", "desc": "ui.inputActions.vehicle_debug.reload_vehicle.description" },
+"reload_all_vehicles"     :{"cat":"vehicle_debug", "order":  1, "ctx": "tlua", "onDown"  :"core_vehicle_manager.reloadAllVehicles()", "title": "ui.inputActions.vehicle_debug.reload_all_vehicles.title", "desc": "ui.inputActions.vehicle_debug.reload_all_vehicles.description" },
+"debugmode_reset"         :{"cat":"vehicle_debug", "order":  2, "ctx": "vlua", "onDown"  :"bdebug.resetModes()","title": "ui.inputActions.vehicle_debug.debugmode_reset.title", "desc": "ui.inputActions.vehicle_debug.debugmode_reset.description" },
+"debugmode_toggle"        :{"cat":"vehicle_debug", "order":  3, "ctx": "vlua", "onDown"  :"bdebug.toggleEnabled()","title": "ui.inputActions.vehicle_debug.debugmode_toggle.title", "desc": "ui.inputActions.vehicle_debug.debugmode_toggle.description" },
+
+"debugmode_skeleton_fwd"  :{"cat":"vehicle_debug", "order": 10, "ctx": "vlua", "onDown"  :"bdebug.skeletonModeChange(1)","title": "ui.inputActions.vehicle_debug.debugmode_skeleton_fwd.title", "desc": "ui.inputActions.vehicle_debug.debugmode_skeleton_fwd.description" },
+"debugmode_skeleton_back" :{"cat":"vehicle_debug", "order": 11, "ctx": "vlua", "onDown"  :"bdebug.skeletonModeChange(-1)","title": "ui.inputActions.vehicle_debug.debugmode_skeleton_back.title", "desc": "ui.inputActions.vehicle_debug.debugmode_skeleton_back.description" },
+"debugmode_nodetext_fwd"  :{"cat":"vehicle_debug", "order": 12, "ctx": "vlua", "onDown"  :"bdebug.nodetextModeChange(1)","title": "ui.inputActions.vehicle_debug.debugmode_nodetext_fwd.title", "desc": "ui.inputActions.vehicle_debug.debugmode_nodetext_fwd.description" },
+"debugmode_nodetext_back" :{"cat":"vehicle_debug", "order": 13, "ctx": "vlua", "onDown"  :"bdebug.nodetextModeChange(-1)","title": "ui.inputActions.vehicle_debug.debugmode_nodetext_back.title", "desc": "ui.inputActions.vehicle_debug.debugmode_nodetext_back.description" },
+"debugmode_nodevis_fwd"   :{"cat":"vehicle_debug", "order": 14, "ctx": "vlua", "onDown"  :"bdebug.nodevisModeChange(1)","title": "ui.inputActions.vehicle_debug.debugmode_nodevis_fwd.title", "desc": "ui.inputActions.vehicle_debug.debugmode_nodevis_fwd.description" },
+"debugmode_nodevis_back"  :{"cat":"vehicle_debug", "order": 15, "ctx": "vlua", "onDown"  :"bdebug.nodevisModeChange(-1)","title": "ui.inputActions.vehicle_debug.debugmode_nodevis_back.title", "desc": "ui.inputActions.vehicle_debug.debugmode_nodevis_back.description" },
+"debugmode_toggle_coltris":{"cat":"vehicle_debug", "order": 18, "ctx": "vlua", "onDown"  :"bdebug.toggleColTris()","title": "ui.inputActions.vehicle_debug.debugmode_toggle_coltris.title", "desc": "ui.inputActions.vehicle_debug.debugmode_toggle_coltris.description" },
+"debugmode_cog_fwd"       :{"cat":"vehicle_debug", "order": 19, "ctx": "vlua", "onDown"  :"bdebug.cogChange(1)","title": "ui.inputActions.vehicle_debug.debugmode_cog_fwd.title", "desc": "ui.inputActions.vehicle_debug.debugmode_cog_fwd.description" },
+"debugmode_cog_decr"      :{"cat":"vehicle_debug", "order": 20, "ctx": "vlua", "onDown"  :"bdebug.cogChange(-1)","title": "ui.inputActions.vehicle_debug.debugmode_cog_decr.title", "desc": "ui.inputActions.vehicle_debug.debugmode_cog_decr.description" },
+"select_node_beam"        :{"cat":"vehicle_debug", "order": 21, "ctx": "vlua", "onDown"  :"bdebug.selectNode()","title": "ui.inputActions.vehicle_debug.select_node_beam.title", "desc": "ui.inputActions.vehicle_debug.select_node_beam.description" },
+}
+
+

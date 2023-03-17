@@ -1,0 +1,8 @@
+{
+  "inplaceEdit_left"   : {"cat":"editor", "order": 1, "ctx": "tlua", "onChange" :"extensions.core_vehicle_inplaceEdit.onInput('left', VALUE)"  , "actionMap": "vehicleEdit", "title": "left", "desc": "" },
+  "inplaceEdit_right"  : {"cat":"editor", "order": 2, "ctx": "tlua", "onChange" :"extensions.core_vehicle_inplaceEdit.onInput('right', VALUE)" , "actionMap": "vehicleEdit", "title": "right", "desc": "" },
+  "inplaceEdit_up"     : {"cat":"editor", "order": 3, "ctx": "tlua", "onChange" :"extensions.core_vehicle_inplaceEdit.onInput('up', VALUE)"    , "actionMap": "vehicleEdit", "title": "up", "desc": "" },
+  "inplaceEdit_down"   : {"cat":"editor", "order": 4, "ctx": "tlua", "onChange" :"extensions.core_vehicle_inplaceEdit.onInput('down', VALUE)"  , "actionMap": "vehicleEdit", "title": "down", "desc": "" },
+  "inplaceEdit_select" : {"cat":"editor", "order": 5, "ctx": "tlua", "onChange" :"extensions.core_vehicle_inplaceEdit.onInput('select', VALUE)", "actionMap": "vehicleEdit", "title": "select", "desc": "" },
+  "inplaceEdit_back"   : {"cat":"editor", "order": 6, "ctx": "tlua", "onChange" :"extensions.core_vehicle_inplaceEdit.onInput('back', VALUE)"  , "actionMap": "vehicleEdit", "title": "back", "desc": "" }
+}

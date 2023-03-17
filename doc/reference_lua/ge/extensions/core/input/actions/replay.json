@@ -1,0 +1,13 @@
+// Please refer to modding/input/ documentation for information about input actions
+// DOT NOT EDIT THIS FILE.
+
+{
+"toggleReplayRecording"   :{"cat":"replay", "order": 94, "ctx": "tlua", "onDown"  :"core_replay.toggleRecording()", "title": "ui.inputActions.gameplay.toggleReplayRecording.title", "desc": "ui.inputActions.gameplay.toggleReplayRecording.description" },
+"cancelReplayRecording"   :{"cat":"replay", "order": 95, "ctx": "tlua", "onDown"  :"core_replay.cancelRecording()", "title": "ui.inputActions.gameplay.cancelReplayRecording.title", "desc": "ui.inputActions.gameplay.cancelReplayRecording.description" },
+"jumpAhead"               :{"cat":"replay",    "order":  5, "ctx": "tlua", "onDown"  :"core_replay.jump(  1)", "actionMap": "ReplayPlayback", "title": "ui.inputActions.slowmotion.jumpAhead.title", "desc": "ui.inputActions.slowmotion.jumpAhead.description" },
+"jumpBack"                :{"cat":"replay",    "order":  6, "ctx": "tlua", "onDown"  :"core_replay.jump( -1)", "actionMap": "ReplayPlayback", "title": "ui.inputActions.slowmotion.jumpBack.title", "desc": "ui.inputActions.slowmotion.jumpBack.description" },
+"jumpFarAhead"            :{"cat":"replay",    "order":  7, "ctx": "tlua", "onDown"  :"core_replay.jump( 15)", "actionMap": "ReplayPlayback", "title": "ui.inputActions.slowmotion.jumpFarAhead.title", "desc": "ui.inputActions.slowmotion.jumpFarAhead.description" },
+"jumpFarBack"             :{"cat":"replay",    "order":  8, "ctx": "tlua", "onDown"  :"core_replay.jump(-15)", "actionMap": "ReplayPlayback", "title": "ui.inputActions.slowmotion.jumpFarBack.title", "desc": "ui.inputActions.slowmotion.jumpFarBack.description" },
+}
+
+

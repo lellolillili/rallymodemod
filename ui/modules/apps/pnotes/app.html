@@ -1,0 +1,92 @@
+<link type="text/css" rel="stylesheet" href="/ui/modules/apps/pnotes/app.css" />
+
+<div class="options" ng-show="opts" class="optionsMenu">
+    <h1> Rally Mode by Lello Lillili </h1>
+    <table class="options">
+        <tr>
+            <th> Volume </th>
+            <th>
+                <input type="range"
+                ng-model="volume" min="0"  max="15" step="0.1">
+                {{volume}}
+            </th>
+        </tr>
+        <tr>
+            <th> Timing </th>
+            <th>
+                <input type="range"
+                ng-model="timeOffset" min="2"  max="5" step="0.1">
+                {{timeOffset}}
+            </th>
+        </tr>
+        <tr>
+            <th> Pause length </th>
+            <th>
+                <input type="range"
+                ng-model="breathLength" min="0"  max="5" step="0.1">
+                {{breathLength}}
+            </th>
+        </tr>
+        <tr>
+            <th> Show visual pacenotes </th>
+            <th> <input type="checkbox" ng-model="visual"> </th>
+        </tr>
+        <tr>
+            <th> Welcome message </th>
+            <th> <input type="checkbox" ng-model="firstTime"> </th>
+        </tr>
+        <tr>
+            <th> Icon size </th>
+            <th>
+                <input type="number"
+                        ng-model="iconSize"
+                        min="50" max="300">
+            </th>
+        </tr>
+        <tr>
+            <th> Icon padding </th>
+            <th>
+                <input type="number"
+                        ng-model="iconPad"
+                        min="0" max="100">
+            </th>
+        </tr>
+        <tr> <th> <button ng-click="saveOpts()"> Save </button> </th> </tr>
+        <tr> <th> <button ng-click="hideOpts()"> Hide </button> </th> </tr>
+    </table>
+
+<!-- INFO/DEBUG TAB-->
+    <table>
+        <tr>
+            <th> Pacenote file:  {{info.pacenoteFile}}
+        </tr>
+        <tr>
+            <th>
+                last waypoint: {{info.lastWaypointN}} ({{info.lastWaypoint}})
+            </th>
+        </tr>
+        <tr>
+            <th>
+                last: {{info.lastPacenote}}
+            </th>
+        </tr>
+        <tr>
+            <th>
+                next: {{info.nextPacenote}}
+            </th>
+        </tr>
+        <tr> <th> <button ng-click="dumpDebug()"> Dump debug info </button> </th> </tr>
+    </table>
+</div>
+
+<div>
+    <table
+           ng-show="visual"
+           style="border:0px; margin-left:auto; margin-right:auto;">
+        <tr>
+            <th ng-repeat="x in picsflat track by $index" style="padding:{{iconPad}}px">
+                <img src="{{x}}" alt="{{x}}" style="height:{{iconSize}}px">
+            </th>
+        </tr>
+    </table>
+</div>

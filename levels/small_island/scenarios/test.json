@@ -1,0 +1,18 @@
+[
+{
+    "name": "TEST",
+    "extensions":[
+      "rallyMode"
+    ],
+    "description":"This is for testing and debugging the pacenote director.",
+    "previews": ["test.jpg"],
+    "type": "Rally Race",
+    "authors": "Lello Lillili",
+    "difficulty": "10",
+	"vehicles": {
+        "scenario_player0": {"playerUsable": true, "startFocus": true }
+    },
+    "lapConfig": ["point1", "point2", "point3", "point4", "point5", "point6", "point7", "point8", "point9", "point10", "point10", "point11", "point12", "point13", "point14", "point15", "point16", "point17", "point18", "point19", "point20", "point21"],
+    "prefabs": ["test"]
+}
+]

@@ -1,0 +1,27 @@
+-- This Source Code Form is subject to the terms of the bCDDL, v. 1.1.
+-- If a copy of the bCDDL was not distributed with this
+-- file, You can obtain one at http://beamng.com/bCDDL-1.1.txt
+
+local C = {}
+C.__index = C
+
+function C:init()
+  self.isGlobal = true
+  self.runningOrder = 0.6
+  self.isFilter = true
+  self.hidden = true
+end
+
+function C:update(data)
+  data.res.pos = data.res.pos or data.pos            -- camera position
+  data.res.rot = data.res.rot or quatFromDir(data.pos) -- direction towards target
+end
+
+-- DO NOT CHANGE CLASS IMPLEMENTATION BELOW
+
+return function(...)
+  local o = ... or {}
+  setmetatable(o, C)
+  o:init()
+  return o
+end

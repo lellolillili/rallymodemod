@@ -1,0 +1,11 @@
+// Please refer to modding/input/ documentation for information about input actions
+// DOT NOT EDIT THIS FILE.
+
+{
+// gameplay speed
+"toggle_slow_motion"      :{"cat":"slowmotion",    "order":  1, "ctx": "tlua", "onDown"  :"bullettime.selectPreset('^')", "title": "ui.inputActions.slowmotion.toggle_slow_motion.title", "desc": "ui.inputActions.slowmotion.toggle_slow_motion.description" },
+"slower_motion"           :{"cat":"slowmotion",    "order":  3, "ctx": "tlua", "onDown"  :"bullettime.selectPreset('<')", "title": "ui.inputActions.slowmotion.slower_motion.title", "desc": "ui.inputActions.slowmotion.slower_motion.description" },
+"faster_motion"           :{"cat":"slowmotion",    "order":  4, "ctx": "tlua", "onDown"  :"bullettime.selectPreset('>')", "title": "ui.inputActions.slowmotion.faster_motion.title", "desc": "ui.inputActions.slowmotion.faster_motion.description" },
+}
+
+

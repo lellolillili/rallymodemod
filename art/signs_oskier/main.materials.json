@@ -1,0 +1,17 @@
+{
+  "slupek": {
+    "name": "slupek",
+    "mapTo": "slupek",
+    "class": "Material",
+    "persistentId": "8f3bcd49-8d18-4cd8-86ae-ecc0e0f55954",
+    "Stages": [
+      {
+        "colorMap": "/levels/oskier_nikkoplus/art/shapes/oskier/signs/slupek"
+      },
+      {},
+      {},
+      {}
+    ],
+    "translucentBlendOp": "None"
+  }
+}

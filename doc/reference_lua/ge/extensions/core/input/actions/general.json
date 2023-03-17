@@ -1,0 +1,14 @@
+// Please refer to modding/input/ documentation for information about input actions
+// DOT NOT EDIT THIS FILE.
+
+{
+"pause"                   :{"cat":"general", "order":  1, "ctx": "tlua", "onDown"  :"bullettime.togglePause()", "title": "ui.inputActions.general.pause.title", "desc": "ui.inputActions.general.pause.description" },
+"quit"                    :{"cat":"general", "order":  2, "ctx": "tlua", "onDown"  :"quit()", "actionMap": "Global", "title": "ui.inputActions.general.quit.title", "desc": "ui.inputActions.general.quit.description" },
+"toggle_fullscreen"       :{"cat":"general", "order":  3, "ctx": "tlua", "onDown"  :"core_settings_graphic.toggleFullscreen()", "actionMap": "Global", "title": "ui.inputActions.general.toggle_fullscreen.title", "desc": "ui.inputActions.general.toggle_fullscreen.description" },
+"photomode"               :{"cat":"general", "order": 10, "ctx": "tlua", "onDown"  :"guihooks.trigger('MenuOpenModule', 'menu.photomode')", "title": "ui.inputActions.general.photomode.title", "desc": "ui.inputActions.general.photomode.description" },
+"toggleUi"                :{"cat":"general", "order": 11, "ctx": "tlua", "onDown"  :"ui_visibility.toggle()", "actionMap": "Global", "title": "ui.inputActions.general.toggleUi.title", "desc": "ui.inputActions.general.toggleUi.description" },
+"doScreenShot"            :{"cat":"general", "order": 12, "ctx": "elua", "onDown"  :"screenshot.doScreenshot()", "actionMap": "Global", "title": "ui.inputActions.general.doScreenShot.title", "desc": "ui.inputActions.general.doScreenShot.description" },
+"doBigScreenShot"         :{"cat":"general", "order": 13, "ctx": "elua", "onDown"  :"screenshot.takeBigScreenShot()", "actionMap": "Global", "title": "ui.inputActions.general.doBigScreenShot.title", "desc": "ui.inputActions.general.doBigScreenShot.description" },
+"doHugeScreenShot"        :{"cat":"general", "order": 14, "ctx": "elua", "onDown"  :"screenshot.takeHugeScreenShot()", "actionMap": "Global", "title": "ui.inputActions.general.doHugeScreenShot.title", "desc": "ui.inputActions.general.doHugeScreenShot.description" },
+"publishScreenShot"       :{"cat":"general", "order": 15, "ctx": "elua", "onDown"  :"screenshot.publish()", "actionMap": "Global", "title": "ui.inputActions.general.publishScreenShot.title", "desc": "ui.inputActions.general.publishScreenShot.description" }
+}

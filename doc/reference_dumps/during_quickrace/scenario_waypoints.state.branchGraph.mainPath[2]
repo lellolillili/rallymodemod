@@ -1,0 +1,12 @@
+example output of the command filename.
+{
+  branch = "mainPath",
+  cpName = "quickrace_wp2",
+  index = 2,
+  successors = { {
+      branch = "mainPath",
+      cpName = "quickrace_wp3",
+      index = 3,
+      insertBranch = false
+    } }
+}

@@ -1,0 +1,611 @@
+//--- OBJECT WRITE BEGIN ---
+$ThisPrefab = new SimGroup() {
+   canSave = "1";
+   canSaveDynamicFields = "1";
+      groupPosition = "0 0 0";
+
+   new BeamNGWaypoint(jungleMixed_rally_finish) {
+      drawDebug = "1";
+      directionalWaypoint = "0";
+      excludeFromMap = "0";
+      position = "-620.009644 722.046326 147.377762";
+      scale = "15 15 15";
+      rotationMatrix = "0.00191000849 -0.999998033 0 0.999998033 0.00191000849 0 0 0 1";
+      canSave = "1";
+      canSaveDynamicFields = "1";
+         mode = "Ignore";
+         pacenote = "empty";
+   };
+   new BeamNGWaypoint(jungleMixedA_rally_wp47) {
+      drawDebug = "1";
+      directionalWaypoint = "0";
+      excludeFromMap = "0";
+      position = "-603.548645 732.518372 149.255219";
+      scale = "15 15 15";
+      rotationMatrix = "0.00191000849 -0.999998033 0 0.999998033 0.00191000849 0 0 0 1";
+      canSave = "1";
+      canSaveDynamicFields = "1";
+         mode = "Ignore";
+         pacenote = "6 left";
+   };
+   new BeamNGWaypoint(jungleMixedA_rally_wp46) {
+      drawDebug = "1";
+      directionalWaypoint = "0";
+      excludeFromMap = "0";
+      position = "-507.721008 752.035583 153.514862";
+      scale = "15 15 15";
+      rotationMatrix = "0.00191000849 -0.999998033 0 0.999998033 0.00191000849 0 0 0 1";
+      canSave = "1";
+      canSaveDynamicFields = "1";
+         mode = "Ignore";
+         pacenote = "line";
+   };
+   new BeamNGWaypoint(jungleMixedA_rally_wp45) {
+      drawDebug = "1";
+      directionalWaypoint = "0";
+      excludeFromMap = "0";
+      position = "-351.370117 795.496765 146.589325";
+      scale = "15 15 15";
+      rotationMatrix = "0.00191000849 -0.999998033 0 0.999998033 0.00191000849 0 0 0 1";
+      canSave = "1";
+      canSaveDynamicFields = "1";
+         mode = "Ignore";
+         pacenote = "4 left";
+   };
+   new BeamNGWaypoint(jungleMixedA_rally_wp44) {
+      drawDebug = "1";
+      directionalWaypoint = "0";
+      excludeFromMap = "0";
+      position = "-264.197113 786.180664 145.148361";
+      scale = "15 15 15";
+      rotationMatrix = "0.00191000849 -0.999998033 0 0.999998033 0.00191000849 0 0 0 1";
+      canSave = "1";
+      canSaveDynamicFields = "1";
+         mode = "Ignore";
+         pacenote = "flat left";
+   };
+   new BeamNGWaypoint(jungleMixedA_rally_wp43) {
+      drawDebug = "1";
+      directionalWaypoint = "0";
+      excludeFromMap = "0";
+      position = "-178.411255 758.481812 147.975143";
+      scale = "15 15 15";
+      rotationMatrix = "0.00191000849 -0.999998033 0 0.999998033 0.00191000849 0 0 0 1";
+      canSave = "1";
+      canSaveDynamicFields = "1";
+         mode = "Ignore";
+         pacenote = "flat left";
+   };
+   new BeamNGWaypoint(jungleMixedA_rally_wp42) {
+      drawDebug = "1";
+      directionalWaypoint = "0";
+      excludeFromMap = "0";
+      position = "-84.8497696 719.872192 148.162949";
+      scale = "15 15 15";
+      rotationMatrix = "0.00191000849 -0.999998033 0 0.999998033 0.00191000849 0 0 0 1";
+      canSave = "1";
+      canSaveDynamicFields = "1";
+         mode = "Ignore";
+         pacenote = "6 right";
+   };
+   new BeamNGWaypoint(jungleMixedA_rally_wp41) {
+      drawDebug = "1";
+      directionalWaypoint = "0";
+      excludeFromMap = "0";
+      position = "-17.170475 708.509033 146.877884";
+      scale = "15 15 15";
+      rotationMatrix = "0.00191000849 -0.999998033 0 0.999998033 0.00191000849 0 0 0 1";
+      canSave = "1";
+      canSaveDynamicFields = "1";
+         mode = "Ignore";
+         pacenote = "go straight";
+   };
+   new BeamNGWaypoint(jungleMixedA_rally_wp40) {
+      drawDebug = "1";
+      directionalWaypoint = "0";
+      excludeFromMap = "0";
+      position = "10.7210884 701.44928 147.685257";
+      scale = "15 15 15";
+      rotationMatrix = "0.00191000849 -0.999998033 0 0.999998033 0.00191000849 0 0 0 1";
+      canSave = "1";
+      canSaveDynamicFields = "1";
+         mode = "Ignore";
+         pacenote = "drops";
+   };
+   new BeamNGWaypoint(jungleMixedA_rally_wp39) {
+      drawDebug = "1";
+      directionalWaypoint = "0";
+      excludeFromMap = "0";
+      position = "49.9362259 691.105713 147.651657";
+      scale = "15 15 15";
+      rotationMatrix = "0.00191000849 -0.999998033 0 0.999998033 0.00191000849 0 0 0 1";
+      canSave = "1";
+      canSaveDynamicFields = "1";
+         marker = "0";
+         mode = "Ignore";
+         pacenote = "empty";
+   };
+   new BeamNGWaypoint(jungleMixedA_rally_wp38) {
+      drawDebug = "1";
+      directionalWaypoint = "0";
+      excludeFromMap = "0";
+      position = "161.639297 678.117004 147.011368";
+      scale = "15 15 15";
+      rotationMatrix = "0.00191000849 -0.999998033 0 0.999998033 0.00191000849 0 0 0 1";
+      canSave = "1";
+      canSaveDynamicFields = "1";
+         mode = "Ignore";
+         pacenote = "junction 6 right long";
+   };
+   new BeamNGWaypoint(jungleMixedA_rally_wp37) {
+      drawDebug = "1";
+      directionalWaypoint = "0";
+      excludeFromMap = "0";
+      position = "208.90654 660.770142 143.221207";
+      scale = "15 15 15";
+      rotationMatrix = "0.00191000849 -0.999998033 0 0.999998033 0.00191000849 0 0 0 1";
+      canSave = "1";
+      canSaveDynamicFields = "1";
+         mode = "Ignore";
+         pacenote = "5 right";
+   };
+   new BeamNGWaypoint(jungleMixedA_rally_wp36) {
+      drawDebug = "1";
+      directionalWaypoint = "0";
+      excludeFromMap = "0";
+      position = "272.49762 656.278076 142.152405";
+      scale = "15 15 15";
+      rotationMatrix = "0.00191000849 -0.999998033 0 0.999998033 0.00191000849 0 0 0 1";
+      canSave = "1";
+      canSaveDynamicFields = "1";
+         mode = "Ignore";
+         pacenote = "6 right into mud dont cut";
+   };
+   new BeamNGWaypoint(jungleMixedA_rally_wp35) {
+      drawDebug = "1";
+      directionalWaypoint = "0";
+      excludeFromMap = "0";
+      position = "299.384369 661.827759 143.006973";
+      scale = "15 15 15";
+      rotationMatrix = "0.00191000849 -0.999998033 0 0.999998033 0.00191000849 0 0 0 1";
+      canSave = "1";
+      canSaveDynamicFields = "1";
+         marker = "0";
+         mode = "Ignore";
+         pacenote = "empty";
+   };
+   new BeamNGWaypoint(jungleMixedA_rally_wp34) {
+      drawDebug = "1";
+      directionalWaypoint = "0";
+      excludeFromMap = "0";
+      position = "347.263214 680.348999 143.917664";
+      scale = "15 15 15";
+      rotationMatrix = "0.00191000849 -0.999998033 0 0.999998033 0.00191000849 0 0 0 1";
+      canSave = "1";
+      canSaveDynamicFields = "1";
+         mode = "Ignore";
+         pacenote = "4 right tightens over crest";
+   };
+   new BeamNGWaypoint(jungleMixedA_rally_wp33) {
+      drawDebug = "1";
+      directionalWaypoint = "0";
+      excludeFromMap = "0";
+      position = "378.301575 705.779297 140.698471";
+      scale = "15 15 15";
+      rotationMatrix = "0.00191000849 -0.999998033 0 0.999998033 0.00191000849 0 0 0 1";
+      canSave = "1";
+      canSaveDynamicFields = "1";
+         mode = "Ignore";
+         pacenote = "bump go straight";
+   };
+   new BeamNGWaypoint(jungleMixedA_rally_wp32) {
+      drawDebug = "1";
+      directionalWaypoint = "0";
+      excludeFromMap = "0";
+      position = "423.101074 733.747864 139.402786";
+      scale = "15 15 15";
+      rotationMatrix = "0.00191000849 -0.999998033 0 0.999998033 0.00191000849 0 0 0 1";
+      canSave = "1";
+      canSaveDynamicFields = "1";
+         mode = "Ignore";
+         pacenote = "6 left tightens";
+   };
+   new BeamNGWaypoint(jungleMixedA_rally_wp31) {
+      drawDebug = "1";
+      directionalWaypoint = "0";
+      excludeFromMap = "0";
+      position = "463.232849 743.422791 139.881363";
+      scale = "15 15 15";
+      rotationMatrix = "0.00191000849 -0.999998033 0 0.999998033 0.00191000849 0 0 0 1";
+      canSave = "1";
+      canSaveDynamicFields = "1";
+         mode = "Ignore";
+         pacenote = "care keep middle";
+   };
+   new BeamNGWaypoint(jungleMixedA_rally_wp30) {
+      drawDebug = "1";
+      directionalWaypoint = "0";
+      excludeFromMap = "0";
+      position = "529.172729 756.891418 141.227386";
+      scale = "15 15 15";
+      rotationMatrix = "0.00191000849 -0.999998033 0 0.999998033 0.00191000849 0 0 0 1";
+      canSave = "1";
+      canSaveDynamicFields = "1";
+         marker = "0";
+         mode = "Ignore";
+         pacenote = "empty";
+   };
+   new BeamNGWaypoint(jungleMixedA_rally_wp29) {
+      drawDebug = "1";
+      directionalWaypoint = "0";
+      excludeFromMap = "0";
+      position = "573.717712 766.141418 139.080612";
+      scale = "15 15 15";
+      rotationMatrix = "0.00191000849 -0.999998033 0 0.999998033 0.00191000849 0 0 0 1";
+      canSave = "1";
+      canSaveDynamicFields = "1";
+         mode = "Ignore";
+   };
+   new BeamNGWaypoint(jungleMixedA_rally_wp28) {
+      drawDebug = "1";
+      directionalWaypoint = "0";
+      excludeFromMap = "0";
+      position = "673.426575 749.979736 135.674164";
+      scale = "15 15 15";
+      rotationMatrix = "0.00191000849 -0.999998033 0 0.999998033 0.00191000849 0 0 0 1";
+      canSave = "1";
+      canSaveDynamicFields = "1";
+         mode = "Ignore";
+         pacenote = "empty";
+   };
+   new BeamNGWaypoint(jungleMixedA_rally_wp27) {
+      drawDebug = "1";
+      directionalWaypoint = "0";
+      excludeFromMap = "0";
+      position = "708.929321 707.991821 140.466766";
+      scale = "15 15 15";
+      rotationMatrix = "0.00191000849 -0.999998033 0 0.999998033 0.00191000849 0 0 0 1";
+      canSave = "1";
+      canSaveDynamicFields = "1";
+         mode = "Ignore";
+         pacenote = "4 left long over crest";
+   };
+   new BeamNGWaypoint(jungleMixedA_rally_wp26) {
+      drawDebug = "1";
+      directionalWaypoint = "0";
+      excludeFromMap = "0";
+      position = "717.009705 653.237732 136.647141";
+      scale = "15 15 15";
+      rotationMatrix = "0.00191000849 -0.999998033 0 0.999998033 0.00191000849 0 0 0 1";
+      canSave = "1";
+      canSaveDynamicFields = "1";
+         mode = "Ignore";
+         pacenote = "empty";
+   };
+   new BeamNGWaypoint(jungleMixedA_rally_wp25) {
+      drawDebug = "1";
+      directionalWaypoint = "0";
+      excludeFromMap = "0";
+      position = "715.194519 621.916321 136.369202";
+      scale = "15 15 15";
+      rotationMatrix = "0.00191000849 -0.999998033 0 0.999998033 0.00191000849 0 0 0 1";
+      canSave = "1";
+      canSaveDynamicFields = "1";
+         mode = "Ignore";
+         pacenote = "go straight";
+   };
+   new BeamNGWaypoint(jungleMixedA_rally_wp24) {
+      drawDebug = "1";
+      directionalWaypoint = "0";
+      excludeFromMap = "0";
+      position = "706.042358 573.094604 139.523361";
+      scale = "15 15 15";
+      rotationMatrix = "0.00191000849 -0.999998033 0 0.999998033 0.00191000849 0 0 0 1";
+      canSave = "1";
+      canSaveDynamicFields = "1";
+         mode = "Ignore";
+         pacenote = "5 left dont cut";
+   };
+   new BeamNGWaypoint(jungleMixedA_rally_wp23) {
+      drawDebug = "1";
+      directionalWaypoint = "0";
+      excludeFromMap = "0";
+      position = "685.99231 530.918396 146.234909";
+      scale = "15 15 15";
+      rotationMatrix = "0.00191000849 -0.999998033 0 0.999998033 0.00191000849 0 0 0 1";
+      canSave = "1";
+      canSaveDynamicFields = "1";
+         mode = "Ignore";
+         pacenote = "bump";
+   };
+   new BeamNGWaypoint(jungleMixedA_rally_wp22) {
+      drawDebug = "1";
+      directionalWaypoint = "0";
+      excludeFromMap = "0";
+      position = "677.620361 514.617188 147.676926";
+      scale = "15 15 15";
+      rotationMatrix = "0.00191000849 -0.999998033 0 0.999998033 0.00191000849 0 0 0 1";
+      canSave = "1";
+      canSaveDynamicFields = "1";
+         mode = "Ignore";
+         pacenote = "go straight";
+   };
+   new BeamNGWaypoint(jungleMixedA_rally_wp21) {
+      drawDebug = "1";
+      directionalWaypoint = "0";
+      excludeFromMap = "0";
+      position = "655.369812 448.582001 144.233719";
+      scale = "15 15 15";
+      rotationMatrix = "0.00191000849 -0.999998033 0 0.999998033 0.00191000849 0 0 0 1";
+      canSave = "1";
+      canSaveDynamicFields = "1";
+         mode = "Ignore";
+         pacenote = "3 right dont cut";
+   };
+   new BeamNGWaypoint(jungleMixedA_rally_wp20) {
+      drawDebug = "1";
+      directionalWaypoint = "0";
+      excludeFromMap = "0";
+      position = "673.424133 401.136932 147.97261";
+      scale = "15 15 15";
+      rotationMatrix = "0.00191000849 -0.999998033 0 0.999998033 0.00191000849 0 0 0 1";
+      canSave = "1";
+      canSaveDynamicFields = "1";
+         marker = "0";
+         mode = "Ignore";
+         pacenote = "empty";
+   };
+   new BeamNGWaypoint(jungleMixedA_rally_wp19) {
+      drawDebug = "1";
+      directionalWaypoint = "0";
+      excludeFromMap = "0";
+      position = "680.769897 358.86087 155.293335";
+      scale = "15 15 15";
+      rotationMatrix = "0.00191000849 -0.999998033 0 0.999998033 0.00191000849 0 0 0 1";
+      canSave = "1";
+      canSaveDynamicFields = "1";
+         mode = "Ignore";
+         pacenote = "empty";
+   };
+   new BeamNGWaypoint(jungleMixedA_rally_wp18) {
+      drawDebug = "1";
+      directionalWaypoint = "0";
+      excludeFromMap = "0";
+      position = "628.676208 281.691864 161.541519";
+      scale = "15 15 15";
+      rotationMatrix = "0.00191000849 -0.999998033 0 0.999998033 0.00191000849 0 0 0 1";
+      canSave = "1";
+      canSaveDynamicFields = "1";
+         mode = "Ignore";
+         pacenote = "4 left long over crest";
+   };
+   new BeamNGWaypoint(jungleMixedA_rally_wp17) {
+      drawDebug = "1";
+      directionalWaypoint = "0";
+      excludeFromMap = "0";
+      position = "565.995911 245.311081 151.103043";
+      scale = "15 15 15";
+      rotationMatrix = "0.00191000849 -0.999998033 0 0.999998033 0.00191000849 0 0 0 1";
+      canSave = "1";
+      canSaveDynamicFields = "1";
+         marker = "0";
+         mode = "Ignore";
+         pacenote = "empty";
+   };
+   new BeamNGWaypoint(jungleMixedA_rally_wp16) {
+      drawDebug = "1";
+      directionalWaypoint = "0";
+      excludeFromMap = "0";
+      position = "522.290771 185.853043 148.959976";
+      scale = "15 15 15";
+      rotationMatrix = "0.00191000849 -0.999998033 0 0.999998033 0.00191000849 0 0 0 1";
+      canSave = "1";
+      canSaveDynamicFields = "1";
+         mode = "Ignore";
+         pacenote = "4 right tightens";
+   };
+   new BeamNGWaypoint(jungleMixedA_rally_wp15) {
+      drawDebug = "1";
+      directionalWaypoint = "0";
+      excludeFromMap = "0";
+      position = "537.408081 107.955566 148.165802";
+      scale = "15 15 15";
+      rotationMatrix = "0.00191000849 -0.999998033 0 0.999998033 0.00191000849 0 0 0 1";
+      canSave = "1";
+      canSaveDynamicFields = "1";
+         mode = "Ignore";
+         pacenote = "4 left";
+   };
+   new BeamNGWaypoint(jungleMixedA_rally_wp14) {
+      drawDebug = "1";
+      directionalWaypoint = "0";
+      excludeFromMap = "0";
+      position = "531.960999 62.9336891 150.449707";
+      scale = "15 15 15";
+      rotationMatrix = "0.00191000849 -0.999998033 0 0.999998033 0.00191000849 0 0 0 1";
+      canSave = "1";
+      canSaveDynamicFields = "1";
+         mode = "Ignore";
+         pacenote = "5 right";
+   };
+   new BeamNGWaypoint(jungleMixedA_rally_wp13) {
+      drawDebug = "1";
+      directionalWaypoint = "0";
+      excludeFromMap = "0";
+      position = "533.738098 12.6434784 156.363571";
+      scale = "15 15 15";
+      rotationMatrix = "0.00191000849 -0.999998033 0 0.999998033 0.00191000849 0 0 0 1";
+      canSave = "1";
+      canSaveDynamicFields = "1";
+         mode = "Ignore";
+         pacenote = "bumpy";
+   };
+   new BeamNGWaypoint(jungleMixedA_rally_wp12) {
+      drawDebug = "1";
+      directionalWaypoint = "0";
+      excludeFromMap = "0";
+      position = "542.445374 -51.4772034 163.390182";
+      scale = "15 15 15";
+      rotationMatrix = "0.00191000849 -0.999998033 0 0.999998033 0.00191000849 0 0 0 1";
+      canSave = "1";
+      canSaveDynamicFields = "1";
+         mode = "Ignore";
+         pacenote = "4 right";
+   };
+   new BeamNGWaypoint(jungleMixedA_rally_wp11) {
+      drawDebug = "1";
+      directionalWaypoint = "0";
+      excludeFromMap = "0";
+      position = "558.46228 -80.7228317 168.649368";
+      scale = "15 15 15";
+      rotationMatrix = "0.00191000849 -0.999998033 0 0.999998033 0.00191000849 0 0 0 1";
+      canSave = "1";
+      canSaveDynamicFields = "1";
+         mode = "Ignore";
+         pacenote = "5 left";
+   };
+   new BeamNGWaypoint(jungleMixedA_rally_wp10) {
+      drawDebug = "1";
+      directionalWaypoint = "0";
+      excludeFromMap = "0";
+      position = "586.57251 -127.165977 177.085205";
+      scale = "15 15 15";
+      rotationMatrix = "0.00191000849 -0.999998033 0 0.999998033 0.00191000849 0 0 0 1";
+      canSave = "1";
+      canSaveDynamicFields = "1";
+         mode = "Ignore";
+         pacenote = "4 right drops";
+   };
+   new BeamNGWaypoint(jungleMixedA_rally_wp9) {
+      drawDebug = "1";
+      directionalWaypoint = "0";
+      excludeFromMap = "0";
+      position = "613.866211 -148.597275 178.929794";
+      scale = "15 15 15";
+      rotationMatrix = "0.00191000849 -0.999998033 0 0.999998033 0.00191000849 0 0 0 1";
+      canSave = "1";
+      canSaveDynamicFields = "1";
+         mode = "Ignore";
+         pacenote = "5 left";
+   };
+   new BeamNGWaypoint(jungleMixedA_rally_wp8) {
+      drawDebug = "1";
+      directionalWaypoint = "0";
+      excludeFromMap = "0";
+      position = "673.232849 -233.409027 178.046387";
+      scale = "15 15 15";
+      rotationMatrix = "0.00191000849 -0.999998033 0 0.999998033 0.00191000849 0 0 0 1";
+      canSave = "1";
+      canSaveDynamicFields = "1";
+         mode = "Ignore";
+         pacenote = "5 right tightens";
+   };
+   new BeamNGWaypoint(jungleMixedA_rally_wp7) {
+      drawDebug = "1";
+      directionalWaypoint = "0";
+      excludeFromMap = "0";
+      position = "703.557556 -260.127563 177.870804";
+      scale = "15 15 15";
+      rotationMatrix = "0.00191000849 -0.999998033 0 0.999998033 0.00191000849 0 0 0 1";
+      canSave = "1";
+      canSaveDynamicFields = "1";
+         mode = "Ignore";
+         pacenote = "crest";
+   };
+   new BeamNGWaypoint(jungleMixedA_rally_wp6) {
+      drawDebug = "1";
+      directionalWaypoint = "0";
+      excludeFromMap = "0";
+      position = "747.255981 -290.28891 171.762421";
+      scale = "15 15 15";
+      rotationMatrix = "0.00191000849 -0.999998033 0 0.999998033 0.00191000849 0 0 0 1";
+      canSave = "1";
+      canSaveDynamicFields = "1";
+         mode = "Ignore";
+         pacenote = "3 left";
+   };
+   new BeamNGWaypoint(jungleMixedA_rally_wp5) {
+      drawDebug = "1";
+      directionalWaypoint = "0";
+      excludeFromMap = "0";
+      position = "788.082764 -373.657135 167.907562";
+      scale = "15 15 15";
+      rotationMatrix = "0.00191000849 -0.999998033 0 0.999998033 0.00191000849 0 0 0 1";
+      canSave = "1";
+      canSaveDynamicFields = "1";
+         mode = "Ignore";
+         pacenote = "flat right";
+   };
+   new BeamNGWaypoint(jungleMixedA_rally_wp4) {
+      drawDebug = "1";
+      directionalWaypoint = "0";
+      excludeFromMap = "0";
+      position = "805.748596 -406.897308 165.8125";
+      scale = "15 15 15";
+      rotationMatrix = "0.00191000849 -0.999998033 0 0.999998033 0.00191000849 0 0 0 1";
+      canSave = "1";
+      canSaveDynamicFields = "1";
+         mode = "Ignore";
+         pacenote = "crest";
+   };
+   new BeamNGWaypoint(jungleMixedA_rally_wp3) {
+      drawDebug = "1";
+      directionalWaypoint = "0";
+      excludeFromMap = "0";
+      position = "840.897095 -464.058075 159.992584";
+      scale = "15 15 15";
+      rotationMatrix = "0.00191000849 -0.999998033 0 0.999998033 0.00191000849 0 0 0 1";
+      canSave = "1";
+      canSaveDynamicFields = "1";
+         mode = "Ignore";
+         pacenote = "6 left";
+   };
+   new BeamNGWaypoint(jungleMixedA_rally_wp2) {
+      drawDebug = "1";
+      directionalWaypoint = "0";
+      excludeFromMap = "0";
+      position = "864.635681 -518.01355 154.734421";
+      scale = "15 15 15";
+      rotationMatrix = "0.00191000849 -0.999998033 0 0.999998033 0.00191000849 0 0 0 1";
+      canSave = "1";
+      canSaveDynamicFields = "1";
+         mode = "Ignore";
+         pacenote = "empty";
+   };
+   new BeamNGWaypoint(jungleMixedA_rally_wp1) {
+      drawDebug = "1";
+      directionalWaypoint = "0";
+      excludeFromMap = "0";
+      position = "889.256958 -586.584229 146.971191";
+      scale = "15 15 15";
+      rotationMatrix = "0.00191000849 -0.999998033 0 0.999998033 0.00191000849 0 0 0 1";
+      canSave = "1";
+      canSaveDynamicFields = "1";
+         mode = "Ignore";
+         pacenote = "onto gravel";
+   };
+   new SpawnSphere(jungleMixed_shakedown_2_standing_spawn) {
+      SpawnClass = "player";
+      SpawnDatablock = "DefaultPlayerData";
+      autoSpawn = "0";
+      spawnTransform = "0";
+      radius = "1";
+      dataBlock = "SpawnSphereMarker";
+      position = "894.432251 -599.913818 146.349274";
+      scale = "1 1 1";
+      rotationMatrix = "-0.930164933 -0.367142588 0 0.367142588 -0.930164933 0 0 0 1";
+      canSave = "1";
+      canSaveDynamicFields = "1";
+         autoplaceOnSpawn = "0";
+         mode = "Ignore";
+         sphereWeight = "1";
+   };
+};
+//--- OBJECT WRITE END ---
+
+
+
+
+
+
+

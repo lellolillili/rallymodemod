@@ -1,0 +1,27 @@
+:root {
+  --green: #1fc22d;
+}
+
+div.options {
+    background-color: rgba(0, 0, 0, 0.5);
+    color: rgba(255, 255, 255, 1);
+    font-style: normal;
+    margin-left: 40px;
+    border-left-style: solid;
+    height: 100%;
+}
+
+table.options {
+  table-layout: fixed;
+  width: 400px;
+  float: left;
+}
+
+th{
+    font-style: normal;
+    text-align: left;
+}
+
+tr:hover {
+    background-color: var(--green);
+}

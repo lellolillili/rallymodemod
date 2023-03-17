@@ -1,0 +1,1228 @@
+//--- OBJECT WRITE BEGIN ---
+$ThisPrefab = new SimGroup() {
+   canSave = "1";
+   canSaveDynamicFields = "1";
+      groupPosition = "0 0 0";
+
+   new SpawnSphere(EfecusaRallyB_standing_spawn) {
+      spawnClass = "player";
+      spawnDatablock = "DefaultPlayerData";
+      autoSpawn = "0";
+      spawnTransform = "0";
+      radius = "1";
+      dataBlock = "SpawnSphereMarker";
+      position = "-133.492142 -641.546692 41.011261";
+      scale = "1 1 1";
+      rotationMatrix = "-0.214362025 -0.976636231 0.0152064096 0.97631377 -0.213771582 0.0333719477 -0.0293415505 0.0219998918 0.999327302";
+      mode = "Ignore";
+      canSave = "1";
+      canSaveDynamicFields = "1";
+      persistentId = "9b171eb9-b2e5-4290-8333-73a0f5e7baba";
+         autoplaceOnSpawn = "0";
+         sphereWeight = "1";
+   };
+   new BeamNGWaypoint(efecusa_rally_B_start) {
+      drawDebug = "0";
+      directionalWaypoint = "0";
+      excludeFromMap = "0";
+      position = "-141.674973 -640.595703 41.1882782";
+      scale = "5 5 5";
+      rotationMatrix = "0.00191000849 -0.999998033 0 0.999998033 0.00191000849 0 0 0 1";
+      mode = "Ignore";
+      canSave = "1";
+      canSaveDynamicFields = "1";
+      persistentId = "4e6f033e-0be2-4bdc-bf51-ec7ddd106822";
+         pacenote = "empty";
+   };
+   new BeamNGWaypoint(efecusa_rally_B_wp101) {
+      drawDebug = "0";
+      directionalWaypoint = "0";
+      excludeFromMap = "0";
+      position = "-199.977737 -644.322571 46.0105019";
+      scale = "15 15 15";
+      rotationMatrix = "0.00191000849 -0.999998033 0 0.999998033 0.00191000849 0 0 0 1";
+      mode = "Ignore";
+      canSave = "1";
+      canSaveDynamicFields = "1";
+      persistentId = "f859d47d-58d5-46dd-95e5-3424bafbac4f";
+         pacenote = "empty";
+   };
+   new BeamNGWaypoint(efecusa_rally_B_wp102) {
+      drawDebug = "0";
+      directionalWaypoint = "0";
+      excludeFromMap = "0";
+      position = "-249.625214 -658.250549 48.3268204";
+      scale = "15 15 15";
+      rotationMatrix = "0.00191000849 -0.999998033 0 0.999998033 0.00191000849 0 0 0 1";
+      mode = "Ignore";
+      canSave = "1";
+      canSaveDynamicFields = "1";
+      persistentId = "59481aa4-16f5-4ebf-8964-372c4888b019";
+         pacenote = "late R4E long tightens late";
+   };
+   new BeamNGWaypoint(efecusa_rally_B_wp103) {
+      drawDebug = "0";
+      directionalWaypoint = "0";
+      excludeFromMap = "0";
+      position = "-298.091461 -662.180786 55.3519173";
+      scale = "15 15 15";
+      rotationMatrix = "0.00191000849 -0.999998033 0 0.999998033 0.00191000849 0 0 0 1";
+      mode = "Ignore";
+      canSave = "1";
+      canSaveDynamicFields = "1";
+      persistentId = "ad1bc1e3-f75c-4a3c-bbc0-9d37a08b1667";
+         pacenote = "empty";
+   };
+   new BeamNGWaypoint(efecusa_rally_B_wp104) {
+      drawDebug = "0";
+      directionalWaypoint = "0";
+      excludeFromMap = "0";
+      position = "-322.607422 -653.44458 58.4076843";
+      scale = "15 15 15";
+      rotationMatrix = "0.00191000849 -0.999998033 0 0.999998033 0.00191000849 0 0 0 1";
+      mode = "Ignore";
+      canSave = "1";
+      canSaveDynamicFields = "1";
+      persistentId = "143e0d86-237f-4610-87b7-533f167e06dd";
+         pacenote = "empty";
+   };
+   new BeamNGWaypoint(efecusa_rally_B_wp105) {
+      drawDebug = "0";
+      directionalWaypoint = "0";
+      excludeFromMap = "0";
+      position = "-352.649109 -620.780579 55.1765289";
+      scale = "15 15 15";
+      rotationMatrix = "0.00191000849 -0.999998033 0 0.999998033 0.00191000849 0 0 0 1";
+      mode = "Ignore";
+      canSave = "1";
+      canSaveDynamicFields = "1";
+      persistentId = "26d4daaf-d51e-4637-bc86-b34e4531f147";
+         marker = "0";
+         pacenote = "empty";
+   };
+   new BeamNGWaypoint(efecusa_rally_B_wp106) {
+      drawDebug = "0";
+      directionalWaypoint = "0";
+      excludeFromMap = "0";
+      position = "-354.883514 -587.671814 50.2785492";
+      scale = "15 15 15";
+      rotationMatrix = "0.00191000849 -0.999998033 0 0.999998033 0.00191000849 0 0 0 1";
+      mode = "Ignore";
+      canSave = "1";
+      canSaveDynamicFields = "1";
+      persistentId = "fda4f337-2cae-4867-8923-17c38b62f16a";
+         pacenote = "empty";
+   };
+   new BeamNGWaypoint(efecusa_rally_B_wp107) {
+      drawDebug = "0";
+      directionalWaypoint = "0";
+      excludeFromMap = "0";
+      position = "-359.87442 -547.777771 43.9692879";
+      scale = "15 15 15";
+      rotationMatrix = "0.00191000849 -0.999998033 0 0.999998033 0.00191000849 0 0 0 1";
+      mode = "Ignore";
+      canSave = "1";
+      canSaveDynamicFields = "1";
+      persistentId = "e7647170-23d4-447c-a198-6ddf0a870dab";
+         pacenote = "junction L2P";
+   };
+   new BeamNGWaypoint(efecusa_rally_B_wp108) {
+      drawDebug = "0";
+      directionalWaypoint = "0";
+      excludeFromMap = "0";
+      position = "-399.427551 -529.620605 40.1582184";
+      scale = "15 15 15";
+      rotationMatrix = "0.00191000849 -0.999998033 0 0.999998033 0.00191000849 0 0 0 1";
+      mode = "Ignore";
+      canSave = "1";
+      canSaveDynamicFields = "1";
+      persistentId = "75bb1d0d-b133-4c5e-b442-fa259a2f40ac";
+         pacenote = "L6E";
+   };
+   new BeamNGWaypoint(efecusa_rally_B_wp109) {
+      drawDebug = "0";
+      directionalWaypoint = "0";
+      excludeFromMap = "0";
+      position = "-447.384857 -514.759644 35.2816772";
+      scale = "15 15 15";
+      rotationMatrix = "0.00191000849 -0.999998033 0 0.999998033 0.00191000849 0 0 0 1";
+      mode = "Ignore";
+      canSave = "1";
+      canSaveDynamicFields = "1";
+      persistentId = "73231ce5-d353-4cdb-9e80-b82461056e5d";
+         pacenote = "caution keep middle";
+   };
+   new BeamNGWaypoint(efecusa_rally_B_wp110) {
+      drawDebug = "0";
+      directionalWaypoint = "0";
+      excludeFromMap = "0";
+      position = "-464.353912 -511.615265 35.6015549";
+      scale = "15 15 15";
+      rotationMatrix = "0.00191000849 -0.999998033 0 0.999998033 0.00191000849 0 0 0 1";
+      mode = "Ignore";
+      canSave = "1";
+      canSaveDynamicFields = "1";
+      persistentId = "d8138267-6650-49da-a728-650824ea2c0e";
+         pacenote = "L4E";
+   };
+   new BeamNGWaypoint(efecusa_rally_B_wp111) {
+      drawDebug = "0";
+      directionalWaypoint = "0";
+      excludeFromMap = "0";
+      position = "-505.29248 -515.333313 40.7514572";
+      scale = "15 15 15";
+      rotationMatrix = "0.00191000849 -0.999998033 0 0.999998033 0.00191000849 0 0 0 1";
+      mode = "Ignore";
+      canSave = "1";
+      canSaveDynamicFields = "1";
+      persistentId = "38aba32e-414f-42a2-9ea3-249b671b7c45";
+         pacenote = "big jump keep middle";
+   };
+   new BeamNGWaypoint(efecusa_rally_B_wp112) {
+      drawDebug = "0";
+      directionalWaypoint = "0";
+      excludeFromMap = "0";
+      position = "-539.121887 -521.782715 35.6706505";
+      scale = "15 15 15";
+      rotationMatrix = "0.00191000849 -0.999998033 0 0.999998033 0.00191000849 0 0 0 1";
+      mode = "Ignore";
+      canSave = "1";
+      canSaveDynamicFields = "1";
+      persistentId = "c43ef5c9-e155-4fbf-911c-c2b8609aa04e";
+         pacenote = "R3P";
+   };
+   new BeamNGWaypoint(efecusa_rally_B_wp113) {
+      drawDebug = "0";
+      directionalWaypoint = "0";
+      excludeFromMap = "0";
+      position = "-569.146851 -512.93396 34.3188591";
+      scale = "15 15 15";
+      rotationMatrix = "0.00191000849 -0.999998033 0 0.999998033 0.00191000849 0 0 0 1";
+      mode = "Ignore";
+      canSave = "1";
+      canSaveDynamicFields = "1";
+      persistentId = "d1a8a0ea-2218-4c55-b482-ffdd7b57feeb";
+         pacenote = "empty";
+   };
+   new BeamNGWaypoint(efecusa_rally_B_wp114) {
+      drawDebug = "0";
+      directionalWaypoint = "0";
+      excludeFromMap = "0";
+      position = "-591.293396 -492.804779 33.6504288";
+      scale = "15 15 15";
+      rotationMatrix = "0.00191000849 -0.999998033 0 0.999998033 0.00191000849 0 0 0 1";
+      mode = "Ignore";
+      canSave = "1";
+      canSaveDynamicFields = "1";
+      persistentId = "f71daf4f-4dfe-44ca-a0ef-e30b52d1b6ce";
+         pacenote = "L4E";
+   };
+   new BeamNGWaypoint(efecusa_rally_B_wp115) {
+      drawDebug = "0";
+      directionalWaypoint = "0";
+      excludeFromMap = "0";
+      position = "-625.454895 -485.068085 31.2167358";
+      scale = "15 15 15";
+      rotationMatrix = "0.00191000849 -0.999998033 0 0.999998033 0.00191000849 0 0 0 1";
+      mode = "Ignore";
+      canSave = "1";
+      canSaveDynamicFields = "1";
+      persistentId = "341e3ff0-325c-4edc-b0e4-9d423e31e60f";
+         marker = "0";
+         pacenote = "empty";
+   };
+   new BeamNGWaypoint(efecusa_rally_B_wp116) {
+      drawDebug = "0";
+      directionalWaypoint = "0";
+      excludeFromMap = "0";
+      position = "-648.381653 -484.698303 29.8387089";
+      scale = "15 15 15";
+      rotationMatrix = "0.00191000849 -0.999998033 0 0.999998033 0.00191000849 0 0 0 1";
+      mode = "Ignore";
+      canSave = "1";
+      canSaveDynamicFields = "1";
+      persistentId = "6e9fb6b6-1c1b-4132-aa3c-da986efa4af0";
+         pacenote = "empty";
+   };
+   new BeamNGWaypoint(efecusa_rally_B_wp117) {
+      drawDebug = "0";
+      directionalWaypoint = "0";
+      excludeFromMap = "0";
+      position = "-676.026855 -486.508911 28.5020466";
+      scale = "15 15 15";
+      rotationMatrix = "0.00191000849 -0.999998033 0 0.999998033 0.00191000849 0 0 0 1";
+      mode = "Ignore";
+      canSave = "1";
+      canSaveDynamicFields = "1";
+      persistentId = "e75744f0-9875-49c5-b5d8-f41be2d85bb8";
+         pacenote = "R5E late";
+   };
+   new BeamNGWaypoint(efecusa_rally_B_wp118) {
+      drawDebug = "0";
+      directionalWaypoint = "0";
+      excludeFromMap = "0";
+      position = "-710.248901 -477.323578 25.0626335";
+      scale = "15 15 15";
+      rotationMatrix = "0.00191000849 -0.999998033 0 0.999998033 0.00191000849 0 0 0 1";
+      mode = "Ignore";
+      canSave = "1";
+      canSaveDynamicFields = "1";
+      persistentId = "5b55ac16-1768-4825-9d02-e5e96eb40daa";
+         pacenote = "L0M";
+   };
+   new BeamNGWaypoint(efecusa_rally_B_wp119) {
+      drawDebug = "0";
+      directionalWaypoint = "0";
+      excludeFromMap = "0";
+      position = "-713.487122 -528.640503 28.002758";
+      scale = "15 15 15";
+      rotationMatrix = "0.00191000849 -0.999998033 0 0.999998033 0.00191000849 0 0 0 1";
+      mode = "Ignore";
+      canSave = "1";
+      canSaveDynamicFields = "1";
+      persistentId = "7e7ced76-8e87-4cc1-a59f-0bd1538efa8a";
+         pacenote = "go straight";
+   };
+   new BeamNGWaypoint(efecusa_rally_B_wp120) {
+      drawDebug = "0";
+      directionalWaypoint = "0";
+      excludeFromMap = "0";
+      position = "-704.538452 -588.617554 23.5339336";
+      scale = "15 15 15";
+      rotationMatrix = "0.00191000849 -0.999998033 0 0.999998033 0.00191000849 0 0 0 1";
+      mode = "Ignore";
+      canSave = "1";
+      canSaveDynamicFields = "1";
+      persistentId = "5b766a6e-f361-4b16-b3b2-65d65ecd5151";
+         pacenote = "R6P";
+   };
+   new BeamNGWaypoint(efecusa_rally_B_wp121) {
+      drawDebug = "0";
+      directionalWaypoint = "0";
+      excludeFromMap = "0";
+      position = "-697.985352 -656.154785 23.5999241";
+      scale = "15 15 15";
+      rotationMatrix = "0.00191000849 -0.999998033 0 0.999998033 0.00191000849 0 0 0 1";
+      mode = "Ignore";
+      canSave = "1";
+      canSaveDynamicFields = "1";
+      persistentId = "6777a603-0cca-4f70-bae6-06d787bcab71";
+         pacenote = "empty";
+   };
+   new BeamNGWaypoint(efecusa_rally_B_wp122) {
+      drawDebug = "0";
+      directionalWaypoint = "0";
+      excludeFromMap = "0";
+      position = "-695.061218 -714.026428 32.2183685";
+      scale = "15 15 15";
+      rotationMatrix = "0.00191000849 -0.999998033 0 0.999998033 0.00191000849 0 0 0 1";
+      mode = "Ignore";
+      canSave = "1";
+      canSaveDynamicFields = "1";
+      persistentId = "31aaf095-9f01-42da-9026-54e5ceccd28e";
+         pacenote = "L4E";
+   };
+   new BeamNGWaypoint(efecusa_rally_B_wp123) {
+      drawDebug = "0";
+      directionalWaypoint = "0";
+      excludeFromMap = "0";
+      position = "-690.662415 -735.655884 40.9700508";
+      scale = "15 15 15";
+      rotationMatrix = "0.00191000849 -0.999998033 0 0.999998033 0.00191000849 0 0 0 1";
+      mode = "Ignore";
+      canSave = "1";
+      canSaveDynamicFields = "1";
+      persistentId = "ae23eb12-daf8-45ab-850f-ad5f29a305c1";
+         pacenote = "RS";
+   };
+   new BeamNGWaypoint(efecusa_rally_B_wp124) {
+      drawDebug = "0";
+      directionalWaypoint = "0";
+      excludeFromMap = "0";
+      position = "-707.19342 -779.535645 40.048584";
+      scale = "15 15 15";
+      rotationMatrix = "0.00191000849 -0.999998033 0 0.999998033 0.00191000849 0 0 0 1";
+      mode = "Ignore";
+      canSave = "1";
+      canSaveDynamicFields = "1";
+      persistentId = "74df9983-7858-486c-8587-3250507fbcea";
+         pacenote = "bridge";
+   };
+   new BeamNGWaypoint(efecusa_rally_B_wp125) {
+      drawDebug = "0";
+      directionalWaypoint = "0";
+      excludeFromMap = "0";
+      position = "-790.187256 -790.328674 40.0863953";
+      scale = "15 15 15";
+      rotationMatrix = "0.00191000849 -0.999998033 0 0.999998033 0.00191000849 0 0 0 1";
+      mode = "Ignore";
+      canSave = "1";
+      canSaveDynamicFields = "1";
+      persistentId = "e1bf0b85-0eff-4149-ab01-dc45f5ee3fa4";
+         pacenote = "L4P";
+   };
+   new BeamNGWaypoint(efecusa_rally_B_wp126) {
+      drawDebug = "0";
+      directionalWaypoint = "0";
+      excludeFromMap = "0";
+      position = "-839.474121 -829.062927 40.6899109";
+      scale = "15 15 15";
+      rotationMatrix = "0.00191000849 -0.999998033 0 0.999998033 0.00191000849 0 0 0 1";
+      mode = "Ignore";
+      canSave = "1";
+      canSaveDynamicFields = "1";
+      persistentId = "251976c9-555e-4b3f-bf8b-a3820f6df0c2";
+         pacenote = "dip";
+   };
+   new BeamNGWaypoint(efecusa_rally_B_wp127) {
+      drawDebug = "0";
+      directionalWaypoint = "0";
+      excludeFromMap = "0";
+      position = "-871.872131 -870.475708 42.2291985";
+      scale = "15 15 15";
+      rotationMatrix = "0.00191000849 -0.999998033 0 0.999998033 0.00191000849 0 0 0 1";
+      mode = "Ignore";
+      canSave = "1";
+      canSaveDynamicFields = "1";
+      persistentId = "d92fd38d-9d75-4cd2-a9f2-1a1c6a07e3c0";
+         pacenote = "R4E long tightens late";
+   };
+   new BeamNGWaypoint(efecusa_rally_B_wp128) {
+      drawDebug = "0";
+      directionalWaypoint = "0";
+      excludeFromMap = "0";
+      position = "-920.159607 -879.342468 43.2481041";
+      scale = "15 15 15";
+      rotationMatrix = "0.00191000849 -0.999998033 0 0.999998033 0.00191000849 0 0 0 1";
+      mode = "Ignore";
+      canSave = "1";
+      canSaveDynamicFields = "1";
+      persistentId = "0f13fd14-a0e5-47e9-b384-c69c4a15bc29";
+         pacenote = "empty";
+   };
+   new BeamNGWaypoint(efecusa_rally_B_wp129) {
+      drawDebug = "0";
+      directionalWaypoint = "0";
+      excludeFromMap = "0";
+      position = "-954.597412 -825.217651 42.522747";
+      scale = "15 15 15";
+      rotationMatrix = "0.00191000849 -0.999998033 0 0.999998033 0.00191000849 0 0 0 1";
+      mode = "Ignore";
+      canSave = "1";
+      canSaveDynamicFields = "1";
+      persistentId = "18a9341b-bccb-405d-8ed8-ac7d92b6da6e";
+         marker = "0";
+         pacenote = "empty";
+   };
+   new BeamNGWaypoint(efecusa_rally_B_wp130) {
+      drawDebug = "0";
+      directionalWaypoint = "0";
+      excludeFromMap = "0";
+      position = "-932.242493 -779.606445 38.2321091";
+      scale = "15 15 15";
+      rotationMatrix = "0.00191000849 -0.999998033 0 0.999998033 0.00191000849 0 0 0 1";
+      mode = "Ignore";
+      canSave = "1";
+      canSaveDynamicFields = "1";
+      persistentId = "0b87ff7c-a533-4f5a-b8cd-be522345cbb4";
+         pacenote = "junction L2P dont cut";
+   };
+   new BeamNGWaypoint(efecusa_rally_B_wp131) {
+      drawDebug = "0";
+      directionalWaypoint = "0";
+      excludeFromMap = "0";
+      position = "-952.458374 -743.534119 38.1788521";
+      scale = "15 15 15";
+      rotationMatrix = "0.00191000849 -0.999998033 0 0.999998033 0.00191000849 0 0 0 1";
+      mode = "Ignore";
+      canSave = "1";
+      canSaveDynamicFields = "1";
+      persistentId = "5cdce3df-0641-4bb7-9f4d-eab8bf053d19";
+         pacenote = "R5E tightens dont cut late";
+   };
+   new BeamNGWaypoint(efecusa_rally_B_wp132) {
+      drawDebug = "0";
+      directionalWaypoint = "0";
+      excludeFromMap = "0";
+      position = "-956.350403 -682.992676 34.9902458";
+      scale = "15 15 15";
+      rotationMatrix = "0.00191000849 -0.999998033 0 0.999998033 0.00191000849 0 0 0 1";
+      mode = "Ignore";
+      canSave = "1";
+      canSaveDynamicFields = "1";
+      persistentId = "99968f62-d8e0-4f78-a8ba-be65f74f9c24";
+         marker = "0";
+         pacenote = "empty";
+   };
+   new BeamNGWaypoint(efecusa_rally_B_wp133) {
+      drawDebug = "0";
+      directionalWaypoint = "0";
+      excludeFromMap = "0";
+      position = "-937.689514 -612.361816 32.815239";
+      scale = "15 15 15";
+      rotationMatrix = "0.00191000849 -0.999998033 0 0.999998033 0.00191000849 0 0 0 1";
+      mode = "Ignore";
+      canSave = "1";
+      canSaveDynamicFields = "1";
+      persistentId = "a23b4bb3-1422-4b51-b1fb-6e31df86d7fd";
+         pacenote = "L6M long";
+   };
+   new BeamNGWaypoint(efecusa_rally_B_wp134) {
+      drawDebug = "0";
+      directionalWaypoint = "0";
+      excludeFromMap = "0";
+      position = "-935.231201 -536.463745 35.7108498";
+      scale = "15 15 15";
+      rotationMatrix = "0.00191000849 -0.999998033 0 0.999998033 0.00191000849 0 0 0 1";
+      mode = "Ignore";
+      canSave = "1";
+      canSaveDynamicFields = "1";
+      persistentId = "6413ac9b-5ef3-4c02-b873-c57272335b6b";
+         pacenote = "empty";
+   };
+   new BeamNGWaypoint(efecusa_rally_B_wp135) {
+      drawDebug = "0";
+      directionalWaypoint = "0";
+      excludeFromMap = "0";
+      position = "-955.681274 -463.859436 42.0842247";
+      scale = "15 15 15";
+      rotationMatrix = "0.00191000849 -0.999998033 0 0.999998033 0.00191000849 0 0 0 1";
+      mode = "Ignore";
+      canSave = "1";
+      canSaveDynamicFields = "1";
+      persistentId = "957c16c5-770d-495c-b532-665ba145d7c0";
+         pacenote = "R6E long over crest";
+   };
+   new BeamNGWaypoint(efecusa_rally_B_wp136) {
+      drawDebug = "0";
+      directionalWaypoint = "0";
+      excludeFromMap = "0";
+      position = "-960.523621 -419.927399 48.7426567";
+      scale = "15 15 15";
+      rotationMatrix = "0.00191000849 -0.999998033 0 0.999998033 0.00191000849 0 0 0 1";
+      mode = "Ignore";
+      canSave = "1";
+      canSaveDynamicFields = "1";
+      persistentId = "ca1b305e-2c51-47b7-9c26-4b7378dea808";
+         pacenote = "empty";
+   };
+   new BeamNGWaypoint(efecusa_rally_B_wp137) {
+      drawDebug = "0";
+      directionalWaypoint = "0";
+      excludeFromMap = "0";
+      position = "-961.400208 -346.282349 55.6518822";
+      scale = "15 15 15";
+      rotationMatrix = "0.00191000849 -0.999998033 0 0.999998033 0.00191000849 0 0 0 1";
+      mode = "Ignore";
+      canSave = "1";
+      canSaveDynamicFields = "1";
+      persistentId = "c6cef618-f5e8-40fe-9a79-3bdb3dee8344";
+         pacenote = "L6P";
+   };
+   new BeamNGWaypoint(efecusa_rally_B_wp138) {
+      drawDebug = "0";
+      directionalWaypoint = "0";
+      excludeFromMap = "0";
+      position = "-964.268555 -301.300262 57.6633873";
+      scale = "15 15 15";
+      rotationMatrix = "0.00191000849 -0.999998033 0 0.999998033 0.00191000849 0 0 0 1";
+      mode = "Ignore";
+      canSave = "1";
+      canSaveDynamicFields = "1";
+      persistentId = "41b08bf0-5e13-40ed-8dd7-d2cca01776e0";
+         pacenote = "empty";
+   };
+   new BeamNGWaypoint(efecusa_rally_B_wp139) {
+      drawDebug = "0";
+      directionalWaypoint = "0";
+      excludeFromMap = "0";
+      position = "-966.038574 -246.832779 57.9101982";
+      scale = "15 15 15";
+      rotationMatrix = "0.00191000849 -0.999998033 0 0.999998033 0.00191000849 0 0 0 1";
+      mode = "Ignore";
+      canSave = "1";
+      canSaveDynamicFields = "1";
+      persistentId = "a0e0329a-8334-427f-b33b-02b1ef048c2b";
+         pacenote = "empty";
+   };
+   new BeamNGWaypoint(efecusa_rally_B_wp140) {
+      drawDebug = "0";
+      directionalWaypoint = "0";
+      excludeFromMap = "0";
+      position = "-972.406189 -177.759155 58.7308121";
+      scale = "15 15 15";
+      rotationMatrix = "0.00191000849 -0.999998033 0 0.999998033 0.00191000849 0 0 0 1";
+      mode = "Ignore";
+      canSave = "1";
+      canSaveDynamicFields = "1";
+      persistentId = "bd0e334b-8633-40c1-a18d-538d05ac3ae7";
+         pacenote = "R6E";
+   };
+   new BeamNGWaypoint(efecusa_rally_B_wp141) {
+      drawDebug = "0";
+      directionalWaypoint = "0";
+      excludeFromMap = "0";
+      position = "-966.878296 -135.158661 57.1029854";
+      scale = "15 15 15";
+      rotationMatrix = "0.00191000849 -0.999998033 0 0.999998033 0.00191000849 0 0 0 1";
+      mode = "Ignore";
+      canSave = "1";
+      canSaveDynamicFields = "1";
+      persistentId = "7378e17a-b78f-4bcb-a5af-47eb4b0e9032";
+         pacenote = "empty";
+   };
+   new BeamNGWaypoint(efecusa_rally_B_wp142) {
+      drawDebug = "0";
+      directionalWaypoint = "0";
+      excludeFromMap = "0";
+      position = "-954.496277 -80.5066986 50.5738297";
+      scale = "15 15 15";
+      rotationMatrix = "0.00191000849 -0.999998033 0 0.999998033 0.00191000849 0 0 0 1";
+      mode = "Ignore";
+      canSave = "1";
+      canSaveDynamicFields = "1";
+      persistentId = "016ae2fb-75c6-4617-8237-fa3a35c26d9f";
+         pacenote = "L6P";
+   };
+   new BeamNGWaypoint(efecusa_rally_B_wp143) {
+      drawDebug = "0";
+      directionalWaypoint = "0";
+      excludeFromMap = "0";
+      position = "-949.832886 -31.6171074 45.1106453";
+      scale = "15 15 15";
+      rotationMatrix = "0.00191000849 -0.999998033 0 0.999998033 0.00191000849 0 0 0 1";
+      mode = "Ignore";
+      canSave = "1";
+      canSaveDynamicFields = "1";
+      persistentId = "9924b0f1-5be1-4f50-aa82-16ab468d8a91";
+         pacenote = "empty";
+   };
+   new BeamNGWaypoint(efecusa_rally_B_wp144) {
+      drawDebug = "0";
+      directionalWaypoint = "0";
+      excludeFromMap = "0";
+      position = "-951.288635 28.9898968 37.9544106";
+      scale = "15 15 15";
+      rotationMatrix = "0.00191000849 -0.999998033 0 0.999998033 0.00191000849 0 0 0 1";
+      mode = "Ignore";
+      canSave = "1";
+      canSaveDynamicFields = "1";
+      persistentId = "3e737ca7-a668-4797-9e28-72a93ee6e243";
+         pacenote = "empty";
+   };
+   new BeamNGWaypoint(efecusa_rally_B_wp145) {
+      drawDebug = "0";
+      directionalWaypoint = "0";
+      excludeFromMap = "0";
+      position = "-956.553955 90.8619843 39.6345062";
+      scale = "15 15 15";
+      rotationMatrix = "0.00191000849 -0.999998033 0 0.999998033 0.00191000849 0 0 0 1";
+      mode = "Ignore";
+      canSave = "1";
+      canSaveDynamicFields = "1";
+      persistentId = "3c6eb8f3-e331-4151-b243-fc0d8ad1fd0a";
+         pacenote = "empty";
+   };
+   new BeamNGWaypoint(efecusa_rally_B_wp146) {
+      drawDebug = "0";
+      directionalWaypoint = "0";
+      excludeFromMap = "0";
+      position = "-958.43457 146.948013 40.2038231";
+      scale = "15 15 15";
+      rotationMatrix = "0.00191000849 -0.999998033 0 0.999998033 0.00191000849 0 0 0 1";
+      mode = "Ignore";
+      canSave = "1";
+      canSaveDynamicFields = "1";
+      persistentId = "0d20eb91-354e-4b72-89bc-20dde8a196bc";
+         pacenote = "L6P";
+   };
+   new BeamNGWaypoint(efecusa_rally_B_wp147) {
+      drawDebug = "0";
+      directionalWaypoint = "0";
+      excludeFromMap = "0";
+      position = "-963.084106 189.171463 40.7917747";
+      scale = "15 15 15";
+      rotationMatrix = "0.00191000849 -0.999998033 0 0.999998033 0.00191000849 0 0 0 1";
+      mode = "Ignore";
+      canSave = "1";
+      canSaveDynamicFields = "1";
+      persistentId = "2281797b-915a-4da4-85fd-67d1537d2462";
+         pacenote = "R6E";
+   };
+   new BeamNGWaypoint(efecusa_rally_B_wp148) {
+      drawDebug = "0";
+      directionalWaypoint = "0";
+      excludeFromMap = "0";
+      position = "-963.338379 221.947067 39.647274";
+      scale = "15 15 15";
+      rotationMatrix = "0.00191000849 -0.999998033 0 0.999998033 0.00191000849 0 0 0 1";
+      mode = "Ignore";
+      canSave = "1";
+      canSaveDynamicFields = "1";
+      persistentId = "a1958c5b-3e52-48bf-8e0d-bc4f23dfe698";
+         pacenote = "empty";
+   };
+   new BeamNGWaypoint(efecusa_rally_B_wp149) {
+      drawDebug = "0";
+      directionalWaypoint = "0";
+      excludeFromMap = "0";
+      position = "-962.970703 276.364899 37.9254761";
+      scale = "15 15 15";
+      rotationMatrix = "0.00191000849 -0.999998033 0 0.999998033 0.00191000849 0 0 0 1";
+      mode = "Ignore";
+      canSave = "1";
+      canSaveDynamicFields = "1";
+      persistentId = "d7f5675e-4b35-4ae6-9235-7c6ab62c066b";
+         pacenote = "R6P";
+   };
+   new BeamNGWaypoint(efecusa_rally_B_wp150) {
+      drawDebug = "0";
+      directionalWaypoint = "0";
+      excludeFromMap = "0";
+      position = "-959.607422 312.044861 34.1573219";
+      scale = "15 15 15";
+      rotationMatrix = "0.00191000849 -0.999998033 0 0.999998033 0.00191000849 0 0 0 1";
+      mode = "Ignore";
+      canSave = "1";
+      canSaveDynamicFields = "1";
+      persistentId = "80156715-a834-4efb-829a-9476f3fa0213";
+         pacenote = "empty";
+   };
+   new BeamNGWaypoint(efecusa_rally_B_wp151) {
+      drawDebug = "0";
+      directionalWaypoint = "0";
+      excludeFromMap = "0";
+      position = "-948.116638 359.839722 32.3104172";
+      scale = "15 15 15";
+      rotationMatrix = "0.00191000849 -0.999998033 0 0.999998033 0.00191000849 0 0 0 1";
+      mode = "Ignore";
+      canSave = "1";
+      canSaveDynamicFields = "1";
+      persistentId = "cfa98adc-2340-4dbf-9272-1e49e5e9a0f0";
+         pacenote = "L6E over dip";
+   };
+   new BeamNGWaypoint(efecusa_rally_B_wp152) {
+      drawDebug = "0";
+      directionalWaypoint = "0";
+      excludeFromMap = "0";
+      position = "-948.13269 407.326538 27.6596031";
+      scale = "15 15 15";
+      rotationMatrix = "0.00191000849 -0.999998033 0 0.999998033 0.00191000849 0 0 0 1";
+      mode = "Ignore";
+      canSave = "1";
+      canSaveDynamicFields = "1";
+      persistentId = "a266f586-c29a-4a7f-bf59-e125f750f3dd";
+         pacenote = "bridge";
+   };
+   new BeamNGWaypoint(efecusa_rally_B_wp153) {
+      drawDebug = "0";
+      directionalWaypoint = "0";
+      excludeFromMap = "0";
+      position = "-947.196106 463.520203 30.926033";
+      scale = "15 15 15";
+      rotationMatrix = "0.00191000849 -0.999998033 0 0.999998033 0.00191000849 0 0 0 1";
+      mode = "Ignore";
+      canSave = "1";
+      canSaveDynamicFields = "1";
+      persistentId = "8167e1e1-f8f7-4a21-9da2-76e4e6269a9c";
+         pacenote = "keep left";
+   };
+   new BeamNGWaypoint(efecusa_rally_B_wp154) {
+      drawDebug = "0";
+      directionalWaypoint = "0";
+      excludeFromMap = "0";
+      position = "-950.419617 493.195099 28.6465111";
+      scale = "15 15 15";
+      rotationMatrix = "0.00191000849 -0.999998033 0 0.999998033 0.00191000849 0 0 0 1";
+      mode = "Ignore";
+      canSave = "1";
+      canSaveDynamicFields = "1";
+      persistentId = "50d4f778-f25d-49cf-8442-40f58cf304bc";
+         pacenote = "R3P over dip";
+   };
+   new BeamNGWaypoint(efecusa_rally_B_wp155) {
+      drawDebug = "0";
+      directionalWaypoint = "0";
+      excludeFromMap = "0";
+      position = "-933.785339 536.011902 28.9056416";
+      scale = "15 15 15";
+      rotationMatrix = "0.00191000849 -0.999998033 0 0.999998033 0.00191000849 0 0 0 1";
+      mode = "Ignore";
+      canSave = "1";
+      canSaveDynamicFields = "1";
+      persistentId = "1ddfd885-6f26-4aa3-9a48-4b57c2c1925f";
+         marker = "0";
+         pacenote = "empty";
+   };
+   new BeamNGWaypoint(efecusa_rally_B_wp156) {
+      drawDebug = "0";
+      directionalWaypoint = "0";
+      excludeFromMap = "0";
+      position = "-906.66095 549.021606 29.559185";
+      scale = "15 15 15";
+      rotationMatrix = "0.00191000849 -0.999998033 0 0.999998033 0.00191000849 0 0 0 1";
+      mode = "Ignore";
+      canSave = "1";
+      canSaveDynamicFields = "1";
+      persistentId = "56c9a656-db17-4b24-ad56-7a7b700f3789";
+         pacenote = "L5E ";
+   };
+   new BeamNGWaypoint(efecusa_rally_B_wp157) {
+      drawDebug = "0";
+      directionalWaypoint = "0";
+      excludeFromMap = "0";
+      position = "-872.365234 579.437073 28.0059299";
+      scale = "15 15 15";
+      rotationMatrix = "0.00191000849 -0.999998033 0 0.999998033 0.00191000849 0 0 0 1";
+      mode = "Ignore";
+      canSave = "1";
+      canSaveDynamicFields = "1";
+      persistentId = "cd472baf-90e8-442e-bcd9-b4aa20f88971";
+         pacenote = "LS around tree";
+   };
+   new BeamNGWaypoint(efecusa_rally_B_wp158) {
+      drawDebug = "0";
+      directionalWaypoint = "0";
+      excludeFromMap = "0";
+      position = "-893.65332 623.495972 27.5100613";
+      scale = "15 15 15";
+      rotationMatrix = "0.00191000849 -0.999998033 0 0.999998033 0.00191000849 0 0 0 1";
+      mode = "Ignore";
+      canSave = "1";
+      canSaveDynamicFields = "1";
+      persistentId = "985a7efe-116b-480e-a7c4-ae86d33eb071";
+         pacenote = "R6E long";
+   };
+   new BeamNGWaypoint(efecusa_rally_B_wp159) {
+      drawDebug = "0";
+      directionalWaypoint = "0";
+      excludeFromMap = "0";
+      position = "-936.252502 684.042542 28.6584263";
+      scale = "15 15 15";
+      rotationMatrix = "0.00191000849 -0.999998033 0 0.999998033 0.00191000849 0 0 0 1";
+      mode = "Ignore";
+      canSave = "1";
+      canSaveDynamicFields = "1";
+      persistentId = "ac3ec370-c7ff-49c2-9ab3-918939727069";
+         pacenote = "empty";
+   };
+   new BeamNGWaypoint(efecusa_rally_B_wp160) {
+      drawDebug = "0";
+      directionalWaypoint = "0";
+      excludeFromMap = "0";
+      position = "-952.95697 722.283386 32.49506";
+      scale = "15 15 15";
+      rotationMatrix = "0.00191000849 -0.999998033 0 0.999998033 0.00191000849 0 0 0 1";
+      mode = "Ignore";
+      canSave = "1";
+      canSaveDynamicFields = "1";
+      persistentId = "803dfc86-bbec-4ce4-872e-4b9d745fa518";
+         pacenote = "tightens to 5 over crest";
+   };
+   new BeamNGWaypoint(efecusa_rally_B_wp161) {
+      drawDebug = "0";
+      directionalWaypoint = "0";
+      excludeFromMap = "0";
+      position = "-959.385071 779.44043 36.0114594";
+      scale = "15 15 15";
+      rotationMatrix = "0.00191000849 -0.999998033 0 0.999998033 0.00191000849 0 0 0 1";
+      mode = "Ignore";
+      canSave = "1";
+      canSaveDynamicFields = "1";
+      persistentId = "9369c05b-4d08-46d4-8849-295148eb3907";
+         pacenote = "opens long";
+   };
+   new BeamNGWaypoint(efecusa_rally_B_wp162) {
+      drawDebug = "0";
+      directionalWaypoint = "0";
+      excludeFromMap = "0";
+      position = "-952.424438 829.685974 33.7483139";
+      scale = "15 15 15";
+      rotationMatrix = "0.00191000849 -0.999998033 0 0.999998033 0.00191000849 0 0 0 1";
+      mode = "Ignore";
+      canSave = "1";
+      canSaveDynamicFields = "1";
+      persistentId = "30dd4d4c-59c3-45d3-8d00-149a87906e1b";
+         pacenote = "empty";
+   };
+   new BeamNGWaypoint(efecusa_rally_B_wp163) {
+      drawDebug = "0";
+      directionalWaypoint = "0";
+      excludeFromMap = "0";
+      position = "-931.765686 882.809448 29.0422058";
+      scale = "15 15 15";
+      rotationMatrix = "0.00191000849 -0.999998033 0 0.999998033 0.00191000849 0 0 0 1";
+      mode = "Ignore";
+      canSave = "1";
+      canSaveDynamicFields = "1";
+      persistentId = "b270d922-fe7e-4c1c-9068-45ec787814a8";
+         pacenote = "empty";
+   };
+   new BeamNGWaypoint(efecusa_rally_B_wp164) {
+      drawDebug = "0";
+      directionalWaypoint = "0";
+      excludeFromMap = "0";
+      position = "-884.923706 929.852966 31.5032063";
+      scale = "15 15 15";
+      rotationMatrix = "0.00191000849 -0.999998033 0 0.999998033 0.00191000849 0 0 0 1";
+      mode = "Ignore";
+      canSave = "1";
+      canSaveDynamicFields = "1";
+      persistentId = "8e635c31-9136-48c9-a263-2a3a17bf0e30";
+         pacenote = "empty";
+   };
+   new BeamNGWaypoint(efecusa_rally_B_wp165) {
+      drawDebug = "0";
+      directionalWaypoint = "0";
+      excludeFromMap = "0";
+      position = "-807.097351 952.535828 38.3439674";
+      scale = "15 15 15";
+      rotationMatrix = "0.00191000849 -0.999998033 0 0.999998033 0.00191000849 0 0 0 1";
+      mode = "Ignore";
+      canSave = "1";
+      canSaveDynamicFields = "1";
+      persistentId = "fe3ee149-c230-4b46-8e9f-15d32b7944a1";
+         marker = "0";
+         pacenote = "empty";
+   };
+   new BeamNGWaypoint(efecusa_rally_B_wp166) {
+      drawDebug = "0";
+      directionalWaypoint = "0";
+      excludeFromMap = "0";
+      position = "-757.049866 952.157288 39.2623672";
+      scale = "15 15 15";
+      rotationMatrix = "0.00191000849 -0.999998033 0 0.999998033 0.00191000849 0 0 0 1";
+      mode = "Ignore";
+      canSave = "1";
+      canSaveDynamicFields = "1";
+      persistentId = "35e0de55-b6a9-4750-8143-5711d963568e";
+         pacenote = "empty";
+   };
+   new BeamNGWaypoint(efecusa_rally_B_wp167) {
+      drawDebug = "0";
+      directionalWaypoint = "0";
+      excludeFromMap = "0";
+      position = "-687.434937 948.777649 43.2593918";
+      scale = "15 15 15";
+      rotationMatrix = "0.00191000849 -0.999998033 0 0.999998033 0.00191000849 0 0 0 1";
+      mode = "Ignore";
+      canSave = "1";
+      canSaveDynamicFields = "1";
+      persistentId = "4e939f98-4e1b-40cf-b62a-2990a4183aeb";
+         pacenote = "empty";
+   };
+   new BeamNGWaypoint(efecusa_rally_B_wp168) {
+      drawDebug = "0";
+      directionalWaypoint = "0";
+      excludeFromMap = "0";
+      position = "-626.855896 946.090942 41.2412834";
+      scale = "15 15 15";
+      rotationMatrix = "0.00191000849 -0.999998033 0 0.999998033 0.00191000849 0 0 0 1";
+      mode = "Ignore";
+      canSave = "1";
+      canSaveDynamicFields = "1";
+      persistentId = "85db7774-94cb-434a-b7cf-135788139903";
+         pacenote = "empty";
+   };
+   new BeamNGWaypoint(efecusa_rally_B_wp169) {
+      drawDebug = "0";
+      directionalWaypoint = "0";
+      excludeFromMap = "0";
+      position = "-576.017822 942.407959 40.5529251";
+      scale = "15 15 15";
+      rotationMatrix = "0.00191000849 -0.999998033 0 0.999998033 0.00191000849 0 0 0 1";
+      mode = "Ignore";
+      canSave = "1";
+      canSaveDynamicFields = "1";
+      persistentId = "266c7fa0-58e3-4777-bbd5-934a731cddc0";
+         pacenote = "slowing junction R0M";
+   };
+   new BeamNGWaypoint(efecusa_rally_B_wp170) {
+      drawDebug = "0";
+      directionalWaypoint = "0";
+      excludeFromMap = "0";
+      position = "-572.81311 920.193298 39.1709061";
+      scale = "15 15 15";
+      rotationMatrix = "0.00191000849 -0.999998033 0 0.999998033 0.00191000849 0 0 0 1";
+      mode = "Ignore";
+      canSave = "1";
+      canSaveDynamicFields = "1";
+      persistentId = "20b04b41-c5d7-4885-b737-7bcffcf39a89";
+         pacenote = "middle over jump";
+   };
+   new BeamNGWaypoint(efecusa_rally_B_wp171) {
+      drawDebug = "0";
+      directionalWaypoint = "0";
+      excludeFromMap = "0";
+      position = "-593.904541 894.766724 42.4993286";
+      scale = "15 15 15";
+      rotationMatrix = "0.00191000849 -0.999998033 0 0.999998033 0.00191000849 0 0 0 1";
+      mode = "Ignore";
+      canSave = "1";
+      canSaveDynamicFields = "1";
+      persistentId = "d7f18f88-0518-45b7-b02c-f3ce75987461";
+         pacenote = "left over jump";
+   };
+   new BeamNGWaypoint(efecusa_rally_B_wp172) {
+      drawDebug = "0";
+      directionalWaypoint = "0";
+      excludeFromMap = "0";
+      position = "-612.514282 866.963684 36.1642342";
+      scale = "15 15 15";
+      rotationMatrix = "0.00191000849 -0.999998033 0 0.999998033 0.00191000849 0 0 0 1";
+      mode = "Ignore";
+      canSave = "1";
+      canSaveDynamicFields = "1";
+      persistentId = "c7f04fd4-c277-4691-8dff-a3962eb8c198";
+         pacenote = "R4E dont cut";
+   };
+   new BeamNGWaypoint(efecusa_rally_B_wp173) {
+      drawDebug = "0";
+      directionalWaypoint = "0";
+      excludeFromMap = "0";
+      position = "-642.251282 844.785461 37.3814964";
+      scale = "15 15 15";
+      rotationMatrix = "0.00191000849 -0.999998033 0 0.999998033 0.00191000849 0 0 0 1";
+      mode = "Ignore";
+      canSave = "1";
+      canSaveDynamicFields = "1";
+      persistentId = "5cbe16ef-47d0-4381-b0e7-b3ef479a8870";
+         pacenote = "L5E short";
+   };
+   new BeamNGWaypoint(efecusa_rally_B_wp174) {
+      drawDebug = "0";
+      directionalWaypoint = "0";
+      excludeFromMap = "0";
+      position = "-667.31543 819.923584 46.2897148";
+      scale = "15 15 15";
+      rotationMatrix = "0.00191000849 -0.999998033 0 0.999998033 0.00191000849 0 0 0 1";
+      mode = "Ignore";
+      canSave = "1";
+      canSaveDynamicFields = "1";
+      persistentId = "f065001d-7062-4e2f-999f-a8177a7704ed";
+         pacenote = "crest keep middle";
+   };
+   new BeamNGWaypoint(efecusa_rally_B_wp175) {
+      drawDebug = "0";
+      directionalWaypoint = "0";
+      excludeFromMap = "0";
+      position = "-682.920715 800.514832 47.5671082";
+      scale = "15 15 15";
+      rotationMatrix = "0.00191000849 -0.999998033 0 0.999998033 0.00191000849 0 0 0 1";
+      mode = "Ignore";
+      canSave = "1";
+      canSaveDynamicFields = "1";
+      persistentId = "b5973325-71f5-47f8-a481-6bf3676244c8";
+         pacenote = "L4E late dont cut";
+   };
+   new BeamNGWaypoint(efecusa_rally_B_wp176) {
+      drawDebug = "0";
+      directionalWaypoint = "0";
+      excludeFromMap = "0";
+      position = "-696.375854 760.290039 50.8472633";
+      scale = "15 15 15";
+      rotationMatrix = "0.00191000849 -0.999998033 0 0.999998033 0.00191000849 0 0 0 1";
+      mode = "Ignore";
+      canSave = "1";
+      canSaveDynamicFields = "1";
+      persistentId = "d2f0546a-4115-41b4-96fc-60af7065ca17";
+         pacenote = "empty";
+   };
+   new BeamNGWaypoint(efecusa_rally_B_wp177) {
+      drawDebug = "0";
+      directionalWaypoint = "0";
+      excludeFromMap = "0";
+      position = "-700.348816 728.14917 49.5438499";
+      scale = "15 15 15";
+      rotationMatrix = "0.00191000849 -0.999998033 0 0.999998033 0.00191000849 0 0 0 1";
+      mode = "Ignore";
+      canSave = "1";
+      canSaveDynamicFields = "1";
+      persistentId = "7b32ed79-1e7f-4abb-b2df-d16add0ce6d4";
+         pacenote = "caution R3E around tree";
+   };
+   new BeamNGWaypoint(efecusa_rally_B_wp178) {
+      drawDebug = "0";
+      directionalWaypoint = "0";
+      excludeFromMap = "0";
+      position = "-728.640442 690.015503 44.0286179";
+      scale = "15 15 15";
+      rotationMatrix = "0.00191000849 -0.999998033 0 0.999998033 0.00191000849 0 0 0 1";
+      mode = "Ignore";
+      canSave = "1";
+      canSaveDynamicFields = "1";
+      persistentId = "cfc7b431-1c7d-4306-99ee-8494abe64f21";
+         pacenote = "bad camber";
+   };
+   new BeamNGWaypoint(efecusa_rally_B_wp179) {
+      drawDebug = "0";
+      directionalWaypoint = "0";
+      excludeFromMap = "0";
+      position = "-752.750732 675.886353 39.0602226";
+      scale = "15 15 15";
+      rotationMatrix = "0.00191000849 -0.999998033 0 0.999998033 0.00191000849 0 0 0 1";
+      mode = "Ignore";
+      canSave = "1";
+      canSaveDynamicFields = "1";
+      persistentId = "31a01efb-085d-4410-9514-386ef6f55eef";
+         pacenote = "L4E tightens";
+   };
+   new BeamNGWaypoint(efecusa_rally_B_wp180) {
+      drawDebug = "0";
+      directionalWaypoint = "0";
+      excludeFromMap = "0";
+      position = "-772.307434 653.006409 31.6268673";
+      scale = "15 15 15";
+      rotationMatrix = "0.00191000849 -0.999998033 0 0.999998033 0.00191000849 0 0 0 1";
+      mode = "Ignore";
+      canSave = "1";
+      canSaveDynamicFields = "1";
+      persistentId = "8e3d99d5-cef2-4afc-8078-55337872c508";
+         marker = "0";
+         pacenote = "empty";
+   };
+   new BeamNGWaypoint(efecusa_rally_B_wp181) {
+      drawDebug = "0";
+      directionalWaypoint = "0";
+      excludeFromMap = "0";
+      position = "-778.150513 625.731506 27.8452511";
+      scale = "15 15 15";
+      rotationMatrix = "0.00191000849 -0.999998033 0 0.999998033 0.00191000849 0 0 0 1";
+      mode = "Ignore";
+      canSave = "1";
+      canSaveDynamicFields = "1";
+      persistentId = "383c7720-fe7e-4f19-9776-f20aaa804cd8";
+         pacenote = "LS";
+   };
+   new BeamNGWaypoint(efecusa_rally_B_wp182) {
+      drawDebug = "0";
+      directionalWaypoint = "0";
+      excludeFromMap = "0";
+      position = "-749.756775 612.331604 29.0539951";
+      scale = "15 15 15";
+      rotationMatrix = "0.00191000849 -0.999998033 0 0.999998033 0.00191000849 0 0 0 1";
+      mode = "Ignore";
+      canSave = "1";
+      canSaveDynamicFields = "1";
+      persistentId = "113b3855-ce9c-42cb-8d37-60e49a54d579";
+         pacenote = "R6E";
+   };
+   new BeamNGWaypoint(efecusa_rally_B_wp183) {
+      drawDebug = "0";
+      directionalWaypoint = "0";
+      excludeFromMap = "0";
+      position = "-729.026855 597.281433 27.5016518";
+      scale = "15 15 15";
+      rotationMatrix = "0.00191000849 -0.999998033 0 0.999998033 0.00191000849 0 0 0 1";
+      mode = "Ignore";
+      canSave = "1";
+      canSaveDynamicFields = "1";
+      persistentId = "d0e0ac64-5699-4b01-b8f3-475f650bf463";
+         pacenote = "L5E late";
+   };
+   new BeamNGWaypoint(efecusa_rally_B_wp184) {
+      drawDebug = "0";
+      directionalWaypoint = "0";
+      excludeFromMap = "0";
+      position = "-687.870483 575.003723 27.6820221";
+      scale = "15 15 15";
+      rotationMatrix = "0.00191000849 -0.999998033 0 0.999998033 0.00191000849 0 0 0 1";
+      mode = "Ignore";
+      canSave = "1";
+      canSaveDynamicFields = "1";
+      persistentId = "0f43f587-b185-4ac9-a950-7e1b0ab14325";
+         pacenote = "empty";
+   };
+   new BeamNGWaypoint(efecusa_rally_B_wp185) {
+      drawDebug = "0";
+      directionalWaypoint = "0";
+      excludeFromMap = "0";
+      position = "-646.935364 570.405334 30.1715336";
+      scale = "15 15 15";
+      rotationMatrix = "0.00191000849 -0.999998033 0 0.999998033 0.00191000849 0 0 0 1";
+      mode = "Ignore";
+      canSave = "1";
+      canSaveDynamicFields = "1";
+      persistentId = "c1bf79ff-166d-4def-a2bb-cb6dd2e47520";
+         pacenote = "keep right";
+   };
+   new BeamNGWaypoint(efecusa_rally_B_wp186) {
+      drawDebug = "0";
+      directionalWaypoint = "0";
+      excludeFromMap = "0";
+      position = "-623.994202 565.032288 29.1851158";
+      scale = "15 15 15";
+      rotationMatrix = "0.00191000849 -0.999998033 0 0.999998033 0.00191000849 0 0 0 1";
+      mode = "Ignore";
+      canSave = "1";
+      canSaveDynamicFields = "1";
+      persistentId = "d6d7cb2a-20cb-413f-adda-55daa88b1e1c";
+         pacenote = "LS";
+   };
+   new BeamNGWaypoint(efecusa_rally_B_wp187) {
+      drawDebug = "0";
+      directionalWaypoint = "0";
+      excludeFromMap = "0";
+      position = "-612.153198 595.12085 29.9707794";
+      scale = "15 15 15";
+      rotationMatrix = "0.00191000849 -0.999998033 0 0.999998033 0.00191000849 0 0 0 1";
+      mode = "Ignore";
+      canSave = "1";
+      canSaveDynamicFields = "1";
+      persistentId = "b113d6ce-abc0-46b7-8d5d-1a5820204291";
+         pacenote = "L6E";
+   };
+   new BeamNGWaypoint(efecusa_rally_B_wp188) {
+      drawDebug = "0";
+      directionalWaypoint = "0";
+      excludeFromMap = "0";
+      position = "-612.771912 652.586365 33.9597816";
+      scale = "15 15 15";
+      rotationMatrix = "0.00191000849 -0.999998033 0 0.999998033 0.00191000849 0 0 0 1";
+      mode = "Ignore";
+      canSave = "1";
+      canSaveDynamicFields = "1";
+      persistentId = "1b8e7a3d-f4a2-4a88-bb31-964a8629378e";
+         pacenote = "line";
+   };
+   new BeamNGWaypoint(efecusa_rally_B_finish) {
+      drawDebug = "0";
+      directionalWaypoint = "0";
+      excludeFromMap = "0";
+      position = "-617.355225 709.518799 32.5200958";
+      scale = "15 15 15";
+      rotationMatrix = "0.00191000849 -0.999998033 0 0.999998033 0.00191000849 0 0 0 1";
+      mode = "Ignore";
+      canSave = "1";
+      canSaveDynamicFields = "1";
+      persistentId = "43350569-9a2d-41bc-b340-025ea1417424";
+         pacenote = "to finish";
+   };
+};
+//--- OBJECT WRITE END ---
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

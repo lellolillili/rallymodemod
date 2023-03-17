@@ -1,0 +1,25 @@
+// Please refer to modding/input/ documentation for information about input actions
+// DOT NOT EDIT THIS FILE.
+
+{
+"toggleMenues"            :{"cat":"menu",          "order":  1, "ctx": "tlua", "onDown"  :"guihooks.trigger('MenuItemNavigation','toggleMenues')", "actionMap": "Global", "title": "ui.inputActions.menu.toggleMenues.title", "desc": "ui.inputActions.menu.toggleMenues.description" },
+"toggle_help"             :{"cat":"menu",          "order":  2, "ctx": "tlua", "onDown"  :"guihooks.trigger('MenuOpenModule','help')", "actionMap": "Normal", "title": "ui.inputActions.menu.toggle_help.title", "desc": "ui.inputActions.menu.toggle_help.description" },
+"options"                 :{"cat":"menu",          "order":  3, "ctx": "tlua", "onDown"  :"guihooks.trigger('MenuOpenModule','options')", "actionMap": "Normal", "title": "ui.inputActions.menu.options.title", "desc": "ui.inputActions.menu.options.description" },
+"vehicle_selector"        :{"cat":"menu",          "order":  4, "ctx": "tlua", "onDown"  :"guihooks.trigger('MenuOpenModule','vehicleselect')", "actionMap": "Normal", "title": "ui.inputActions.menu.vehicle_selector.title", "desc": "ui.inputActions.menu.vehicle_selector.description" },
+"parts_selector"          :{"cat":"menu",          "order":  5, "ctx": "tlua", "onDown"  :"guihooks.trigger('MenuOpenModule','vehicleconfig')", "actionMap": "Normal", "title": "ui.inputActions.menu.parts_selector.title", "desc": "ui.inputActions.menu.parts_selector.description" },
+"appedit"                 :{"cat":"menu",          "order":  5, "ctx": "tlua", "onDown"  :"guihooks.trigger('MenuOpenModule','appedit')", "actionMap": "Normal", "title": "ui.inputActions.menu.appedit.title", "desc": "ui.inputActions.menu.appedit.description" },
+"menu_item_up"            :{"cat":"menu",          "order": 10, "ctx": "tlua", "onDown"  :"guihooks.trigger('MenuItemNavigation','up')", "title": "ui.inputActions.menu.menu_item_up.title", "desc": "ui.inputActions.menu.menu_item_up.description" },
+"menu_item_down"          :{"cat":"menu",          "order": 11, "ctx": "tlua", "onDown"  :"guihooks.trigger('MenuItemNavigation','down')", "title": "ui.inputActions.menu.menu_item_down.title", "desc": "ui.inputActions.menu.menu_item_down.description" },
+"menu_item_left"          :{"cat":"menu",          "order": 12, "ctx": "tlua", "onDown"  :"guihooks.trigger('MenuItemNavigation','left')", "title": "ui.inputActions.menu.menu_item_left.title", "desc": "ui.inputActions.menu.menu_item_left.description" },
+"menu_item_right"         :{"cat":"menu",          "order": 13, "ctx": "tlua", "onDown"  :"guihooks.trigger('MenuItemNavigation','right')", "title": "ui.inputActions.menu.menu_item_right.title", "desc": "ui.inputActions.menu.menu_item_right.description" },
+"menu_item_radial_x"      :{"cat":"menu",          "order": 14, "ctx": "tlua", "onChange":"guihooks.trigger('MenuItemNavigation','radial-x',VALUE)", "actionMap": "VehicleCommon", "isCentered":true, "title": "ui.inputActions.menu.menu_item_radial_x.title", "desc": "ui.inputActions.menu.menu_item_radial_x.description" },
+"menu_item_radial_y"      :{"cat":"menu",          "order": 15, "ctx": "tlua", "onChange":"guihooks.trigger('MenuItemNavigation','radial-y',VALUE)", "actionMap": "VehicleCommon", "isCentered":true, "title": "ui.inputActions.menu.menu_item_radial_y.title", "desc": "ui.inputActions.menu.menu_item_radial_y.description" },
+"menu_item_radial_right_x":{"cat":"menu",          "order": 16, "ctx": "tlua", "onChange":"guihooks.trigger('MenuItemNavigation','radial-right-x',VALUE)", "actionMap": "VehicleCommon", "isCentered":true, "title": "ui.inputActions.menu.menu_item_radial_right_x.title", "desc": "ui.inputActions.menu.menu_item_radial_right_x.description" },
+"menu_item_radial_right_y":{"cat":"menu",          "order": 17, "ctx": "tlua", "onChange":"guihooks.trigger('MenuItemNavigation','radial-right-y',VALUE)", "actionMap": "VehicleCommon", "isCentered":true, "title": "ui.inputActions.menu.menu_item_radial_right_y.title", "desc": "ui.inputActions.menu.menu_item_radial_right_y.description" },
+"menu_tab_right"          :{"cat":"menu",          "order": 18, "ctx": "tlua", "onDown"  :"guihooks.trigger('MenuItemNavigation','tab-right')", "title": "ui.inputActions.menu.menu_tab_right.title", "desc": "ui.inputActions.menu.menu_tab_right.description" },
+"menu_tab_left"           :{"cat":"menu",          "order": 19, "ctx": "tlua", "onDown"  :"guihooks.trigger('MenuItemNavigation','tab-left')", "title": "ui.inputActions.menu.menu_tab_left.title", "desc": "ui.inputActions.menu.menu_tab_left.description" },
+"menu_item_select"        :{"cat":"menu",          "order": 21, "ctx": "tlua", "onDown"  :"guihooks.trigger('MenuItemNavigation','confirm')", "title": "ui.inputActions.menu.menu_item_select.title", "desc": "ui.inputActions.menu.menu_item_select.description" },
+"menu_item_back"          :{"cat":"menu",          "order": 22, "ctx": "tlua", "onDown"  :"guihooks.trigger('MenuItemNavigation','back')", "title": "ui.inputActions.menu.menu_item_back.title", "desc": "ui.inputActions.menu.menu_item_back.description" },
+}
+
+
