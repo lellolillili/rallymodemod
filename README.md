@@ -1,30 +1,39 @@
 # Rally mode - experimental
 
+## Dowload
+
+No need to clone the repo. Download a zip release instead.
+
+If you're interested in working on the code, then go ahead and clone the repo. I'm very happy to collaborate.
+
 ## Install
 
-Remove/rename the other version. Extract into mods/unpacked
+Put the zip file in your mods folder. You do no need to unpack if you just want to play and edit basic settings (a the settings file, *rallyconfig.ini* will be created in *beamng_local/settings/*).
 
-## Start a rally.
+## Go Rallying
 
-Open a rally - one of the time trial with pacenotes.
-Restart once (press 'R') to start rallying.
+The rallies are under Time Trials menu. You can only start a rally from the Time Trials menu. 
+Start the race. After the countdown, you will be greeted by a welcome message. Read it and follow the instructions.
+You need to load the rally UI in order to see the pacenote symbols and the pause menu. 
+Press 'SHIFT+CTRL+U', add apps, choose the Rally Mode UI app. Keep it nice and big and centered.
 
-## New time trials
-They are the ones with just a black thumbnail. They are shorter than the old ones.
+Restart once (press 'R') to disable the waypoint sounds. The custom waypoint module will be loaded, and the sounds won't play anymore. 
 
-## Enable the new UI:
-'SHIFT+CTRL+U', add apps, choose the Rally Mode UI app. Keep it nice and big and centered.
-
-## Rally menu:
-Anytime after the countdown starts, you can pause physics ('J') to open the rally menu. The menu is self explanatory.
+Anytime after the countdown starts, you can pause physics ('J') to open the rally menu. The menu is self explanatory.  
 
 Don't forget to hit "save" to save the options you modify.
 
-## Config
+## Co-driver volume
+You will see an option to adjust the co-driver volume. I actually have no idea what the hell is the correlation between the number you put in there, and actual volume of the co-driver voice. I only know that 0 is mute, small numbers are low volume, and large numbers are high volume. Please let me know if you figure out a reasonable range.
+
+## Time trials
+You can see the length of a rally in the thumbnail. Shakedowns are short stages, usually sections of the larger stages. Special stages are traditional length stages (5 to 15 km, for now).
+
+## Configuration
 
 ### Advanced options
 
-Open setting/rallyconfig.ini (it is created after you use the "save" button in the menu for the first time).
+Open local_BeamNG_folder/setting/rallyconfig.ini (it is created after you use the "save" button in the menu for the first time). You can edit some of the options in this file for fine-tuning your co-driver. Not evey single option in this file can be changed from the pause menu.
 
 ### Change co-driver
 
@@ -32,37 +41,36 @@ Open setting/rallyconfig.ini. In codriverDir, you can use any of the codrivers y
 
 mods/unpacked/art/codrivers
 
-For the moment, you can test out
+For the moment, we have 
 
-Alex Gelsomino (ripped from youtube)
-Phil Mills (ripped from dirt rally)
-
-At the moment UI doesnt work for these (for now). I'll fix upon release.
+* Stu - text to speech
+* Alex Gelsomino - sampled from real rally footage
 
 ## Edit pacenotes
 
-When rallying, pause, and check out the pacenote file name. Create the pacenote file ("filename.pnt") in the correct directory. Example:
-
-in mods/unpacked/pacenotedirector/levels/
+When rallying, enter the pause menu ('J'), and check the pacenote-file name. You can create the pacenote file ("filename.pnt") in the correct directory, and start editing the pacenotes.
 
 you have to have these files (note smallIslandRally_forward.pnt)
 small_island
- ├── art
  ├── quickrace
- │   ├── smallIslandRally_forward.pnt
- │   ├── smallIslandRally_forward.prefab
+ │   ├── smallIslandRally_forward.pnt           < custom pacenote overrides
+ │   ├── smallIslandRally_forward.prefab        < waypoints and default pacenote
  │   ├── smallIslandRally.jpg
- │   ├── smallIslandRally.json
- │   └── smallIslandRally.prefab
- └── smallIslandRally.lua
+ │   ├── smallIslandRally.json                  < race config
+ │   └── smallIslandRally.prefab                < stage clutter
+ └── smallIslandRally.lua                       < tells BeamNG to start the mod
 
-Pausing Physics will show pacenote information. Use that.
+Pausing Physics will show pacenote information. Use that to edit the pacenotes.
 
 If you want to change pacenote 1 to something that Stu will read "caution left 3 minus", add the following line to the pnt file
 
 1 - caution L3M;
 
 ### Corner codes:
+
+The corner codes for each co-driver are in pacenotedirector/art/codrivers/CODRIVER/codriver.ini
+
+For the co-driver Stu, these are the corner codes
 
 (L/R)0M - acute LR
 (L/R)0E - hairpin LR
@@ -92,10 +100,18 @@ If you want to change pacenote 1 to something that Stu will read "caution left 3
 (L/R)6E - 6 LR
 (L/R)6P - flat LR
 
-If you use corner codes, the notes will be compatible with all co-drivers. If you don't, you can just write, instead,
+You don't have to use corner codes, but if you do, your pacenotes will work with any co-driver. 
+
+If you don't want to use them, your pacenotes will be co-driver dependent. In that case, you can just write (for example, if you're using Stu)
+
+    '4 left minus', '5 left plus long', 'hairpin left over crest', etc. 
+
+Here's an example pacenote file 
 
 1 - caution left 3 minus;
 
-and the pacenote will only work with Stu.
+Always check the console for pacenote errors. For example, it will tell you if you use an inexistent samples.
 
-Always check the console for pacenote errors. For example, it will tell you if you use an inexistent sample.
+## Testing stuff
+There are two test scenarios (gridmap and small island) for testing the mod. They are under the Scenario menu, not the Time Trial menu. 
+In particular, the gridmap test will utter every single corner, which is useful when making new co-driver.
