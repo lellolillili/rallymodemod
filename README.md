@@ -83,14 +83,15 @@ can create the pacenote file ("filename.pnt") in the correct directory, and
 start editing the pacenotes.
 
 you have to have these files (note smallIslandRally_forward.pnt)
-small_island
- ├── quickrace
- │   ├── smallIslandRally_forward.pnt           < custom pacenote overrides
- │   ├── smallIslandRally_forward.prefab        < waypoints and default pacenote
- │   ├── smallIslandRally.jpg
- │   ├── smallIslandRally.json                  < race config
- │   └── smallIslandRally.prefab                < stage clutter
- └── smallIslandRally.lua                       < tells BeamNG to start the mod
+
+    small_island
+        ├── quickrace
+        │   ├── smallIslandRally_forward.pnt           < custom pacenote overrides
+        │   ├── smallIslandRally_forward.prefab        < waypoints and default pacenote
+        │   ├── smallIslandRally.jpg
+        │   ├── smallIslandRally.json                  < race config
+        │   └── smallIslandRally.prefab                < stage clutter
+        └── smallIslandRally.lua                       < tells BeamNG to start the mod
 
 Pausing Physics will show pacenote information. Use that to edit the pacenotes. 
 Here's an example of a valid pacenote file
@@ -115,33 +116,33 @@ Gelsomino/codriver.ini*]
 
 For the co-driver Stu, these are the corner codes
 
-(L/R)0M - acute LR
-(L/R)0E - hairpin LR
-(L/R)0P - open hairpin LR
+    (L/R)0M - acute LR
+    (L/R)0E - hairpin LR
+    (L/R)0P - open hairpin LR
 
-(L/R)1M - 1 LR minus
-(L/R)1E - 1 LR
-(L/R)1P - 1 LR plus
+    (L/R)1M - 1 LR minus
+    (L/R)1E - 1 LR
+    (L/R)1P - 1 LR plus
 
-(L/R)2M - 2 LR minus
-(L/R)2E - 2 LR
-(L/R)2P - 2 LR plus
+    (L/R)2M - 2 LR minus
+    (L/R)2E - 2 LR
+    (L/R)2P - 2 LR plus
 
-(L/R)3M - 3 LR minus
-(L/R)3E - 3 LR
-(L/R)3P - 3 LR plus
+    (L/R)3M - 3 LR minus
+    (L/R)3E - 3 LR
+    (L/R)3P - 3 LR plus
 
-(L/R)4M - 4 LR minus
-(L/R)4E - 4 LR
-(L/R)4P - 4 LR plus
+    (L/R)4M - 4 LR minus
+    (L/R)4E - 4 LR
+    (L/R)4P - 4 LR plus
 
-(L/R)5M - 5 LR minus
-(L/R)5E - 5 LR
-(L/R)5P - 5 LR plus
+    (L/R)5M - 5 LR minus
+    (L/R)5E - 5 LR
+    (L/R)5P - 5 LR plus
 
-(L/R)6M - 6 LR minus
-(L/R)6E - 6 LR
-(L/R)6P - flat LR
+    (L/R)6M - 6 LR minus
+    (L/R)6E - 6 LR
+    (L/R)6P - flat LR
 
 You don't have to use corner codes, but if you do, your pacenotes will work with any co-driver.
 
@@ -152,10 +153,10 @@ that case, you can just write (for example, if you're using Stu)
 
 Here's an example pacenote file
 
-1 - caution left 3 minus;
-3 - caution R4M long;
-6 - jump;
-8 - hairpin left;
+    1 - caution left 3 minus;
+    3 - caution R4M long;
+    6 - jump;
+    8 - hairpin left;
 
 ### Pacenote options
 
@@ -165,6 +166,7 @@ There are additional options you can specify after the semicolon
 These I haven't used in ages, and I don't have time to test them properly now.
 They are supposed to manage how much of a pause the co-driver will take after
 uttering a pacenote. The pause length depends on the *breathLength* variable.
+
 * nopause
 * shortpause
 * verylongpause
