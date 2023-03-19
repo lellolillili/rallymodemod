@@ -8,8 +8,8 @@ I'm very happy to collaborate with anyone.
 
 ## Install
 Put the zip file in your mods folder. You do no need to unpack if you just want
-to play and edit basic settings (a the settings file, *rallyconfig.ini* will be
-created in *beamng_local/settings/*).
+to play and edit basic settings (the settings file, *rallyconfig.ini* will be
+created in *beamng_local/settings/).
 
 ## Go Rallying
 
