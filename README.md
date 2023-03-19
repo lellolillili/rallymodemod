@@ -1,10 +1,10 @@
 # Rally mode - experimental
 
 ## Download
-No need to clone the repo. Download a zip release instead.
+No need to clone the repo, just Download the leatest release (a zipfile) from the menu on the right.
 
-If you're interested in working on the code, then go ahead and clone the repo.
-I'm very happy to collaborate.
+If you're interested in working on the code, however, then go ahead and clone the repo.
+I'm very happy to collaborate with anyone.
 
 ## Install
 Put the zip file in your mods folder. You do no need to unpack if you just want
@@ -12,6 +12,9 @@ to play and edit basic settings (a the settings file, *rallyconfig.ini* will be
 created in *beamng_local/settings/*).
 
 ## Go Rallying
+
+If you have a *beamng_local_folder/settings/rallyconfig.ini* from previous versions of the mod, **remove it**.
+
 The rallies are under Time Trials menu. You can only start a rally from the Time
 Trials menu. 
 
