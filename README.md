@@ -1,21 +1,22 @@
 # Rally mode - experimental
-
+ 
 ## Download
-No need to clone the repo, just Download the leatest release (a zipfile) from the menu on the right.
+No need to clone the repo, just Download the leatest release (a zipfile) from
+the menu on the right.
 
-If you're interested in working on the code, however, then go ahead and clone the repo.
-I'm very happy to collaborate with anyone.
+If you're interested in working on the code, then go ahead and clone the repo.
 
 ## Install
 Put the zip file in your mods folder. You do no need to unpack if you just want
 to play and edit basic settings (the settings file, *rallyconfig.ini* will be
-created in *beamng_local/settings/).
+created in *beamng_local/settings/* after you make your first edits from the
+pause menu).
 
 ## Go Rallying
+If you have a *beamng_local_folder/settings/rallyconfig.ini* from previous
+versions of the mod, **remove it**.
 
-If you have a *beamng_local_folder/settings/rallyconfig.ini* from previous versions of the mod, **remove it**.
-
-The rallies are under Time Trials menu. You can only start a rally from the Time
+The rallies are under the Time Trials menu. You can only start a rally from the Time
 Trials menu. 
 
 You can see the length of a rally in the thumbnail. Shakedowns are short stages,
@@ -23,7 +24,7 @@ usually sections of the larger stages. Special stages are traditional length
 stages (5 to 15 km, for now).
 
 Most rallies are for vanilla maps, plus a few mod maps. If you want to rally on
-mod maps, you will need the following mods
+mod maps, you need the following mods
 * [PJS Drift and Rally](https://www.beamng.com/resources/pjs-drift-rally-pbr.21164/)
 * [Jungle Rock Island - Dirt version](https://www.beamng.com/resources/el-ferritos-jungle-rock-rally.22254/)
 * [East Coast USA - Dirt version](https://www.beamng.com/resources/el-ferritos-east-coast-dirt-rally.19717/)
@@ -31,9 +32,9 @@ mod maps, you will need the following mods
 
 * [Pikes Peak - WIP - coming soon!](https://www.beamng.com/resources/pikes-peak-lidar-edition.4986/)
 
-Start the race. After the countdown, you will be greeted by a
-welcome message. Read it and follow the instructions. You need to load the rally
-UI in order to see the pacenote symbols and the pause menu. Press
+Start a rally from the Time Trial menu. After the countdown, you will be greeted
+by a welcome message. Read it and follow the instructions. You need to load the
+rally UI in order to see the pacenote symbols and the pause menu. Press
 'SHIFT+CTRL+U', add apps, choose the Rally Mode UI app. Keep it nice and big and
 centered.
 
@@ -43,7 +44,7 @@ module will be loaded, and the sounds won't play anymore.
 Anytime after the countdown starts, you can pause physics ('J') to open the
 rally menu. The menu is self explanatory.
 
-Don't forget to hit "save" to save the options you modify.
+Don't forget to hit "save" to make the changes stick.
 
 ## Co-driver volume
 You will see an option to adjust the co-driver volume. I actually have no idea
@@ -184,6 +185,10 @@ There are two test scenarios (gridmap and small island) for testing the mod.
 They are under the Scenario menu, not the Time Trial menu.  In particular, the
 gridmapV2 test will utter every single corner, which is useful when making new
 co-driver.
+
+# Guides 
+
+* How to [make you own rallies](/doc/create_rallies.md)
 
 # Contribute 
 There is SO MUCH stuff that ANYONE could do, depending on your inclinations.
