@@ -1,375 +1,188 @@
-Here I explain how to create new trime trials with pacenotes, for use with the Rally Mode Mod.
+# Edit existing pacenotes
 
-The official, stable release of the Rally Mode Mod can be found here
-https://www.beamng.com/resources/rally-mode-smart-co-driver-stages-with-pacenotes.21824/
+If you just want to know how to change a couple of pacenotes and go on with your life, this is explained in the main page.
 
-The documentation and the experimental version  can be found on the github repo
-https://github.com/lellolillili/rallymodemod
 
-Edit existing pacenotes
-If you just want to know how to change a couple of pacenotes and go on with your life, this is explained in a look at the documentation linked above. This guide is for creating brand new rallies.
+# Make your own Time Trials with pacenotes
 
-Make your own Time Trials with pacenotes
-Creating a rally with pacenotes is effectively the same as creating a Time Trial with many waypoints. If you don't know how to create a Time Trial, you may want to look that up first (I will briefly explain that here though). In this guide, we'll name our new rally "myRally".
+Creating a rally with pacenotes is effectively the same as creating a Time Trial with many waypoints. If you don't know how to do that, you may want to look that up first, but I will give you just enough information to get by below. 
 
-Preparing
-Unpack the mod and find out where your local BeamNG folder is. In what follows, it is Local/BeamNG.drive/. Note that I use slashes instead of backslashes, because of reasons.
+In this guide, we will create a new rally for Italy. You can adapt this guide to any other map: just copy and paste various stuff into the right directory. It'll make sense as you read on.
 
-Getting started by cloning an existing rally
-We'll copy one of the mods' rallies from the mod's folder into our local level folder. We'll use a random rally from Italy as a blueprint, but you can use whatever. Go to
 
-Local/BeamNG.drive/0.xx/mods/unpacked/rallymodemod/levels/italy.
+### Preparing
 
-copy any one of the lua files (we'll use Castelletto.lua in this example), paste it to
+Unpack the mod and find out where your local BeamNG folder is. You need to unpack the mod so you can copy-paste some of it content. If you hate unpacked mods for whatever reason, you can always just extract the files you need from the zipfile and place them in the correct directory. In what follows, the local beamng folder will be *Local/BeamNG.drive/*. Note that I use slashes instead of backslashes (because of reasons).
 
-Local/BeamNG.drive/0.26/levels/italy,
 
-and rename the file you just pasted to myRally.lua. We are creating another rally in Italy, but you can pase  the file in any other level's folder. You'll need to create the folder if it doesn't exist already. This is the file that tells the game to load up the mod every time you play one of the rallies.
+### Cloning an existing rally
 
-Go to the mod's italy/quickrace folder
+The easiest way is to duplicate an existing rally and modify it where needed. Existing rallies for Italy are in the directories:
 
-Local/BeamNG.drive/0.26/mods/unpacked/pacenoteDirector/levels/italy/quickrace,
+    Local/BeamNG.drive/0.xx/mods/unpacked/rallymodemod/levels/italy < lua file 
+    Local/BeamNG.drive/0.xx/mods/unpacked/rallymodemod/levels/italy/quickrace < prefabs, picture, route (optional: custom pacenotes)
 
-copy the following files
-Castelletto.json
-Castelletto_forward.prefab
-Castelletto.prefab
-and paste them into
+We'll use a rally from Italy as a blueprint, say, *Castelletto*, but you can use whatever. Copy the following files:
 
-Local/BeamNG.drive/0.26/levels/italy/quickrace. Rename the files you just pasted to
-myRally.json
-myRally_forward.prefab
-myRally.prefab
-1. has Stage info and waypoint order, 2. has waypoints and start/finish stage stuff, and 3. has barriers, stage clutter, and all that. You can use stage clutter to change a map quite a lot. You can add bridges, big stones, and other fun stuff to create new paths or block old ones. Use your imagination.
+    Local/BeamNG.drive/0.xx/mods/unpacked/rallymodemod/levels/italy/Castelletto.lua
+                                                                   /quickrace/Castelletto.json
+                                                                             /Castelletto_forward.prefab
+                                                                             /Castelletto.prefab
 
-You may also add a thumbnail, myRally.jpg.
+Rename the files you just pasted to *myRally* in one of two places:
 
-Open up myRally.json with a text editor and change the track name, description, etc.
+1. A new local mod containing all your custom rallies
 
-Launch the map editor
-Launch the game and start the Time Trial you just created. Don't worry if your car starts falling from the sky. It's just a waypoint name mismatch that you will fix soon.
+        Local/BeamNG.drive/0.xx/mods/unpacked/MYCUSTOMRALLIES/levels/italy/myRally.lua
+                                                                          /quickrace/myRally.json
+                                                                                    /myRally_forward.prefab
+                                                                                    /myRally.prefab
 
-Launch the F11 menu. Open the scene tree and look for the prefab. You'll find it after scrolling all the way down, in the MissionGroup group. It will be named myRally, and have a little package icon. Right-click, unpack it, and expand it so you can see the list of waypoints. The first thing you'll notice is that there are a lot of waypoints. This is because they serve multiple purposes, which I explain now.
+2. Your local *levels* folder
 
-upload_2022-3-2_21-32-31.png
+        Local/BeamNG.drive/0.xx/levels/italy/myRally.lua
+                                            /quickrace/myRally.json
+                                                       myRally_forward.prefab
+                                                       myRally.prefab
 
-Waypoints
-1. Waypoints carry pacenotes describing features of the road such as corners, crests, and dips. They are placed at the features (e.g., at corner entry, at the beginning of a crest, or on a dip). I can't stress this enough: the whole point of this workflow is that you put a waypoint at a corner, and describe it in the pacenote field. The pacenote director will handle the timing.
+We are creating another rally in Italy, but you can place these files in any other level's folder. You'll need to create the folder if it doesn't exist already. 
 
-upload_2022-3-2_21-29-29.png
+*myRally.lua* is the file that tells the game to load up the mod every time you start the time trial.
+You can paste these 4 files, respecting the hierarchy, in: 
 
-2. Waypoints define the stage. Distances between any two points are calculated with respect to the rough outline of the track that is defined by the waypoints. The better the waypoints follow the road, the more accurate these distances will be. Examples of distances that are used by the mod are a) the distance between two pacenotes, b) the distance between your car and the next pacenote, c) total track length, d) distance traveled so far. There are more, but you get the idea: if there aren't enough waypoints, these distances will be inaccurate and the pacenote director will behave badly.
+*myRally.json* is the race file: it specifies the order of the waypoints. The number of waypoints in this file must match the number of waypoints in the prefab. Open this file with a text editor and change the track name, description, etc.
 
-3. Waypoints act as a (very unsophisticated) track-cutting prevention system. Since you have to pass through every single waypoint to finish the track, skipping one will mess up your lap. For this reason, you should be generous and use large radius waypoints (significantly larger than the road width). More sophisticated systems such as time penalties and wrong way detection are a bit overkill for now, given the stage of the mod.
+*myRally_forward.prefab* this is where the waypoints go. Pacenotes are added to the waypoints. 
+
+*myRally.prefab* this is where stage clutter goes. Race start, barriers, and all that. You can use stage clutter to change a map quite a lot. You can add bridges, big stones, and other fun stuff to create new paths or block old ones. Use your imagination. 
+
+You may also add a thumbnail, *myRally.jpg*, in the quickrace folder.
+
+
+### World editor
+
+Launch the map where your rally takes place in free roaming and launch the world editor (F11). 
+
+From the asset browser, go to the folder where you copied the files and import the prefab files. Right click on them, and do "import at origin" (or something like that).
+
+Open the scene tree and look for the prefabs you just imported. Right click each of them and unpack them. One is named myRally, and the other is named myRally_forward. Expand myRally, remove all the stage clutter you don't need, and repack the prefab. In this guide I will not explain how to add stage clutter, it's pretty easy. Basically, once you've set up the rally, you can decorate it further. It's useful to keep all this stuff in a separate prefab file, instead of mixing up waypoints and stage objects. 
+
+Expand myRally_forward, so you can see the list of waypoints. The first thing you'll notice is that there are a lot of waypoints. This is because they serve multiple purposes, which I explain now.
+
+![first pic](fig1.jpg)
+
+#### Waypoints
+
+1. Waypoints carry pacenotes describing features of the road such as corners, crests, and dips. They are placed **at** the features (e.g., at corner **entry**, at the **beginning** of a crest, or dip). I can't stress this enough: the whole point of this workflow is that you put a waypoint at the start of a corner, and describe it in the pacenote field. The pacenote director will handle the timing. You can place any number of additional point wherever, but it is very important that at least every single jump/dip/crest/junction/etc has one waypoint right where the feature begins.
+
+![second pic](fig2.jpg)
+
+2. Waypoints define the stage. Distances are calculated with respect to the rough outline of the track that is defined by the waypoints. The better the waypoints follow the road, the more accurate these distances will be. Obviously, the more waypoints there are, the better the outline is. The mod calculates a lot of distances: including a) the distance between two pacenotes, b) the distance between your car and the next pacenote, c) total track length, d) distance traveled so far. There are more, but you get the idea: if there aren't enough waypoints, these distances will be inaccurate and the pacenote director will misbehave. Be liberal with waypoints. 
+
+3. Waypoints act as a (very unsophisticated) track-cutting prevention system. Since you have to pass through every single waypoint to finish the race, skipping one will mess up your lap. For this reason, you should be generous and use large radius waypoints (significantly larger than the road width). The size of waypoints is set on the scale parameter - 15m is a good size, but it depends on how large or narrow the road is. 
 
 In your usual rally, many waypoints will be blank. An empty waypoint either does not have the pacenote dynamic field at all or has its value set to pacenote="empty".
 
-upload_2022-3-2_21-29-51.png
+![third pic](fig3.jpg)
 
-Creating your own rally
-Remove all the pacenotes from your prefab on the scene tree except the spawn point, start, finish, and the very first waypoint (shift+click to select multiple waypoints from the scene tree). These are usually named something_start, something_finish, and something_wp1. It's highly recommended that you rename the waypoints to something unique, for reasons that are beyond the scope of this tutorial. in this case, you can use my_rally_wp1, or myRallywp1 (anything al long as it ends in '1').
+### Creating your own rally
+Remove all the waypoints from your prefab (*myRally_forward*) from the scene tree except the spawn point, start, finish, and the very first waypoint (Shift+Click to select multiple waypoints from the scene tree, and DEL to delete them). These are usually named something like *some_rally_start*, *some_rally_finish*, and *some_rally_wp1*. It's highly recommended that you rename the waypoints to something unique. In this case, for the first waypoint you can use *my_rally_wp1*, (anything as long as it ends in '1'), and for the start and finish you can use *my_rally_start* and *my_rally_finish*.
 
-You need to change the spawn point name, in this case to myRally_standing_spawn. The part before _standing_spawn must always match the json filename (from myRally.json), otherwise, your car will spawn at the wrong place. Don't get too worried about names, you can always rename everything at the end by opening your prefab file with a text editor and doing find-replace. Just always be careful with the name of the standing spawn.
+You need to change the spawn point name, in this case to *myRally_standing_spawn*. The part before *_standing_spawn* must **always match the json filename** (in this case it is *myRally.json*), otherwise, your car will spawn at the wrong place. Don't get too worried about names, you can always rename everything at the end by opening your prefab file with a text editor and doing find-replace, but always be careful with the name of the standing spawn.
 
-Your starting point now should be a prefab names myRally, with the following objects inside
+Your starting point now should be a prefab names *myRally_forward*, with the following objects inside
 
-myRally_standing_spawn
-myRally_start
-myRally_wp1
-myRally_finish
+    myRally_standing_spawn
+    my_rally_start
+    my_rally_wp1
+    my_rally_finish
 
-Make sure the dynamic field in the first waypoint is set to "empty" (not crucial, but convenient, as you'll find out.) Copy the first pacenote, myRally_wp1. Here's your basic workflow, for the most part: Paste the waypoint (the pasted waypoint will be conveniently renamed to myRally_wp2), and navigate with the free camera to where you want to put the next waypoint (e.g., at a corner's entry), hit the shortcut for "move object to camera", and edit the pacenote dynamic field if you need to. Paste the next node, and do the same.
+Make sure the dynamic field in the first waypoint is set to "empty" (not crucial, but convenient, as you'll find out.) You will find the dynamic field in the object inspector menu. Copy the first pacenote, *myRally_wp1*. Here's your basic workflow, for the most part: Paste the waypoint (the pasted waypoint will be  automatically renamed to *myRally_wp2*) and navigate with the free camera to where you want to place the next waypoint (e.g., at a corner's entry). Hit the shortcut for *move object to camera*, and edit the pacenote dynamic field if you need to. For example, if the waypoint is at a corner's entry, you can put a pacenote there. Paste the next node, move to camera, and keep going until the end. You have to press enter after writing the note in the field!
+Protip: remap "move object to camera" to "V" from *Options>Editor* (or some other shortcut that's convenient to hit right after CTRL-V, because you're gonna be doing a lot of that).
 
-The last waypoint must be myRally_finish, and the first one must be myRally_start. Place them accordingly. myRally_standing_spawn is where your car will spawn, and should be in the middle of myRally_standing_spawn. Place it and rotate it so that your car will not spawn upside down.
+The last waypoint must be *myRally_finish*, and the first one must be *myRally_start*. Place them accordingly. *myRally_standing_spawn* is where your car will spawn. Place it and rotate it so that your car will not spawn upside down.
 
-Protip: re-map "move object to camera" to "V" from Options>Editor (or some other shortcut that's convenient to hit right after CTRL-V, because you're gonna be doing a lot of that).
 
-The list of available calls is in the file AppData/Local/BeamNG.drive/0.24/mods/unpacked/pacenoteDirector/scripts/pacenotes/pacenotes.json.
+### OK, what are the pacenotes?
 
-Note: you have to press enter after writing the note in the field!
+It depends on the co-driver and the samples that they have available, but if you're planning on sharing your notes, you can be extra safe and use [this list](/doc/all_available_calls.md). This list guarantees that your pacenotes will work with any co-driver that comes with the experimental and official releases. It will become more useful as I add more co-drivers. 
 
-Note: blank nodes can be either pacenote="empty", or not have the pacenote field altogether.
+If you know you're always going to be using the same co-driver, you can use anything sample you can find in its sample folder. Stu has a crapload of samples, but Alex Gelsomino sounds cooler. Have a look here for the list of all the samples
 
-Pacenotes and markers
-The co-driver will always say the distance to the next pacenote after the call. For example, a few calls in a row will sound something like
+* [Stu's samples](/art/codrivers/Stu)
+* [Alex Gelsomino's samples](/art/codrivers/Alex Gelsomino)
 
-"3 left 40", "6 right 100", "tightens bad 50", "line 300", etc.
+### Pacenotes and markers
+The co-driver will always tell the distance to the next pacenote after each call. For example: 
 
-Distances are calculated automatically. For medium and long corners, as well as hairpins, it's recommended that you add a "marker waypoint" to specify where the corner ends. Marker behavior is best explained with diagrams. This is done by adding the dynamic field marker to the waypoint. This is how markers work:
+    "3 left 40", "6 right 100", "tightens bad 50", "line 300", etc.
 
-(P) = waypoint with pacenote
-(P) = waypoint with pacenote
-(M) = waypoint with marker
-(PM) = waypoint with pacenote AND marker
+Distances are calculated automatically. For medium and long corners, as well as hairpins, it's recommended that you add a "marker waypoint" to specify where the corner ends. You can make a waypoint act as a marker by creating a dynamic field "marker". The value is not important, just set it to 0. Marker behavior is best explained with diagrams. 
+
+    (P) = waypoint with pacenote
+    (P) = waypoint with pacenote
+    (M) = waypoint with marker
+    (PM) = waypoint with pacenote AND marker
 
 Code:
 case 1: No marker between 2 pacenotes
-If the corner is very short or you're just describing a feature of the road with no relevant length (rock, kink...), just say the dist from the next corner or feature.
-( P ) ----- ( ) ---- ( ) ----- ( ) ----- ( P )
+If the corner is very short or you're just describing a feature of the road with no relevant length (rock, kink...), just say the distance from the next corner or feature.
+
+    ( P1 ) ----- ( ) ---- ( ) ----- ( ) ----- ( P2 )
+     10m         50m      60m       70m         80m
+
+    Call: "P1 70, P2 ..."
 
 case 2: one marker between 2 pacenotes.
 If the corner is > 30 meters, you should mark the end of the corner. The only marker is interpreted as the end of the corner you just called.
-( P ) ----- ( M ) ---- ( ) ----- ( ) ------ ( P )
 
-You make a waypoint act as a marker by adding a dynamic field named "marker" to the waypoint. The content doesn't matter, but it'll be 0 by default. Also, note that putting a marker field on a non-empty pacenote does nothing. If this is confusing to you, look for a waypoint with a marker dynamic field in the examples. I'm sure it'll make sense once you see it in action.
+    ( P1 ) ----- ( M ) ---- ( ) ----- ( ) ----- ( P2 )
+     10m         50m        60m       70m         80m
 
-upload_2022-3-2_21-31-49.png
+    Call: "P1 50, P2 ..."
 
-If two pacenotes are closer than some cutoff distance, the co-driver will not say the distance, but it will add a link word at the beginning of the next call. The cutoff is specified in the settings/rallyconfig.ini configuration file. The cutoff and the link word can be configured. If you set the link word to "and", and the cutoff to 40, the utterance "3 left 40", "6 right 100" will become "3 left", "and 6 right 100". Look at the config file for the defaults and recommendations.
+If this is confusing to you, look for a waypoint with a marker dynamic field in the examples. I'm sure it'll make sense once you see it in action.
 
-As far as saving the prefab, packing, unpacking and exporting it, saving it as a mod, etc, you can just treat it as a normal prefab. Once you're done, either save or pack the prefab. Packing is recommended, but there's no problem with just hitting save if you know what you're doing.
+![fourth pic](fig4.jpg)
 
-Finishing up
+If two pacenotes are closer than some cutoff distance, the co-driver will not say the distance, but it will add a link word at the beginning of the next call. The cutoff is specified in your local version of *settings/rallyconfig.ini*. In fact, both the cutoff and the link word can be configured. If you set the link word to "and", and the cutoff to 40, the pacenotes "3 left 40", "6 right 100" will become "3 left", "and 6 right 100". 
 
-Pack the prefab. With a text editor, open
+### Finishing up (or saving your work for later)
 
-Local/BeamNG.drive/0.26/levels/italy/quickrace
+Once you're done, either save the map or pack the prefab. Packing the prefab is the recommended way, but there's no problem with just hitting save if you know what you're doing.
 
-You'll see a list of waypoints. This list must match the waypoint you have defined in your prefab.
+If you want to make the Time Trial playable, the waypoint list and names in the json must match the number and name of the waypoints in the forward prefab. You can edit the json with a text editor. If our example, this file is *myRally.json*.
 
-Note that quick edits to pacenotes can be done directly with a text editor on the prefab file. No need to relaunch the game and open the map editor. Note, however, that if you mess something up, it'll be very hard to troubleshoot. When in doubt, backup first.
+Note that quick edits to the pacenotes can be done directly with a text editor on *myRally_forward.prefab* file. No need to relaunch the game and open the map editor. Note, however, that if you mess something up, it can be very hard to troubleshoot. When in doubt, backup first.
 
-Common errors and tips
-Waypoints in the prefab file and the json file must match. The spawn point must be named correctly, json and prefab must have the same number of waypoints, and their names must match.
+### Common errors and tips
+
+You can look at the console for error messages. It will tell you if you misspelled a pacenote.
 
 If you make a mistake and create a dynamic field whose name has whitespace in it, the game will throw an "expected X, got nil" type of error, without telling you which pacenote is the cause of the issue. You're going to have to go through the text prefab file and check every single pacenote.
 
-If you unpack all the prefabs for a map at the same time, you can quickly see which routes you've already used for a rally. This is useful when you want your rallys to cover the entirety of a map with no overlap.
+If you unpack all the prefabs for a map at the same time, you can quickly see which routes you've already used for a rally. This is useful when you want your rallies to cover the entirety of a map with no overlap.
 
 Create a Time Trial (quickRace) with pacenotes
 Suppose you want to do a new Time Trial with pacenotes for gridmap_v2.
 
-1. Copy paste the folder structure for a Time Trial and all its files. These are
+# Random notes about saving pacenotes and prefabs
 
-BeamNG.drive/0.24/levels/gridmap_v2/quickrace/testRally.json
-BeamNG.drive/0.24/levels/gridmap_v2/quickrace/testRally.prefab
-BeamNG.drive/0.24/levels/gridmap_v2/quickrace/testRally_forward.prefab
-BeamNG.drive/0.24/levels/gridmap_v2/testRally.lua
-
-2. Launch a Time Trial, open map editor, unpack the prefab, and edit waypoints and their pacenotes.
-
-3. Pack the prefab. This should save the new prefab on top of the new one. Packed prefabs are relatively readable, so you can do quick edits to it with a text editor if needed (e.g., a quick edit to a pacenote).
-
-4. Update the race order in testRally.json.
-
-Random notes about saving pacenotes and prefabs
 Suppose the Time Trial is published as a mod. If my mods' level folder is set up as follows
-Code:
-BeamNG.drive/mods/unpacked/rally/levels/gridmap_v2
-                                    ├── rally.prefab
-                                    └── scenarios
-                                        ├── rally.json
-                                        └── rally_thumb.jpg
+
+    BeamNG.drive/mods/unpacked/rally/levels/gridmap_v2
+                                           /rally.prefab
+                                           /scenarios/
+                                                     /rally.json
+                                                     /rally_thumb.jpg
 
 then, upon saving the level from the F11 menu, the following file is created in my local level folder:
 
-BeamNG.drive/0.24/levels/gridmap_v2/main/MissionGroup/rally_unpacked/items.level.json,
+    BeamNG.drive/0.24/levels/gridmap_v2/main/MissionGroup/rally_unpacked/items.level.json,
 
-which is essentially a raw prefab. It shows up in the scene tree as rally_unpacked, and as far as I can tell overrides the prefab provided by the mod. If I pack it, a local prefab is created in the map's folder
+which is essentially a raw prefab. It shows up in the scene tree as *rally_unpacked*, and as far as I can tell overrides the prefab provided by the mod. If I pack it, a local prefab is created in local map's folder
 
-BeamNG.drive/0.24/levels/gridmap_v2/rally.prefab
+    BeamNG.drive/0.24/levels/gridmap_v2/rally.prefab
 
 and the mission group subfolder disappears.
-
-Doing recce (a.k.a changing the pacenotes you don't like)
-Once the pacenotes are done, the fun just begins, because I want players to be able to tweak and personalize the notes, by allowing them to do their own recce.
-
-upload_2022-3-2_21-30-12.png
-
-Copy all the prefabs that end in _forward.prefab into your local beamng folder, recreating the correct structure.
-
-Waypoint information is displayed in the console (~). Pause the game whenever you find a pacenote you want to change. Find the exact waypoint name in the console (it has all the necessary information), open prefab with a text editor, CTRL-F to the waypoint, and change the pacenote. See pic. The list of available calls is in the file AppData/Local/BeamNG.drive/0.24/mods/unpacked/pacenoteDirector/scripts/pacenotes/pacenotes.json.
-
-You can also change the pacenotes by opening the F11 menu and unpacking the prefab. Don't forget to repack it.
-
-
-How the mod works
-I'm using the Pacenotes Core mod to utter the calls, and the game's built-in waypoint-based race logic to handle the scenario. In practice, you are playing a normal Time Trial, but with pacenotes. The pacenote director can also run on top of scenarios. It works as long as the prefab has waypoints, and waypoints have pacenotes in them.
-
-Pacenotes are added to waypoints, which I'm also using to define rough track limits. During the race, the pacenote director figures out when to say the pacenotes and will calculate distance calls automatically. A distance call is the distance from the current pacenote to the next pacenote. If you marked two waypoints that are 100 meters away as, say, "3 left" and "crest", the co-driver will automatically say "3 left, 100 [PAUSE], crest ...". The director will utter a call T seconds before you cross the waypoint, basing the estimate on the current car speed and other stuff that you have control over. You can configure T in the config file.Released on the repo, see https://www.beamng.com/resources/pacenotedirector.21824/
-
-Configuration
-See repo link.
-
-TUTORIAL: Make your own Time Trials with pacenotes
-scroll down to section "Recce" if you just want to know how to change a couple of pacenotes and go on with your life
-
-Create a new Time Trial with pacenotes
-Creating a rally with pacenotes is effectively the same as creating a Time Trial with many waypoints. If you don't know how to create a Time Trial, you may want to look that up first (I will briefly explain that here though). In this guide, we'll name our new rally "myRally".
-
-Preparing
-Unpack the mod and find out where your local BeamNG folder is. In what follows, it is Local/BeamNG.drive/. Note that I use slashes instead of backslashes.
-
-Getting started by cloning an existing rally
-We'll copy one of the mods' rallies from the mod's folder to our local level folder. Go to
-
-Local/BeamNG.drive/0.26/mods/unpacked/pacenoteDirector/levels/italy.
-
-copy any one of the lua files (we'll use Castelletto.lua in this example), paste it to
-
-Local/BeamNG.drive/0.26/levels/italy,
-
-and rename the file you just pasted to myRally.lua. You'll need to create the folder if it doesn't exist already. This is the file that tells the game to load up the mod every time you play one of the rallies.
-
-Go to the mod's italy/quickrace folder
-
-Local/BeamNG.drive/0.26/mods/unpacked/pacenoteDirector/levels/italy/quickrace,
-
-copy the following files
-Castelletto.json
-Castelletto_forward.prefab
-Castelletto.prefab
-and paste them into
-
-Local/BeamNG.drive/0.26/levels/italy/quickrace. Rename the files you just pasted to
-myRally.json
-myRally_forward.prefab
-myRally.prefab
-1. has Stage info and waypoint order, 2. has waypoints and start/finish stage stuff, and 3. has barriers, stage clutter, and all that. You can use stage clutter to change a map quite a lot. You can add bridges, big stones, and other fun stuff to create new paths or block old ones. Use your imagination.
-
-You may also add a thumbnail, myRally.jpg.
-
-Open up myRally.json with a text editor and change the track name, description, etc.
-
-Launch the map editor
-Launch the game and start the Time Trial you just created. Don't worry if your car starts falling from the sky. It's just a waypoint name mismatch that you will fix soon.
-
-Launch the F11 menu. Open the scene tree and look for the prefab. You'll find it after scrolling all the way down, in the MissionGroup group. It will be named myRally, and have a little package icon. Right-click, unpack it, and expand it so you can see the list of waypoints. The first thing you'll notice is that there are a lot of waypoints. This is because they serve multiple purposes, which I explain now.
-
-upload_2022-3-2_21-32-31.png
-
-Waypoints
-1. Waypoints carry pacenotes describing features of the road such as corners, crests, and dips. They are placed at the features (e.g., at corner entry, at the beginning of a crest, or on a dip). I can't stress this enough: the whole point of this workflow is that you put a waypoint at a corner, and describe it in the pacenote field. The pacenote director will handle the timing.
-
-upload_2022-3-2_21-29-29.png
-
-2. Waypoints define the stage. Distances between any two points are calculated with respect to the rough outline of the track that is defined by the waypoints. The better the waypoints follow the road, the more accurate these distances will be. Examples of distances that are used by the mod are a) the distance between two pacenotes, b) the distance between your car and the next pacenote, c) total track length, d) distance traveled so far. There are more, but you get the idea: if there aren't enough waypoints, these distances will be inaccurate and the pacenote director will behave badly.
-
-3. Waypoints act as a (very unsophisticated) track-cutting prevention system. Since you have to pass through every single waypoint to finish the track, skipping one will mess up your lap. For this reason, you should be generous and use large radius waypoints (significantly larger than the road width). More sophisticated systems such as time penalties and wrong way detection are a bit overkill for now, given the stage of the mod.
-
-In your usual rally, many waypoints will be blank. An empty waypoint either does not have the pacenote dynamic field at all or has its value set to pacenote="empty".
-
-upload_2022-3-2_21-29-51.png
-
-Creating your own rally
-Remove all the pacenotes from your prefab on the scene tree except the spawn point, start, finish, and the very first waypoint (shift+click to select multiple waypoints from the scene tree). These are usually named something_start, something_finish, and something_wp1. It's highly recommended that you rename the waypoints to something unique, for reasons that are beyond the scope of this tutorial. in this case, you can use my_rally_wp1, or myRallywp1 (anything al long as it ends in '1').
-
-You need to change the spawn point name, in this case to myRally_standing_spawn. The part before _standing_spawn must always match the json filename (from myRally.json), otherwise, your car will spawn at the wrong place. Don't get too worried about names, you can always rename everything at the end by opening your prefab file with a text editor and doing find-replace. Just always be careful with the name of the standing spawn.
-
-Your starting point now should be a prefab names myRally, with the following objects inside
-
-myRally_standing_spawn
-myRally_start
-myRally_wp1
-myRally_finish
-
-Make sure the dynamic field in the first waypoint is set to "empty" (not crucial, but convenient, as you'll find out.) Copy the first pacenote, myRally_wp1. Here's your basic workflow, for the most part: Paste the waypoint (the pasted waypoint will be conveniently renamed to myRally_wp2), and navigate with the free camera to where you want to put the next waypoint (e.g., at a corner's entry), hit the shortcut for "move object to camera", and edit the pacenote dynamic field if you need to. Paste the next node, and do the same.
-
-The last waypoint must be myRally_finish, and the first one must be myRally_start. Place them accordingly. myRally_standing_spawn is where your car will spawn, and should be in the middle of myRally_standing_spawn. Place it and rotate it so that your car will not spawn upside down.
-
-Protip: re-map "move object to camera" to "V" from Options>Editor (or some other shortcut that's convenient to hit right after CTRL-V, because you're gonna be doing a lot of that).
-
-The list of available calls is in the file AppData/Local/BeamNG.drive/0.24/mods/unpacked/pacenoteDirector/scripts/pacenotes/pacenotes.json.
-
-Note: you have to press enter after writing the note in the field!
-
-Note: blank nodes can be either pacenote="empty", or not have the pacenote field altogether.
-
-Pacenotes and markers
-The co-driver will always say the distance to the next pacenote after the call. For example, a few calls in a row will sound something like
-
-"3 left 40", "6 right 100", "tightens bad 50", "line 300", etc.
-
-Distances are calculated automatically. For medium and long corners, as well as hairpins, it's recommended that you add a "marker waypoint" to specify where the corner ends. Marker behavior is best explained with diagrams. This is done by adding the dynamic field marker to the waypoint. This is how markers work:
-
-(P) = waypoint with pacenote
-(P) = waypoint with pacenote
-(M) = waypoint with marker
-(PM) = waypoint with pacenote AND marker
-
-Code:
-case 1: No marker between 2 pacenotes
-If the corner is very short or you're just describing a feature of the road with no relevant length (rock, kink...), just say the dist from the next corner or feature.
-( P ) ----- ( ) ---- ( ) ----- ( ) ----- ( P )
-
-case 2: one marker between 2 pacenotes.
-If the corner is > 30 meters, you should mark the end of the corner. The only marker is interpreted as the end of the corner you just called.
-( P ) ----- ( M ) ---- ( ) ----- ( ) ------ ( P )
-
-You make a waypoint act as a marker by adding a dynamic field named "marker" to the waypoint. The content doesn't matter, but it'll be 0 by default. Also, note that putting a marker field on a non-empty pacenote does nothing. If this is confusing to you, look for a waypoint with a marker dynamic field in the examples. I'm sure it'll make sense once you see it in action.
-
-upload_2022-3-2_21-31-49.png
-
-If two pacenotes are closer than some cutoff distance, the co-driver will not say the distance, but it will add a link word at the beginning of the next call. The cutoff is specified in the settings/rallyconfig.ini configuration file. The cutoff and the link word can be configured. If you set the link word to "and", and the cutoff to 40, the utterance "3 left 40", "6 right 100" will become "3 left", "and 6 right 100". Look at the config file for the defaults and recommendations.
-
-As far as saving the prefab, packing, unpacking and exporting it, saving it as a mod, etc, you can just treat it as a normal prefab. Once you're done, either save or pack the prefab. Packing is recommended, but there's no problem with just hitting save if you know what you're doing.
-
-Finishing up
-
-Pack the prefab. With a text editor, open
-
-Local/BeamNG.drive/0.26/levels/italy/quickrace
-
-You'll see a list of waypoints. This list must match the waypoint you have defined in your prefab.
-
-Note that quick edits to pacenotes can be done directly with a text editor on the prefab file. No need to relaunch the game and open the map editor. Note, however, that if you mess something up, it'll be very hard to troubleshoot. When in doubt, backup first.
-
-Common errors and tips
-Waypoints in the prefab file and the json file must match. The spawn point must be named correctly, json and prefab must have the same number of waypoints, and their names must match.
-
-If you make a mistake and create a dynamic field whose name has whitespace in it, the game will throw an "expected X, got nil" type of error, without telling you which pacenote is the cause of the issue. You're going to have to go through the text prefab file and check every single pacenote.
-
-If you unpack all the prefabs for a map at the same time, you can quickly see which routes you've already used for a rally. This is useful when you want your rallys to cover the entirety of a map with no overlap.
-
-Create a Time Trial (quickRace) with pacenotes
-Suppose you want to do a new Time Trial with pacenotes for gridmap_v2.
-
-1. Copy paste the folder structure for a Time Trial and all its files. These are
-
-BeamNG.drive/0.24/levels/gridmap_v2/quickrace/testRally.json
-BeamNG.drive/0.24/levels/gridmap_v2/quickrace/testRally.prefab
-BeamNG.drive/0.24/levels/gridmap_v2/quickrace/testRally_forward.prefab
-BeamNG.drive/0.24/levels/gridmap_v2/testRally.lua
-
-2. Launch a Time Trial, open map editor, unpack the prefab, and edit waypoints and their pacenotes.
-
-3. Pack the prefab. This should save the new prefab on top of the new one. Packed prefabs are relatively readable, so you can do quick edits to it with a text editor if needed (e.g., a quick edit to a pacenote).
-
-4. Update the race order in testRally.json.
-
-Random notes about saving pacenotes and prefabs
-Suppose the Time Trial is published as a mod. If my mods' level folder is set up as follows
-Code:
-BeamNG.drive/mods/unpacked/rally/levels/gridmap_v2
-                                    ├── rally.prefab
-                                    └── scenarios
-                                        ├── rally.json
-                                        └── rally_thumb.jpg
-
-then, upon saving the level from the F11 menu, the following file is created in my local level folder:
-
-BeamNG.drive/0.24/levels/gridmap_v2/main/MissionGroup/rally_unpacked/items.level.json,
-
-which is essentially a raw prefab. It shows up in the scene tree as rally_unpacked, and as far as I can tell overrides the prefab provided by the mod. If I pack it, a local prefab is created in the map's folder
-
-BeamNG.drive/0.24/levels/gridmap_v2/rally.prefab
-
-and the mission group subfolder disappears.
-
-Doing recce (a.k.a changing the pacenotes you don't like)
-Once the pacenotes are done, the fun just begins, because I want players to be able to tweak and personalize the notes, by allowing them to do their own recce.
-
-upload_2022-3-2_21-30-12.png
-
-Copy all the prefabs that end in _forward.prefab into your local beamng folder, recreating the correct structure.
-
-Waypoint information is displayed in the console (~). Pause the game whenever you find a pacenote you want to change. Find the exact waypoint name in the console (it has all the necessary information), open prefab with a text editor, CTRL-F to the waypoint, and change the pacenote. See pic. The list of available calls is in the file AppData/Local/BeamNG.drive/0.24/mods/unpacked/pacenoteDirector/scripts/pacenotes/pacenotes.json.
-
-You can also change the pacenotes by opening the F11 menu and unpacking the prefab. Don't forget to repack it.
-
-
-How the mod works
-I'm using the Pacenotes Core mod to utter the calls, and the game's built-in waypoint-based race logic to handle the scenario. In practice, you are playing a normal Time Trial, but with pacenotes. The pacenote director can also run on top of scenarios. It works as long as the prefab has waypoints, and waypoints have pacenotes in them.
-
-Pacenotes are added to waypoints, which I'm also using to define rough track limits. During the race, the pacenote director figures out when to say the pacenotes and will calculate distance calls automatically. A distance call is the distance from the current pacenote to the next pacenote. If you marked two waypoints that are 100 meters away as, say, "3 left" and "crest", the co-driver will automatically say "3 left, 100 [PAUSE], crest ...". The director will utter a call T seconds before you cross the waypoint, basing the estimate on the current car speed and other stuff that you have control over. You can configure T in the config file.
 
