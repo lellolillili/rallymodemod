@@ -1,18 +1,24 @@
 # Rally mode - experimental
  
 ## Download
+
 No need to clone the repo, just Download the leatest release (a zipfile) from
 the menu on the right.
 
 If you're interested in working on the code, then go ahead and clone the repo.
 
 ## Install
+
+Remove or deactivate any previous versions of the mod.
+    
 Put the zip file in your mods folder. You do no need to unpack if you just want
 to play and edit basic settings (the settings file, *rallyconfig.ini* will be
 created in *beamng_local_dir/settings/* after you make your first edits from the
 pause menu).
 
+
 ## Go Rallying
+
 If you have a *beamng_local_dir/settings/rallyconfig.ini* from previous
 versions of the mod, **remove it**.
 
@@ -46,17 +52,21 @@ rally menu. The menu is self explanatory.
 
 Don't forget to hit "save" to make the changes stick.
 
+
 ## Co-driver volume
+
 You will see an option to adjust the co-driver volume. I actually have no idea
 what the hell is the correlation between the number you put in there, and actual
 volume of the co-driver voice. I only know that 0 is mute, small numbers are low
 volume, and large numbers are high volume. Please let me know if you figure out
 a reasonable range.
 
+
 ## Configuration
 
 ### Advanced options
-[More details in [](/settings/rallyconfig.ini)]
+
+[More details in [](/settings/rallyconfig.ini)
 
 Open the copy of the rallyconfig file *in your own local BeamNG directory*,
 *beamng_local_dir/setting/rallyconfig.ini* (it is created after you use the
@@ -64,7 +74,9 @@ Open the copy of the rallyconfig file *in your own local BeamNG directory*,
 options in this file for fine-tuning your co-driver. Not every single option in
 this file can be changed from the pause menu.
 
+
 ### Change co-driver
+
 Open *beamng_local_dir/setting/rallyconfig.ini*. In the *codriverDir* option
 you can use any of the co-drivers you have in the folder
 
@@ -75,14 +87,18 @@ For the moment, we have
 * Stu - text to speech
 * Alex Gelsomino - sampled from real rally footage
 
+
 ### Codriver customization
+
 You can find a tutorial on how you can create and/or customize your co-driver in
 Alex Gelsomino's config files.
 
-* [](/art/codrivers/Alex Gelsomino/codriver.ini)
-* [](/art/codrivers/Alex Gelsomino/symbols.ini)
+* [](art/codrivers/Alex Gelsomino/codriver.ini)
+* [](art/codrivers/Alex Gelsomino/symbols.ini)
                             
+
 ## Edit pacenotes
+
 When rallying, enter the pause menu ('J'), and check the pacenote-file name. You
 can create the pacenote file ("filename.pnt") in the correct directory, and
 start editing the pacenotes.
@@ -111,8 +127,9 @@ Here's an example of a valid pacenote file
 The pacenotes attached to waypoints  1, 2, 4, 5, 8 and 14 will be now
 overridden. The rest will stay default. Default pacenotes are stored as a
 field in the waypoints in
-*.../levels/levelname/quickrace/rallyname_forward.prefab*. Do not touch this
+*levels/levelname/quickrace/rallyname_forward.prefab*. Do not touch this
 file.
+
 
 ### Corner codes:
 
@@ -165,6 +182,7 @@ Here's an example pacenote file
     6 - jump;
     8 - hairpin left;
 
+
 ### Pacenote options
 
 There are additional options you can specify after the semicolon
@@ -183,22 +201,26 @@ uttering a pacenote. The pause length depends on the *breathLength* variable.
 Always check the console for pacenote errors. For example, it will tell you if
 you use an inexistent samples.
 
+
 ## Testing stuff
+
 There are two test scenarios (gridmap and small island) for testing the mod.
 They are under the Scenario menu, not the Time Trial menu.  In particular, the
 gridmapV2 test will utter every single corner, which is useful when making new
 co-driver.
+
 
 # Tutorials 
 
 * How to [make you own rallies](/doc/create_rallies.md)
 * Same as above, but [video](https://www.youtube.com/watch?v=frwT8l9dPS4)
 * Creating co-drivers: 
-[managing samples](/art/codrivers/Alex Gelsomino/codriver.ini) 
+[managing samples](art/codrivers/Alex Gelsomino/codriver.ini) 
 and 
-[UI symbols](/art/codrivers/Alex Gelsomino/symbols.ini)
+[UI symbols](art/codrivers/Alex Gelsomino/symbols.ini)
     
 # Contribute 
+
 There is SO MUCH stuff that ANYONE could do, depending on your inclinations.
 Even with 0 coding experience. 
 
@@ -216,7 +238,9 @@ Even with 0 coding experience.
 * Help out with pacenote samples (do you want to record new sounds? contact me!)
 * Same as above, but in your own language
 
+
 # Contact 
-BeamNG 
+
+Please join this BeamNG 
 [forum thread](https://www.beamng.com/threads/rally-pack-with-pacenotes.84072/)
 for discussions.
