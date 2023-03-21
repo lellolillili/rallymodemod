@@ -216,8 +216,8 @@ co-driver.
 * Same as above, but [video](https://www.youtube.com/watch?v=frwT8l9dPS4)
 * Creating co-drivers: 
   - [recording samples](doc/scrip_for_codrivers.md)
-  - [managing samples](art/codrivers/Alex Gelsomino/codriver.ini) 
-  - [associating symbols](art/codrivers/Alex Gelsomino/symbols.ini)
+  - [managing samples](art/codrivers/Alex%20Gelsomino/codriver.ini) 
+  - [associating symbols](art/codrivers/Alex%20Gelsomino/symbols.ini)
     
 # Contribute 
 
