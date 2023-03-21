@@ -72,7 +72,7 @@ Open the copy of the rallyconfig file *in your own local BeamNG directory*,
 options in this file for fine-tuning your co-driver. Not every single option in
 this file can be changed from the pause menu.
 
-More details about the options are in the original [config file](settings/rallyconfig.ini)
+More details about the options are in the original [config file](settings/rallyconfig.ini).
 
 
 ### Change co-driver
@@ -180,7 +180,7 @@ Here's an example pacenote file
 More details about this topic 
 [here](art/codrivers/Stu/codriver.ini) 
 and 
-[here](art/codrivers/Alex%20Gelsomino/codriver.ini)
+[here](art/codrivers/Alex%20Gelsomino/codriver.ini).
 
 
 ### Pacenote options
