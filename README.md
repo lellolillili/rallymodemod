@@ -66,13 +66,13 @@ a reasonable range.
 
 ### Advanced options
 
-More details in [the config file](settings/rallyconfig.ini)
-
 Open the copy of the rallyconfig file *in your own local BeamNG directory*,
 *beamng_local_dir/setting/rallyconfig.ini* (it is created after you use the
 "save" button in the pause menu for the first time). You can edit some of the
 options in this file for fine-tuning your co-driver. Not every single option in
 this file can be changed from the pause menu.
+
+More details about the options are in the original [config file](settings/rallyconfig.ini)
 
 
 ### Change co-driver
@@ -133,14 +133,6 @@ file.
 
 ### Corner codes:
 
-More details 
-
-[here](art/codrivers/Stu/codriver.ini) 
-
-and 
-
-[here](art/codrivers/Alex%20Gelsomino/codriver.ini)
-
 For the co-driver Stu, these are the corner codes
 
     (L/R)0M - acute LR
@@ -184,6 +176,11 @@ Here's an example pacenote file
     3 - caution R4M long;
     6 - jump;
     8 - hairpin left;
+
+More details about this topic 
+[here](art/codrivers/Stu/codriver.ini) 
+and 
+[here](art/codrivers/Alex%20Gelsomino/codriver.ini)
 
 
 ### Pacenote options
