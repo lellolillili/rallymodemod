@@ -215,7 +215,7 @@ co-driver.
 * How to [make you own rallies](/doc/create_rallies.md)
 * Same as above, but [video](https://www.youtube.com/watch?v=frwT8l9dPS4)
 * Creating co-drivers: 
-  - [recording samples](doc/scrip_for_codrivers.md)
+  - [recording samples](doc/script_for_codrivers.md)
   - [managing samples](art/codrivers/Alex%20Gelsomino/codriver.ini) 
   - [associating symbols](art/codrivers/Alex%20Gelsomino/symbols.ini)
     
