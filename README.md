@@ -9,11 +9,11 @@ If you're interested in working on the code, then go ahead and clone the repo.
 ## Install
 Put the zip file in your mods folder. You do no need to unpack if you just want
 to play and edit basic settings (the settings file, *rallyconfig.ini* will be
-created in *beamng_local/settings/* after you make your first edits from the
+created in *beamng_local_dir/settings/* after you make your first edits from the
 pause menu).
 
 ## Go Rallying
-If you have a *beamng_local_folder/settings/rallyconfig.ini* from previous
+If you have a *beamng_local_dir/settings/rallyconfig.ini* from previous
 versions of the mod, **remove it**.
 
 The rallies are under the Time Trials menu. You can only start a rally from the Time
@@ -56,15 +56,16 @@ a reasonable range.
 ## Configuration
 
 ### Advanced options
-[More details in *settings/rallyconfig.ini*]
+[More details in [](/settings/rallyconfig.ini)]
 
-Open *local_BeamNG_folder/setting/rallyconfig.ini* (it is created after you use
-the "save" button in the pause menu for the first time). You can edit some of
-the options in this file for fine-tuning your co-driver. Not every single option
-in this file can be changed from the pause menu.
+Open the copy of the rallyconfig file *in your own local BeamNG directory*,
+*beamng_local_dir/setting/rallyconfig.ini* (it is created after you use the
+"save" button in the pause menu for the first time). You can edit some of the
+options in this file for fine-tuning your co-driver. Not every single option in
+this file can be changed from the pause menu.
 
 ### Change co-driver
-Open *local_beamng_folder/setting/rallyconfig.ini*. In the *codriverDir* option
+Open *beamng_local_dir/setting/rallyconfig.ini*. In the *codriverDir* option
 you can use any of the co-drivers you have in the folder
 
     mods/unpacked/art/codrivers
@@ -78,8 +79,8 @@ For the moment, we have
 You can find a tutorial on how you can create and/or customize your co-driver in
 Alex Gelsomino's config files.
 
-* art/codrivers/Alex Gelsomino/codriver.ini
-* art/codrivers/Alex Gelsomino/symbols.ini
+* [](/art/codrivers/Alex Gelsomino/codriver.ini)
+* [](/art/codrivers/Alex Gelsomino/symbols.ini)
                             
 ## Edit pacenotes
 When rallying, enter the pause menu ('J'), and check the pacenote-file name. You
@@ -115,8 +116,10 @@ file.
 
 ### Corner codes:
 
-[More details in *art/codrivers/Stu/codriver.ini* and *art/codrivers/Alex
-Gelsomino/codriver.ini*]
+[More details in 
+[](/art/codrivers/Stu/codriver.ini) 
+and 
+[](/art/codrivers/Alex Gelsomino/codriver.ini)
 
 For the co-driver Stu, these are the corner codes
 
@@ -186,10 +189,15 @@ They are under the Scenario menu, not the Time Trial menu.  In particular, the
 gridmapV2 test will utter every single corner, which is useful when making new
 co-driver.
 
-# Guides 
+# Tutorials 
 
 * How to [make you own rallies](/doc/create_rallies.md)
-
+* Same as above, but [video](https://www.youtube.com/watch?v=frwT8l9dPS4)
+* Creating co-drivers: 
+[managing samples](/art/codrivers/Alex Gelsomino/codriver.ini) 
+and 
+[UI symbols](/art/codrivers/Alex Gelsomino/symbols.ini)
+    
 # Contribute 
 There is SO MUCH stuff that ANYONE could do, depending on your inclinations.
 Even with 0 coding experience. 
@@ -197,6 +205,7 @@ Even with 0 coding experience.
 * Testing: just let me know if anything's off
 * Feature request - What should I do next?
 * YouTube videos (tutorials, showcase, plain ol' rallies)
+* Make some noise, tell your friends, like and subscribe, and all that
 * Graphic design stuff (logos, map thumbnails, pacenote icons, UI design 
 * Do pacenotes for my reverse stages
 * Split up the stages and make shorter ones (maybe 3 to 5 km long shakedowns?)
@@ -208,6 +217,6 @@ Even with 0 coding experience.
 * Same as above, but in your own language
 
 # Contact 
-Let's chat here:
-
-https://www.beamng.com/threads/rally-pack-with-pacenotes.84072/
+BeamNG 
+[forum thread](https://www.beamng.com/threads/rally-pack-with-pacenotes.84072/)
+for discussions.
