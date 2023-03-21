@@ -66,7 +66,7 @@ a reasonable range.
 
 ### Advanced options
 
-[More details in [](/settings/rallyconfig.ini)
+More details in [](settings/rallyconfig.ini)
 
 Open the copy of the rallyconfig file *in your own local BeamNG directory*,
 *beamng_local_dir/setting/rallyconfig.ini* (it is created after you use the
