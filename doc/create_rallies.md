@@ -69,13 +69,13 @@ Open the scene tree and look for the prefabs you just imported. Right click each
 
 Expand myRally_forward, so you can see the list of waypoints. The first thing you'll notice is that there are a lot of waypoints. This is because they serve multiple purposes, which I explain now.
 
-![first pic](/doc/pics/fig1.jpg)
+![first pic](pics/fig1.jpg)
 
 #### Waypoints
 
 1. Waypoints carry pacenotes describing features of the road such as corners, crests, and dips. They are placed **at** the features (e.g., at corner **entry**, at the **beginning** of a crest, or dip). I can't stress this enough: the whole point of this workflow is that you put a waypoint at the start of a corner, and describe it in the pacenote field. The pacenote director will handle the timing. You can place any number of additional point wherever, but it is very important that at least every single jump/dip/crest/junction/etc has one waypoint right where the feature begins.
 
-![second pic](/doc/pics/fig2.jpg)
+![second pic](pics/fig2.jpg)
 
 2. Waypoints define the stage. Distances are calculated with respect to the rough outline of the track that is defined by the waypoints. The better the waypoints follow the road, the more accurate these distances will be. Obviously, the more waypoints there are, the better the outline is. The mod calculates a lot of distances: including a) the distance between two pacenotes, b) the distance between your car and the next pacenote, c) total track length, d) distance traveled so far. There are more, but you get the idea: if there aren't enough waypoints, these distances will be inaccurate and the pacenote director will misbehave. Be liberal with waypoints. 
 
@@ -83,7 +83,7 @@ Expand myRally_forward, so you can see the list of waypoints. The first thing yo
 
 In your usual rally, many waypoints will be blank. An empty waypoint either does not have the pacenote dynamic field at all or has its value set to pacenote="empty".
 
-![third pic](/doc/pics/fig3.jpg)
+![third pic](pics/fig3.jpg)
 
 ### Creating your own rally
 Remove all the waypoints from your prefab (*myRally_forward*) from the scene tree except the spawn point, start, finish, and the very first waypoint (Shift+Click to select multiple waypoints from the scene tree, and DEL to delete them). These are usually named something like *some_rally_start*, *some_rally_finish*, and *some_rally_wp1*. It's highly recommended that you rename the waypoints to something unique. In this case, for the first waypoint you can use *my_rally_wp1*, (anything as long as it ends in '1'), and for the start and finish you can use *my_rally_start* and *my_rally_finish*.
@@ -105,7 +105,7 @@ The last waypoint must be *myRally_finish*, and the first one must be *myRally_s
 
 ### OK, what are the pacenotes?
 
-It depends on the co-driver and the samples that they have available, but if you're planning on sharing your notes, you can be extra safe and use [this list](/doc/all_available_calls.md). This list guarantees that your pacenotes will work with any co-driver that comes with the experimental and official releases. It will become more useful as I add more co-drivers. 
+It depends on the co-driver and the samples that they have available, but if you're planning on sharing your notes, you can be extra safe and use [this list](doc/all_available_calls.md). This list guarantees that your pacenotes will work with any co-driver that comes with the experimental and official releases. It will become more useful as I add more co-drivers. 
 
 If you know you're always going to be using the same co-driver, you can use anything sample you can find in its sample folder. Stu has a crapload of samples, but Alex Gelsomino sounds cooler. Have a look here for the list of all the samples
 
@@ -143,7 +143,7 @@ If the corner is > 30 meters, you should mark the end of the corner. The only ma
 
 If this is confusing to you, look for a waypoint with a marker dynamic field in the examples. I'm sure it'll make sense once you see it in action.
 
-![fourth pic](/doc/pics/fig4.jpg)
+![fourth pic](pics/fig4.jpg)
 
 If two pacenotes are closer than some cutoff distance, the co-driver will not say the distance, but it will add a link word at the beginning of the next call. The cutoff is specified in your local version of *settings/rallyconfig.ini*. In fact, both the cutoff and the link word can be configured. If you set the link word to "and", and the cutoff to 40, the pacenotes "3 left 40", "6 right 100" will become "3 left", "and 6 right 100". 
 
