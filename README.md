@@ -66,7 +66,7 @@ a reasonable range.
 
 ### Advanced options
 
-More details in [](settings/rallyconfig.ini)
+More details in [the config file](settings/rallyconfig.ini)
 
 Open the copy of the rallyconfig file *in your own local BeamNG directory*,
 *beamng_local_dir/setting/rallyconfig.ini* (it is created after you use the
@@ -133,10 +133,10 @@ file.
 
 ### Corner codes:
 
-[More details in 
-[](/art/codrivers/Stu/codriver.ini) 
+[More details 
+[here](/art/codrivers/Stu/codriver.ini) 
 and 
-[](/art/codrivers/Alex Gelsomino/codriver.ini)
+[here](/art/codrivers/Alex Gelsomino/codriver.ini)
 
 For the co-driver Stu, these are the corner codes
 
