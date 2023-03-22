@@ -16,14 +16,13 @@ to play and edit basic settings (the settings file, *rallyconfig.ini* will be
 created in *beamng_local_dir/settings/* after you make your first edits from the
 pause menu).
 
-
 ## Go Rallying
 
-If you have a *beamng_local_dir/settings/rallyconfig.ini* from previous
-versions of the mod, **remove it**.
+If you have a *beamng_local_dir/settings/rallyconfig.ini* from previous versions
+of the mod, **remove it**.
 
-The rallies are under the Time Trials menu. You can only start a rally from the Time
-Trials menu. 
+The rallies are under the Time Trials menu. You can only start a rally from the
+Time Trials menu.
 
 You can see the length of a rally in the thumbnail. Shakedowns are short stages,
 usually sections of the larger stages. Special stages are traditional length
@@ -31,12 +30,12 @@ stages (5 to 15 km, for now).
 
 Most rallies are for vanilla maps, plus a few mod maps. If you want to rally on
 mod maps, you need the following mods
+
 * [PJS Drift and Rally](https://www.beamng.com/resources/pjs-drift-rally-pbr.21164/)
 * [Jungle Rock Island - Dirt version](https://www.beamng.com/resources/el-ferritos-jungle-rock-rally.22254/)
 * [East Coast USA - Dirt version](https://www.beamng.com/resources/el-ferritos-east-coast-dirt-rally.19717/)
 * [Carvalho de Rei](https://www.beamng.com/threads/carvalho-de-rei-rallye-de-portugal-rfactor-port-now-with-pacenotes-support.84721/)
-
-* [Pikes Peak - WIP - coming soon!](https://www.beamng.com/resources/pikes-peak-lidar-edition.4986/)
+* [Pikes Peak](https://www.beamng.com/resources/pikes-peak-lidar-edition.4986/)
 
 Start a rally from the Time Trial menu. After the countdown, you will be greeted
 by a welcome message. Read it and follow the instructions. You need to load the
@@ -68,17 +67,18 @@ a reasonable range.
 
 Open the copy of the rallyconfig file *in your own local BeamNG directory*,
 *beamng_local_dir/setting/rallyconfig.ini* (it is created after you use the
-"save" button in the pause menu for the first time). You can edit some of the
-options in this file for fine-tuning your co-driver. Not every single option in
-this file can be changed from the pause menu.
+"save" button in the pause menu for the first time) options in this file for
+fine-tuning your co-driver. Not every single option in this file can be changed
+from the pause menu.
 
-More details about the options are in the original [config file](settings/rallyconfig.ini).
+More details about the options are in the original 
+[config file](settings/rallyconfig.ini).
 
 
 ### Change co-driver
 
-Open *beamng_local_dir/setting/rallyconfig.ini*. In the *codriverDir* option
-you can use any of the co-drivers you have in the folder
+Open *beamng_local_dir/setting/rallyconfig.ini*. In the *codriverDir* option you
+can use any of the co-drivers you have in the folder
 
     mods/unpacked/art/codrivers
 
@@ -93,17 +93,17 @@ For the moment, we have
 You can find a tutorial on how you can create and/or customize your co-driver in
 Alex Gelsomino's config files.
 
-* [](art/codrivers/Alex Gelsomino/codriver.ini)
-* [](art/codrivers/Alex Gelsomino/symbols.ini)
+* [](art/codrivers/Alex%20Gelsomino/codriver.ini)
+* [](art/codrivers/Alex%20Gelsomino/symbols.ini)
                             
 
 ## Edit pacenotes
 
 When rallying, enter the pause menu ('J'), and check the pacenote-file name. You
-can create the pacenote file ("filename.pnt") in the correct directory, and
+can create the pacenote file (*filename.pnt*) in the correct directory, and
 start editing the pacenotes.
 
-you have to have these files (note smallIslandRally_forward.pnt)
+you have to have these files (note *smallIslandRally_forward.pnt*)
 
     small_island
         ├── quickrace
@@ -114,7 +114,7 @@ you have to have these files (note smallIslandRally_forward.pnt)
         │   └── smallIslandRally.prefab                < stage clutter
         └── smallIslandRally.lua                       < tells BeamNG to start the mod
 
-Pausing Physics will show pacenote information. Use that to edit the pacenotes. 
+Pausing Physics will show pacenote information. Use that to edit the pacenotes.
 Here's an example of a valid pacenote file
 
     1 - L2M;
@@ -124,11 +124,10 @@ Here's an example of a valid pacenote file
     8 - right 2 minus;
     14 - jump;
 
-The pacenotes attached to waypoints  1, 2, 4, 5, 8 and 14 will be now
-overridden. The rest will stay default. Default pacenotes are stored as a
-field in the waypoints in
-*levels/levelname/quickrace/rallyname_forward.prefab*. Do not touch this
-file.
+The pacenotes attached to waypoints 1, 2, 4, 5, 8 and 14 will be now overridden.
+The rest will stay default. Default pacenotes are stored as a field in the
+waypoints in *levels/levelname/quickrace/rallyname_forward.prefab*. Do not touch
+this file.
 
 
 ### Corner codes:
@@ -163,12 +162,13 @@ For the co-driver Stu, these are the corner codes
     (L/R)6E - 6 LR
     (L/R)6P - flat LR
 
-You don't have to use corner codes, but if you do, your pacenotes will work with any co-driver.
+You don't have to use corner codes, but if you do, your pacenotes will work with
+any co-driver.
 
 If you don't want to use them, your pacenotes will be co-driver dependent. In
 that case, you can just write (for example, if you're using Stu)
 
-    '4 left minus', '5 left plus long', 'hairpin left over crest', etc.
+    4 left minus, 5 left plus long, hairpin left over crest
 
 Here's an example pacenote file
 
@@ -205,7 +205,7 @@ you use an inexistent samples.
 ## Testing stuff
 
 There are two test scenarios (gridmap and small island) for testing the mod.
-They are under the Scenario menu, not the Time Trial menu.  In particular, the
+They are under the Scenario menu, not the Time Trial menu. In particular, the
 gridmapV2 test will utter every single corner, which is useful when making new
 co-driver.
 
@@ -215,9 +215,9 @@ co-driver.
 * How to [make you own rallies](/doc/create_rallies.md)
 * Same as above, but [video](https://www.youtube.com/watch?v=frwT8l9dPS4)
 * Creating co-drivers: 
-  - [recording samples](doc/script_for_codrivers.md)
-  - [managing samples](art/codrivers/Alex%20Gelsomino/codriver.ini) 
-  - [associating symbols](art/codrivers/Alex%20Gelsomino/symbols.ini)
+  - [Recording samples](doc/script_for_codrivers.md)
+  - [Managing samples](art/codrivers/Alex%20Gelsomino/codriver.ini) 
+  - [Associating symbols](art/codrivers/Alex%20Gelsomino/symbols.ini)
     
 # Contribute 
 
