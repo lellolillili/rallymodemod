@@ -2,7 +2,7 @@
  
 ## Download
 
-No need to clone the repo, just Download the leatest release (a zipfile) from
+No need to clone the repo, just download the latest release (a zipfile) from
 the menu on the right.
 
 If you're interested in working on the code, then go ahead and clone the repo.
