@@ -1321,7 +1321,7 @@ $ThisPrefab = new SimGroup() {
       canSave = "1";
       canSaveDynamicFields = "1";
          mode = "Ignore";
-         pacenote = "left 4 double tightens";
+         pacenote = "L4E double tightens";
    };
    new BeamNGWaypoint(jungleMixed_rally_wp1) {
       drawDebug = "1";
