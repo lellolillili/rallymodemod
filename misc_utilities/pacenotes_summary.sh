@@ -26,4 +26,4 @@ for f in ../levels/**/*_forward.prefab; do
 done
 
 # The matching algorithm is the same used by the mod.
-lua ./call_to_samples.lua
+lua ./call_to_samples.lua $CODRIVERDIR

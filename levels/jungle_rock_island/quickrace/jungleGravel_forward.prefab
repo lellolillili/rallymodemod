@@ -882,7 +882,7 @@ $ThisPrefab = new SimGroup() {
       mode = "Ignore";
       canSave = "1";
       canSaveDynamicFields = "1";
-         pacenote = "R4E double triple caution keep left uphill";
+         pacenote = "R4E triple caution keep left uphill";
    };
    new BeamNGWaypoint(jri_jungleGravel_rally_wp57) {
       drawDebug = "0";

@@ -9,19 +9,6 @@ Shakedown: San Toltego - Fucked
 
 Shakedown: Norte-Portino - Fucked (should work now)
 
-Shakedown: Castelletto - OK
-Shakedown: Fastello - OK
-Shakedown: Fastello-Castelletto - OK
-Shakedown: Passo del Chiurlo - OK
-Special stage: East Coast Dirt - OK
-Shakedown: Jungle - OK
-
-## Voices:
-
-### Alex Gelsomino 
-* TODO: pictures
-* TODO: 
-
 ### Phil Mills
 * TODO: pictures
 
@@ -38,7 +25,7 @@ Shakedown: Jungle - OK
 
 # TODO: Next release
 
-* subs "turn left/right" to "SL/SR" everywhere.
+* there are occasional "turn left/right" to "SL/SR" everywhere.
 * symbols.ini should be in the codriver folder
 * merge the distance call into the actual call, so you can use phrases with distances in them, e.g., 30 right, continues over 30, etc
 * "options" field
@@ -59,6 +46,9 @@ Shakedown: Jungle - OK
 # Samples
 
 # Alex Gelsomino
+
+* "right.ogg" is missing.
+* consider creating "keep left", "keep right", "keep middle", "keep out", "keep in".
 
 # Phil Mills
 

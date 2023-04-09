@@ -292,7 +292,7 @@ $ThisPrefab = new SimGroup() {
       canSave = "1";
       canSaveDynamicFields = "1";
       persistentId = "8dce57da-2351-400f-a91c-179ce2d9180a";
-         pacenote = "R4E  minus";
+         pacenote = "R4M";
    };
    new BeamNGWaypoint(smallIsland_rally_wp21) {
       drawDebug = "0";

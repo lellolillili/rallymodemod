@@ -100,29 +100,29 @@
 0E - LR 1
 0P - LR 1 plus
 
-1M - LR 2 minus
-1E - LR 2
-1P - LR 2 plus
+1M - LR 1 plus
+1E - LR 2 minus
+1P - LR 2 minus
 
-2M - LR 3 minus
-2E - LR 3
-2P - LR 3 plus
+2M - LR 2
+2E - LR 2
+2P - LR 2 plus
 
-3M - LR 4 minus
-3E - LR 4
-3P - LR 4 plus
+3M - LR 3 minus
+3E - LR 3
+3P - LR 3 plus
 
-4M - LR 5 minus
-4E - LR 5
-4P - LR 5 plus
+4M - LR 4 minus
+4E - LR 4
+4P - LR 4 plus
 
-5M - LR 6 minus
-5E - LR 6
-5P - LR 6 plus
+5M - LR 5 minus
+5E - LR 5
+5P - LR 5 plus
 
-6M - LR 7 minus
-6E - LR 7
-6P - LR 7 plus
+6M - LR 6 minus
+6E - LR 6
+6P - LR 6 plus
 
 S - turn LR 2
 
@@ -177,7 +177,6 @@ slowCorners=left 1 minus, right 1 minus, left 1, right 1, left 1 plus, right 1 p
 3 minus
 3
 3 plus long
-4
 4 right
 5 minus in
 5
@@ -319,7 +318,6 @@ left 6 over jump
 left 6 plus
 left 6 short
 left 6 very long
-left 7
 left
 left over crest
 left over small crest
@@ -393,7 +391,6 @@ right 6 over dip
 right 6 plus long
 right 6 plus
 right 6 plus over crest
-right 7
 right
 short
 short over crest
@@ -475,7 +472,7 @@ big jump >>> jump
 continues over crest >>> long over crest
 curb >>> kerr
 dont cut >>> dont
-double tightens >>> tightens tightens
+double tightens >>> caution tightens
 downhill >>> down
 drops >>> down
 go narrow >>> narrows
@@ -525,18 +522,20 @@ wide out >>> wide
 then >>> and
 tunnel >>> entry
 over bridge >>> bridge
-double caution >>> caution caution
 
 # Possibly problematic:
 # Should implement these somehow, at some point
 # Maybe stitch extra + late?
 
 # TODO:
+right >>> _
+keep right >>> _
 over jump >>> _
 keep out >>> _
 very late >>> _
 middle over bump >>> _
 middle over crest >>> _
+double caution >>> _
 
 # good to have:
 
