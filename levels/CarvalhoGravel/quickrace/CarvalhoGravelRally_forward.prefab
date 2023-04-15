@@ -1539,7 +1539,7 @@ $ThisPrefab = new SimGroup() {
       mode = "Ignore";
       canSave = "1";
       canSaveDynamicFields = "1";
-         pacenote = "left right";
+         pacenote = "line";
    };
    new BeamNGWaypoint(carvalho_gravel_rally_wp45) {
       drawDebug = "0";

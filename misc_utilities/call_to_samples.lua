@@ -195,16 +195,14 @@ for _, phr in ipairs(calls) do
   end
 end
 
-for _, i in ipairs(penor) do
-  cock
-end
+-- Uncomment for a list of used corners and other calls
+--
+-- print("not corners")
+-- for k, v in spairs(used_samples, function(t, a, b) return t[b] < t[a] end) do
+--   print(k .. ": " .. v)
+-- end
 
-print("not corners")
-for k, v in spairs(used_samples, function(t, a, b) return t[b] < t[a] end) do
-  print(k .. ": " .. v)
-end
-
-print("corners")
-for k, v in spairs(used_corners, function(t, a, b) return t[b] < t[a] end) do
-  print(k .. ": " .. v)
-end
+-- print("corners")
+-- for k, v in spairs(used_corners, function(t, a, b) return t[b] < t[a] end) do
+--   print(k .. ": " .. v)
+-- end
