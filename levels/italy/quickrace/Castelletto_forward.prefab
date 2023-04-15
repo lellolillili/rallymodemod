@@ -15,7 +15,7 @@ $ThisPrefab = new SimGroup() {
       canSave = "1";
       canSaveDynamicFields = "1";
       persistentId = "fab5a9bb-224a-41f6-80c3-a1fcded3a715";
-         pacenote = "R3E tightens p p into RS";
+         pacenote = "R3E tightens into RS";
    };
    new BeamNGWaypoint(it_castelletto_rally_wp265) {
       drawDebug = "0";
@@ -147,7 +147,7 @@ $ThisPrefab = new SimGroup() {
       canSave = "1";
       canSaveDynamicFields = "1";
       persistentId = "83f7afbe-df9a-4823-8f66-1acd96e8f7a4";
-         pacenote = "R4E  minus";
+         pacenote = "R4M";
    };
    new BeamNGWaypoint(it_castelletto_rally_wp255) {
       drawDebug = "0";

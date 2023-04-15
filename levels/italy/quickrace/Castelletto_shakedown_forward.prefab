@@ -1362,7 +1362,7 @@ $ThisPrefab = new SimGroup() {
       canSaveDynamicFields = "1";
       persistentId = "83f7afbe-df9a-4823-8f66-1acd96e8f7a4";
          mode = "Ignore";
-         pacenote = "R4E  minus";
+         pacenote = "R4M";
    };
    new BeamNGWaypoint(it_castelletto_rally_wp257) {
       drawDebug = "1";
@@ -1494,7 +1494,7 @@ $ThisPrefab = new SimGroup() {
       canSaveDynamicFields = "1";
       persistentId = "fab5a9bb-224a-41f6-80c3-a1fcded3a715";
          mode = "Ignore";
-         pacenote = "R3E tightens p p into LS";
+         pacenote = "R3E tightens into LS";
    };
    new TSStatic() {
       shapeName = "art/rally/race_rally_finish_checkpoint_yellow.dae";

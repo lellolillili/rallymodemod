@@ -419,7 +419,7 @@ $ThisPrefab = new SimGroup() {
       mode = "Ignore";
       canSave = "1";
       canSaveDynamicFields = "1";
-         pacenote = "left right";
+         pacenote = "line";
    };
    new BeamNGWaypoint(castelletto_sd_rally_wp33) {
       drawDebug = "0";

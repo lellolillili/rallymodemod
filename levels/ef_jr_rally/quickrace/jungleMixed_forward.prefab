@@ -159,7 +159,7 @@ $ThisPrefab = new SimGroup() {
       mode = "Ignore";
       canSave = "1";
       canSaveDynamicFields = "1";
-         pacenote = "R6E into mud dont cut";
+         pacenote = "R6E into muddy dont cut";
    };
    new BeamNGWaypoint(jungleMixedA_rally_wp35) {
       drawDebug = "0";
@@ -633,7 +633,7 @@ $ThisPrefab = new SimGroup() {
       mode = "Ignore";
       canSave = "1";
       canSaveDynamicFields = "1";
-         pacenote = "left 4 double tightens";
+         pacenote = "L4E double tightens";
    };
    new BeamNGWaypoint(jungleMixed_rally_wp3) {
       drawDebug = "0";

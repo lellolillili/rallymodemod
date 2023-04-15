@@ -865,7 +865,7 @@ $ThisPrefab = new SimGroup() {
       canSave = "1";
       canSaveDynamicFields = "1";
       persistentId = "7f9bebcb-9685-44cc-97f6-f1d6a0ad2d86";
-         pacenote = "R5E  plus late";
+         pacenote = "R5P late";
    };
    new BeamNGWaypoint(it_fastello_rally_wp63) {
       drawDebug = "0";
