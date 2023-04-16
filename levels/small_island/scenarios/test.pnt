@@ -4,22 +4,23 @@
 # overwrite = true
 # means you're just making corrections
 # TODO: if there's no pacenote= fields already, the whole thing craps out!
-# 1 - L1P;
-# 2 - into R4E;
-# 3 - LS;
-# 4 - RS;
-# 5 - R3P;
-# 6 - RS;
-# 7 - caution R2E;
-# 8 - L1P;
-# 9 - L1P;
-# 11 - into R4E;
-# 12 - LS;
-# 13 - RS;
-# 14 - R3P;
-# 15 - RS;
-# 16 - caution R2E;
-# 17 - L1P;
-# 18 - L1P;
-# 19 - L1P;
-# 20 - L1P;
+
+1 - L1P;
+2 - L2E;
+3 - R2E;
+4 - L3E;
+5 - R3E;
+6 - RS;
+7 - caution R2E;
+8 - L1P;
+9 - L1P;
+11 - into R4E;
+12 - LS;
+13 - RS;
+14 - R3P;
+15 - RS;
+16 - caution R2E;
+17 - L1P;
+18 - L1P;
+19 - L1P;
+20 - L1P;

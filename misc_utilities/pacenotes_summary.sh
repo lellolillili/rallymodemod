@@ -3,7 +3,7 @@
 # This script checks that all the pacenotes in the levels folder with respect to
 # a specific co-driver and shows mistakes
 
-CODRIVERNAME="RBR-French"
+CODRIVERNAME="RBR-English"
 CODRIVERDIR=../art/codrivers/$CODRIVERNAME
 SAMPLESDIR=$CODRIVERDIR/samples
 

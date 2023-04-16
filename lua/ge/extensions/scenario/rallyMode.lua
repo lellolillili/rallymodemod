@@ -24,25 +24,25 @@ local rallyInfo = {}
 
 -- From http://lua-users.org/wiki/CsvUtils
 local function fromCSV(s)
-    s = s .. ','        -- ending comma
-    local t = {}        -- table to collect fields
+    s = s .. ',' -- ending comma
+    local t = {} -- table to collect fields
     local fieldstart = 1
     repeat
         -- next field is quoted? (start with `"'?)
         if string.find(s, '^"', fieldstart) then
             local a, c
-            local i  = fieldstart
+            local i = fieldstart
             repeat
                 -- find closing quote
-                a, i, c = string.find(s, '"("?)', i+1)
-            until c ~= '"'    -- quote not followed by quote?
+                a, i, c = string.find(s, '"("?)', i + 1)
+            until c ~= '"' -- quote not followed by quote?
             if not i then error('unmatched "') end
-            local f = string.sub(s, fieldstart+1, i-1)
+            local f = string.sub(s, fieldstart + 1, i - 1)
             table.insert(t, (string.gsub(f, '""', '"')))
             fieldstart = string.find(s, ',', i) + 1
-        else                -- unquoted; find next comma
+        else -- unquoted; find next comma
             local nexti = string.find(s, ',', fieldstart)
-            table.insert(t, string.sub(s, fieldstart, nexti-1))
+            table.insert(t, string.sub(s, fieldstart, nexti - 1))
             fieldstart = nexti + 1
         end
     until fieldstart > string.len(s)
@@ -83,6 +83,7 @@ end
 local function distOrLink(d)
     -- Outputs rounded distance or linkWords when below cutoff
     local M = tonumber(allowedDists[#allowedDists])
+    print(d)
     if d > M then
         return M
     end
@@ -91,8 +92,9 @@ local function distOrLink(d)
     else
         for i, v in ipairs(allowedDists) do
             -- The + 3 means we're rounding conservatively
+            print(v)
             if d + 3 < tonumber(v) then
-                return allowedDists[i-1]
+                return allowedDists[i - 1]
             end
         end
     end
@@ -108,9 +110,9 @@ end
 local function getDistBtw(m, n)
     -- Returns dist between the m-th and n-th waypoints
     local d = 0
-    for i=m, n-1, 1 do
+    for i = m, n - 1, 1 do
         local a = getWaypointPos(i)
-        local b = getWaypointPos(i+1)
+        local b = getWaypointPos(i + 1)
         d = d + a:distance(b)
     end
     return d
@@ -161,7 +163,7 @@ local function getPacenoteAfter(i)
     local sc = scenario_scenarios.getScenario()
     local max = #sc.BranchLapConfig
     local inext = i + 1
-    for k=inext, max, 1 do
+    for k = inext, max, 1 do
         local pCall = getCall(k)
         if k >= max then
             --TODO: not sure what this does anymore
@@ -191,7 +193,7 @@ local function getDistCall(p)
         local dist = getDistBtw(p, pFinal)
         return distOrLink(dist)
     elseif pFinal > p + 1 then
-        for i=pFinal-1, p+1, -1 do
+        for i = pFinal - 1, p + 1, -1 do
             if getMarker(i) ~= nil then
                 p = i
             end
@@ -251,7 +253,7 @@ end
 
 local function stageLength()
     local iFinal = #scenario_waypoints.state.originalBranches.mainPath
-    return getDistBtw(1,iFinal)
+    return getDistBtw(1, iFinal)
 end
 
 local function getToFinish()
@@ -274,7 +276,7 @@ local function getLastWaypoint()
 end
 
 local function tokm(x)
-    local xkm = x/1000
+    local xkm = x / 1000
     return string.format("%.1f", xkm)
 end
 
@@ -285,7 +287,7 @@ local function stats()
     local s = tostring(tokm(from) .. " / " .. tokm(total) .. " (km)")
     log("I", logTag, "Stats: " .. s)
     guihooks.trigger('Message',
-                      {ttl = 5, msg = s, category = "align", icon = "flag"})
+        { ttl = 5, msg = s, category = "align", icon = "flag" })
 end
 
 local currentSentence = {}
@@ -310,8 +312,8 @@ local function getPhrasesFromWords(words)
             match = phrase
         end
     end
-    for i=1, #string.split(match), 1 do
-        table.remove(words,1)
+    for i = 1, #string.split(match), 1 do
+        table.remove(words, 1)
     end
     if match == "" then
         return
@@ -321,8 +323,13 @@ local function getPhrasesFromWords(words)
 end
 
 local function fileExists(f)
-    local f=io.open(f,"r")
-    if f~=nil then io.close(f) return true else return false end
+    local f = io.open(f, "r")
+    if f ~= nil then
+        io.close(f)
+        return true
+    else
+        return false
+    end
 end
 
 local function stringToWords(s)
@@ -342,8 +349,8 @@ local function getPhrasesFromWords(words)
             match = phrase
         end
     end
-    for i=1, #string.split(match), 1 do
-        table.remove(words,1)
+    for i = 1, #string.split(match), 1 do
+        table.remove(words, 1)
     end
     if match == "" then
         return
@@ -354,12 +361,12 @@ end
 
 -- You can use up to 20 alternative samples
 local altSuffixes = {}
-for i=1, 20 do altSuffixes[i] = '_' .. tostring(i) end
+for i = 1, 20 do altSuffixes[i] = '_' .. tostring(i) end
 
 local function buildCodriver(f)
     local dir = f
     if (not fileExists(dir .. "/codriver.ini")) then
-        log("E", logTag, "Codriver file not found. Expecting \"" .. dir .. "/codriver.ini\"." )
+        log("E", logTag, "Codriver file not found. Expecting \"" .. dir .. "/codriver.ini\".")
         return
     end
     local d = {}
@@ -393,18 +400,18 @@ local function buildCodriver(f)
                         table.insert(d[key]["samples"], mainSample)
                         for _, v in ipairs(altSuffixes) do
                             local altSample = dir ..
-                              '/samples/alts/' .. (sub or key) .. v .. '.ogg'
-                              -- Dont search for the i+1-th and following
-                              -- alternative samples if you can't find the i-th
-                              -- sample. This avoids a lot of useless, very
-                              -- slow, file searches.  The filenames must not
-                              -- skip any numbers though.
+                                '/samples/alts/' .. (sub or key) .. v .. '.ogg'
+                            -- Dont search for the i+1-th and following
+                            -- alternative samples if you can't find the i-th
+                            -- sample. This avoids a lot of useless, very
+                            -- slow, file searches.  The filenames must not
+                            -- skip any numbers though.
                             if not fileExists(altSample) then break end
                             table.insert(d[key]["samples"], altSample)
                         end
                     end
 
-                    local pf =  symbolsDir .. (sub or key) .. '.svg'
+                    local pf = symbolsDir .. (sub or key) .. '.svg'
                     if fileExists(pf) then
                         d[key]["pics"] = {}
                         table.insert(d[key]["pics"], pf)
@@ -439,7 +446,7 @@ local function buildCodriver(f)
                         end
                     else
                         log("W", logTag, "Symbol substitution was specified,\
-                        but key \"" .. key ..  "\" was not found in the codriver. You might be missing the audio sample.")
+                        but key \"" .. key .. "\" was not found in the codriver. You might be missing the audio sample.")
                     end
                 end
             end
@@ -448,8 +455,8 @@ local function buildCodriver(f)
     fs:close()
 
     local dists = { 10, 20, 30, 40, 50, 60, 70, 80, 90, 100, 110, 120, 130,
-    140, 150, 160, 170, 180, 190, 200, 250, 300, 350, 400, 450, 500, 550,
-    600, 650, 700, 750, 800, 850, 900, 1000, 1500, 2000 }
+        140, 150, 160, 170, 180, 190, 200, 250, 300, 350, 400, 450, 500, 550,
+        600, 650, 700, 750, 800, 850, 900, 1000, 1500, 2000 }
     for _, v in ipairs(dists) do
         if d[tostring(v)] then
             table.insert(allowedDists, v)
@@ -457,6 +464,7 @@ local function buildCodriver(f)
     end
 
     d["_"] = nil
+
     return d
 end
 
@@ -505,20 +513,20 @@ local function readCfgFromIni()
     rcfg.iconSize = c.iconSize
     rcfg.iconPad = c.iconPad
     if (checkConfig(rcfg) == false) then
-        log( "E", logTag, "Bad configuration file. Delete your local config file. Using some reasonable defaults instead.")
-        rcfg.breathLength=0.1
-        rcfg.codriverDir="Stu"
-        rcfg.cutoff=30
-        rcfg.hideMarkers=true
-        rcfg.linkWord="into"
-        rcfg.posOffset=0
-        rcfg.recce=true
-        rcfg.timeOffset=3.8
-        rcfg.visual=true
+        log("E", logTag, "Bad configuration file. Delete your local config file. Using some reasonable defaults instead.")
+        rcfg.breathLength = 0.1
+        rcfg.codriverDir = "Stu"
+        rcfg.cutoff = 30
+        rcfg.hideMarkers = true
+        rcfg.linkWord = "into"
+        rcfg.posOffset = 0
+        rcfg.recce = true
+        rcfg.timeOffset = 3.8
+        rcfg.visual = true
         rcfg.firstTime = true
-        rcfg.volume=8
-        rcfg.iconSize=100
-        rcfg.iconPad=0
+        rcfg.volume = 8
+        rcfg.iconSize = 100
+        rcfg.iconPad = 0
     else
         log("I", logTag, "Config file loaded.")
     end
@@ -535,7 +543,7 @@ local function buildRally()
     local t = {}
     local sc = scenario_scenarios.getScenario()
     local max = #sc.BranchLapConfig
-    for i=1, max, 1 do
+    for i = 1, max, 1 do
         -- TODO: don't forget to change this if you change the way markers
         -- work. Which you probably should cause it's a bit dumb.
         local isMarker = false
@@ -550,9 +558,9 @@ local function buildRally()
         }
         local s = getCallFromWp(i)
 
-        if (s ~= nil) and (s~= "empty") then
+        if (s ~= nil) and (s ~= "empty") then
             for i, v in pairs(corners) do
-                s = s:gsub(i,v)
+                s = s:gsub(i, v)
             end
 
             r["call"] = s
@@ -570,9 +578,9 @@ local function buildRally()
     local cfname = f
     local f = io.open(f, "r")
     if f then
-        log( "I", logTag,
-        "Found a custom pacenotes file (\"" .. cfname ..
-        "\"). \nDefault pacenotes will be overwritten wherever an alternative\
+        log("I", logTag,
+            "Found a custom pacenotes file (\"" .. cfname ..
+            "\"). \nDefault pacenotes will be overwritten wherever an alternative\
         is provided."
         )
         local d = {}
@@ -580,13 +588,13 @@ local function buildRally()
             if string.len(line) > 0 then
                 local firstChar = string.sub(line, 1, 1)
                 if firstChar ~= '#' then
-                    local ind = tonumber(line:match( "^%s*(%d+)%s*%-.*$"))
+                    local ind = tonumber(line:match("^%s*(%d+)%s*%-.*$"))
                     if ind then
                         local mrk = line:find("^%s*%d+%s*%-%s*marker")
                         if mrk == nil then
-                            local s =   line:match("^%s*%d+%s*%-%s*(.*)%s*;%s*.*")
+                            local s = line:match("^%s*%d+%s*%-%s*(.*)%s*;%s*.*")
                             local opt = line:match("^%s*%d+%s*%-%s*.*%s*;%s*(.*)$") or ""
-                            if (s~= nil) and (s~= "empty") then
+                            if (s ~= nil) and (s ~= "empty") then
                                 for i, v in pairs(corners) do
                                     s = s:gsub(i, v)
                                 end
@@ -603,7 +611,7 @@ local function buildRally()
         f:close()
     else
         log("I", logTag,
-        "No custom pacenotes not found (\"" .. cfname .. "\").\
+            "No custom pacenotes not found (\"" .. cfname .. "\").\
         Using default pacenotes."
         )
     end
@@ -612,14 +620,16 @@ local function buildRally()
         if v.call then
             local wds = stringToWords(v.call)
             getPhrasesFromWords(wds)
+            dump(currentSentence)
+            dump("test")
             local mat = 0
             for _, m in ipairs(wds) do
                 mat = mat + #(wds)
             end
             if mat ~= #(wds) then
                 log("W", logTag,
-                "Fix pacenotes or codriver. Problems with: " .. tostring(k) ..
-                " - " .. v.call .. ". Pacenotes will malfunction."
+                    "Fix pacenotes or codriver. Problems with: " .. tostring(k) ..
+                    " - " .. v.call .. ". Pacenotes will malfunction."
                 )
             end
             clearCurrentSentence()
@@ -677,8 +687,8 @@ local function onRaceStart()
                     (may take effect after changing map or restarting the game)\
                     "
         guihooks.trigger('Message',
-          {ttl = 120, msg = str, category = "align", icon = "flag"})
-      end
+            { ttl = 120, msg = str, category = "align", icon = "flag" })
+    end
 end
 
 local function onRaceWaypointReached(data)
@@ -687,7 +697,7 @@ local function onRaceWaypointReached(data)
 
     local name = getWaypointName(i)
 
-    guihooks.trigger("pnotesHideSymbol", i-1)
+    guihooks.trigger("pnotesHideSymbol", i - 1)
     if rcfg.recce then
         print('W[ ' .. tostring(i) .. ' ] - ' .. name)
     end
@@ -701,9 +711,9 @@ local playQueue = {}
 local function speak()
     if tableIsEmpty(playQueue) then return 0 end
     local ph = codriver[playQueue[1]].samples
-    local sample = ph[math.random(1,#ph)]
-    local out = Engine.Audio.playOnce('AudioGui', sample, { volume = rcfg.volume } )
-    table.remove(playQueue,1)
+    local sample = ph[math.random(1, #ph)]
+    local out = Engine.Audio.playOnce('AudioGui', sample, { volume = rcfg.volume })
+    table.remove(playQueue, 1)
     return out.len
 end
 
@@ -728,7 +738,7 @@ local function queuePhrase(s)
                 for __, vv in ipairs(codriver[v].pics) do
                     guihooks.trigger("pnotesQueueSymbol", {
                         i = last, pics = vv
-                    } )
+                    })
                 end
             end
         end
@@ -762,7 +772,7 @@ local function onPreRender(dtReal, dtSim, dtRaw)
         local timeOffset = rcfg.timeOffset
         local posOffset = rcfg.posOffset
         local breathLength = rcfg.breathLength
-        local pred =  posOffset + speed * timeOffset
+        local pred = posOffset + speed * timeOffset
         local pnote = getPacenoteAfter(last)
 
         local i = pnote.index
@@ -781,6 +791,7 @@ local function onPreRender(dtReal, dtSim, dtRaw)
         local dist = getDistFrom(i)
         if (dist < pred) and i > last and i < max then
             suffix = getDistCall(i)
+            print("suffix" .. suffix)
             -- If last pacenote's automatic suffix was disabled,
             -- then also disable this pacenotes's automatic prefix.
             if nosuffix then
@@ -802,19 +813,19 @@ local function onPreRender(dtReal, dtSim, dtRaw)
                     queuePhrase(tostring(suffix))
                     breathe(breathLength)
                 elseif pnote.opts:find("shortpause") then
-                    breathe(round(0.5*timeOffset*10))
+                    breathe(round(0.5 * timeOffset * 10))
                     queuePhrase(tostring(suffix))
                     breathe(breathLength)
                 elseif pnote.opts:find("verylongpause") then
-                    breathe(round(2*timeOffset*10))
+                    breathe(round(2 * timeOffset * 10))
                     queuePhrase(tostring(suffix))
                     breathe(breathLength)
                 elseif pnote.opts:find("longpause") then
-                    breathe(round(1.5*timeOffset*10))
+                    breathe(round(1.5 * timeOffset * 10))
                     queuePhrase(tostring(suffix))
                     breathe(breathLength)
                 elseif pnote.opts:find("pause") then
-                    breathe(round(timeOffset*10))
+                    breathe(round(timeOffset * 10))
                     queuePhrase(tostring(suffix))
                     breathe(breathLength)
                 else
@@ -826,6 +837,7 @@ local function onPreRender(dtReal, dtSim, dtRaw)
                 breathe(breathLength)
                 queuePhrase(tostring(suffix))
             end
+            print(suffix)
             -- If the distance call is too close to get called,
             -- then prepend a linkword (e.g. "into") to the next call.
             if suffix == "" then
@@ -886,8 +898,8 @@ end
 local function uiToConfig(s)
     -- TODO: this is really lazy
     if rcfg == nil then return end
-    local opts = fromCSV(s)
-    local tmpcfg = {}
+    local opts          = fromCSV(s)
+    local tmpcfg        = {}
     tmpcfg.breathLength = tonumber(opts[1])
     tmpcfg.timeOffset   = tonumber(opts[2])
     tmpcfg.visual       = strToBool(opts[3])
@@ -895,7 +907,7 @@ local function uiToConfig(s)
     tmpcfg.volume       = tonumber(opts[5])
     tmpcfg.iconSize     = tonumber(opts[6])
     tmpcfg.iconPad      = tonumber(opts[7])
-    local check = checkConfig(tmpcfg)
+    local check         = checkConfig(tmpcfg)
     if check == true then
         log("I", logTag,
             "Options parsed from the UI are good.\
@@ -947,6 +959,6 @@ M.getCodriver = getCodriver
 M.stats = stats
 M.dumpDebug = dumpDebug
 M.uiToConfig = uiToConfig
-M.getPacenoteFile =  getPacenoteFile
+M.getPacenoteFile = getPacenoteFile
 
 return M

@@ -1226,7 +1226,7 @@ $ThisPrefab = new SimGroup() {
       canSave = "1";
       canSaveDynamicFields = "1";
       persistentId = "f9f474f1-a782-49dc-888b-b99181845561";
-         pacenote = "4RE late";
+         pacenote = "R4E late";
    };
    new BeamNGWaypoint(jvl_wp89) {
       drawDebug = "1";
@@ -1310,7 +1310,7 @@ $ThisPrefab = new SimGroup() {
       canSave = "1";
       canSaveDynamicFields = "1";
       persistentId = "092873ea-1ba9-41b1-869b-59f600b8f2cf";
-         pacenote = "furn R4E opens";
+         pacenote = "turn R4E opens";
    };
    new BeamNGWaypoint(jvl_wp82) {
       drawDebug = "1";
@@ -1370,7 +1370,7 @@ $ThisPrefab = new SimGroup() {
       canSave = "1";
       canSaveDynamicFields = "1";
       persistentId = "0121c196-a5e0-4ada-9d92-d02c5ce54017";
-         pacenote = "6 right over bumps";
+         pacenote = "R6E over bumps";
    };
    new BeamNGWaypoint(jvl_wp77) {
       drawDebug = "1";
@@ -1394,7 +1394,7 @@ $ThisPrefab = new SimGroup() {
       canSave = "1";
       canSaveDynamicFields = "1";
       persistentId = "43da3c7e-4f3c-4b49-9642-e2a2c12c61ef";
-         pacenote = "6 left over jump";
+         pacenote = "L6E over jump";
    };
    new BeamNGWaypoint(jvl_wp75) {
       drawDebug = "1";
@@ -1790,7 +1790,7 @@ $ThisPrefab = new SimGroup() {
       canSave = "1";
       canSaveDynamicFields = "1";
       persistentId = "6abfab7f-1024-4d99-b3f7-2bc8d13fb254";
-         pacenote = "46E late";
+         pacenote = "L6E late";
    };
    new BeamNGWaypoint(jvl_wp42) {
       drawDebug = "1";
