@@ -93,8 +93,8 @@ For the moment, we have
 You can find a tutorial on how you can create and/or customize your co-driver in
 Alex Gelsomino's config files.
 
-* [](art/codrivers/Alex%20Gelsomino/codriver.ini)
-* [](art/codrivers/Alex%20Gelsomino/symbols.ini)
+* [samples](art/codrivers/Alex%20Gelsomino/codriver.ini)
+* [symbols](art/codrivers/Alex%20Gelsomino/symbols.ini)
                             
 
 ## Edit pacenotes
