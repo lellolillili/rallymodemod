@@ -1,3 +1,11 @@
+# Urgent
+
+* Some calls don't work for the RBR codrivers (there's a few examples in small island)
+* Also need to test Alex Gelsomino in the above.
+
+* No mesh in small island rally
+
+
 # Time trials:
 
 Johnson valley loop - test & add clutter
@@ -11,9 +19,6 @@ Shakedown: Norte-Portino - Fucked (should work now)
 # General
 
 * After you have "at junction" change all the "junction acute/1/2/3 l/r" into "acute/1/2/3 at junction".
-
-### Phil Mills
-* TODO: pictures
 
 # Changelog 
 * Added multilanguage support
@@ -40,7 +45,3 @@ Shakedown: Norte-Portino - Fucked (should work now)
 
 * "right.ogg" is missing.
 * consider creating "keep left", "keep right", "keep middle", "keep out", "keep in".
-
-# Phil Mills
-
-* do a general trim. I think some samples have a very long leading silence.

@@ -5,11 +5,11 @@
 # means you're just making corrections
 # TODO: if there's no pacenote= fields already, the whole thing craps out!
 
-# 1 - L2M;
-# 2 - LS;
-# 3 - RS;
-# 4 - right 2 minus;
-# 5 - L2M;
-# 6 - left 2 minus;
-# 7 - R2M;
-# 8 - right 2 minus;
+1 - right into LSQ onto tarmac;
+2 - care slippy easy right keep in;
+3 - junction hairpin left;
+4 - 90 left;
+5 - L2M;
+6 - left 2 minus;
+7 - R2M;
+8 - right 2 minus;
