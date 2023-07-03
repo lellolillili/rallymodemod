@@ -83,7 +83,6 @@ end
 local function distOrLink(d)
     -- Outputs rounded distance or linkWords when below cutoff
     local M = tonumber(allowedDists[#allowedDists])
-    print(d)
     if d > M then
         return M
     end
@@ -389,6 +388,8 @@ local function buildCodriver(f)
                     local sub
                     if line:find("%>%>%>") then
                         key, sub = line:match("^(.*)%>%>%>(.*)$")
+                        key = trim(key)
+                        sub = trim(sub)
                     else
                         key = trim(line:match("^(.+)$"))
                     end
@@ -619,6 +620,7 @@ local function buildRally()
     for k, v in ipairs(rally) do
         if v.call then
             local wds = stringToWords(v.call)
+            dump(wds)
             getPhrasesFromWords(wds)
             dump(currentSentence)
             dump("test")
@@ -780,18 +782,16 @@ local function onPreRender(dtReal, dtSim, dtRaw)
 
         if last ~= 0 then
             rallyInfo.lastPacenote = last .. ' - ' ..
-                rally[last].call .. '; '
-                .. rally[last].options
+                rally[last].call .. '; ' .. rally[last].options
         end
 
-        rallyInfo.nextPacenote = i .. ' - ' ..
-            rally[i].call .. '; '
-            .. rally[i].options
+        if i > last and i < max and (rally[i].call ~= nil) then
+            rallyInfo.nextPacenote = i .. ' - ' ..
+                rally[i].call .. '; ' .. rally[i].options
 
         local dist = getDistFrom(i)
         if (dist < pred) and i > last and i < max then
             suffix = getDistCall(i)
-            print("suffix" .. suffix)
             -- If last pacenote's automatic suffix was disabled,
             -- then also disable this pacenotes's automatic prefix.
             if nosuffix then
@@ -837,7 +837,6 @@ local function onPreRender(dtReal, dtSim, dtRaw)
                 breathe(breathLength)
                 queuePhrase(tostring(suffix))
             end
-            print(suffix)
             -- If the distance call is too close to get called,
             -- then prepend a linkword (e.g. "into") to the next call.
             if suffix == "" then
