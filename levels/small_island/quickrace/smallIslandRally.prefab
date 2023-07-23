@@ -413,7 +413,7 @@ $ThisPrefab = new SimGroup() {
       persistentId = "76466c52-fef3-4b60-9d53-d54b88e04413";
    };
    new TSStatic() {
-      shapeName = "art/shapes/buildings/si_res_observatory.dae";
+      shapeName = "levels/small_island/art/shapes/buildings/si_res_observatory.dae";
       dynamic = "0";
       playAmbient = "1";
       meshCulling = "0";
@@ -485,7 +485,7 @@ $ThisPrefab = new SimGroup() {
       persistentId = "c4a42435-cf9e-4533-bd38-491792a7650f";
    };
    new TSStatic() {
-      shapeName = "art/shapes/buildings/si_res_solar_panel_tall.dae";
+      shapeName = "levels/small_island/art/shapes/buildings/si_res_solar_panel_tall.dae";
       dynamic = "0";
       playAmbient = "1";
       meshCulling = "0";
@@ -509,7 +509,7 @@ $ThisPrefab = new SimGroup() {
       persistentId = "e044b7b7-31a5-4c7e-beae-e155421d9308";
    };
    new TSStatic() {
-      shapeName = "art/shapes/buildings/si_res_solar_panel_tall.dae";
+      shapeName = "levels/small_island/art/shapes/buildings/si_res_solar_panel_tall.dae";
       dynamic = "0";
       playAmbient = "1";
       meshCulling = "0";
@@ -533,7 +533,7 @@ $ThisPrefab = new SimGroup() {
       persistentId = "ec611931-42de-4c0b-a2bb-33327f54865b";
    };
    new TSStatic() {
-      shapeName = "art/shapes/buildings/si_res_solar_panel_tall.dae";
+      shapeName = "levels/small_island/art/shapes/buildings/si_res_solar_panel_tall.dae";
       dynamic = "0";
       playAmbient = "1";
       meshCulling = "0";
@@ -557,7 +557,7 @@ $ThisPrefab = new SimGroup() {
       persistentId = "3024c4df-275e-4413-b466-e19d5c5ecb8c";
    };
    new TSStatic() {
-      shapeName = "art/shapes/buildings/si_res_solar_panel_tall.dae";
+      shapeName = "levels/small_island/art/shapes/buildings/si_res_solar_panel_tall.dae";
       dynamic = "0";
       playAmbient = "1";
       meshCulling = "0";
@@ -581,7 +581,7 @@ $ThisPrefab = new SimGroup() {
       persistentId = "e868fbc4-8d78-493c-af1c-0e0ef4b9ad06";
    };
    new Prefab(res_main_office1) {
-      filename = "art/prefabs/si_research_building_main_office.prefab.json";
+      filename = "/levels/small_island/art/prefabs/si_research_building_main_office.prefab.json";
       loadMode = "Automatic";
       useGlobalTranslation = "0";
       position = "-301.755432 -255.944626 38.3108559";
@@ -593,7 +593,7 @@ $ThisPrefab = new SimGroup() {
       persistentId = "519d9ca4-ff59-424f-b133-48b39804d182";
    };
    new TSStatic() {
-      shapeName = "art/shapes/buildings/si_res_solar_panel_tall.dae";
+      shapeName = "levels/small_island/art/shapes/buildings/si_res_solar_panel_tall.dae";
       dynamic = "0";
       playAmbient = "1";
       meshCulling = "0";
@@ -641,7 +641,7 @@ $ThisPrefab = new SimGroup() {
       persistentId = "d830053d-cb11-41db-ac65-9d4b4b3d7fea";
    };
    new TSStatic() {
-      shapeName = "art/shapes/misc/containers_40_beamng.dae";
+      shapeName = "/levels/small_island/art/shapes/misc/containers_40_beamng.dae";
       dynamic = "0";
       playAmbient = "1";
       meshCulling = "0";
@@ -941,7 +941,7 @@ $ThisPrefab = new SimGroup() {
       persistentId = "18c24983-c715-49ab-a1af-ad35de548af6";
    };
    new TSStatic() {
-      shapeName = "art/shapes/buildings/si_small_shack.DAE";
+      shapeName = "/levels/small_island/art/shapes/buildings/si_small_shack.DAE";
       dynamic = "0";
       playAmbient = "1";
       meshCulling = "0";
@@ -965,7 +965,7 @@ $ThisPrefab = new SimGroup() {
       persistentId = "81151ddb-7f90-41cd-965e-881495638454";
    };
    new TSStatic() {
-      shapeName = "art/shapes/buildings/si_res_observatory.dae";
+      shapeName = "levels/small_island/art/shapes/buildings/si_res_observatory.dae";
       dynamic = "0";
       playAmbient = "1";
       meshCulling = "0";
@@ -989,7 +989,7 @@ $ThisPrefab = new SimGroup() {
       persistentId = "acd8d80b-1dd1-41a7-8ca3-630d6e580e4a";
    };
    new TSStatic(res_banding_office1) {
-      shapeName = "art/shapes/buildings/si_res_small_building.dae";
+      shapeName = "/levels/small_island/art/shapes/buildings/si_res_small_building.dae";
       dynamic = "0";
       playAmbient = "1";
       meshCulling = "0";

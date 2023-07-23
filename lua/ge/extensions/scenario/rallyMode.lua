@@ -757,7 +757,8 @@ local function breathe(t)
 end
 
 local function onPreRender(dtReal, dtSim, dtRaw)
-    -- TODO: not sure if this is useful, but it should short-circuit everything until the rally is initialized.
+    -- TODO: not sure if this is useful, but it should short-circuit everything
+    -- until the rally is initialized.
     if (rallyInitd == false) or (rallyPaused == true) then return end
     if speakTimer < 0 then
         speakTimer = speak(speakTimer)
@@ -789,62 +790,63 @@ local function onPreRender(dtReal, dtSim, dtRaw)
             rallyInfo.nextPacenote = i .. ' - ' ..
                 rally[i].call .. '; ' .. rally[i].options
 
-        local dist = getDistFrom(i)
-        if (dist < pred) and i > last and i < max then
-            suffix = getDistCall(i)
-            -- If last pacenote's automatic suffix was disabled,
-            -- then also disable this pacenotes's automatic prefix.
-            if nosuffix then
-                prefix = ""
-            end
-            nosuffix = false
-            if rcfg.recce then
-                local name = getWaypointName(i)
-            end
-            queuePhrase(prefix .. ' ' .. pnote.call)
-            -- TODO: all these breaththings must be double checked. No idea
-            -- wtf they do.
-            if pnote.opts then
-                if pnote.opts:find("nosuffix") then
-                    breathe(breathLength)
-                    nosuffix = true
-                elseif pnote.opts:find("nopause") then
-                    breathe(breathLength)
-                    queuePhrase(tostring(suffix))
-                    breathe(breathLength)
-                elseif pnote.opts:find("shortpause") then
-                    breathe(round(0.5 * timeOffset * 10))
-                    queuePhrase(tostring(suffix))
-                    breathe(breathLength)
-                elseif pnote.opts:find("verylongpause") then
-                    breathe(round(2 * timeOffset * 10))
-                    queuePhrase(tostring(suffix))
-                    breathe(breathLength)
-                elseif pnote.opts:find("longpause") then
-                    breathe(round(1.5 * timeOffset * 10))
-                    queuePhrase(tostring(suffix))
-                    breathe(breathLength)
-                elseif pnote.opts:find("pause") then
-                    breathe(round(timeOffset * 10))
-                    queuePhrase(tostring(suffix))
-                    breathe(breathLength)
+            local dist = getDistFrom(i)
+            if (dist < pred) and i > last and i < max then
+                suffix = getDistCall(i)
+                -- If last pacenote's automatic suffix was disabled,
+                -- then also disable this pacenotes's automatic prefix.
+                if nosuffix then
+                    prefix = ""
+                end
+                nosuffix = false
+                if rcfg.recce then
+                    local name = getWaypointName(i)
+                end
+                queuePhrase(prefix .. ' ' .. pnote.call)
+                -- TODO: all these breaththings must be double checked. No idea
+                -- wtf they do.
+                if pnote.opts then
+                    if pnote.opts:find("nosuffix") then
+                        breathe(breathLength)
+                        nosuffix = true
+                    elseif pnote.opts:find("nopause") then
+                        breathe(breathLength)
+                        queuePhrase(tostring(suffix))
+                        breathe(breathLength)
+                    elseif pnote.opts:find("shortpause") then
+                        breathe(round(0.5 * timeOffset * 10))
+                        queuePhrase(tostring(suffix))
+                        breathe(breathLength)
+                    elseif pnote.opts:find("verylongpause") then
+                        breathe(round(2 * timeOffset * 10))
+                        queuePhrase(tostring(suffix))
+                        breathe(breathLength)
+                    elseif pnote.opts:find("longpause") then
+                        breathe(round(1.5 * timeOffset * 10))
+                        queuePhrase(tostring(suffix))
+                        breathe(breathLength)
+                    elseif pnote.opts:find("pause") then
+                        breathe(round(timeOffset * 10))
+                        queuePhrase(tostring(suffix))
+                        breathe(breathLength)
+                    else
+                        breathe(breathLength)
+                        queuePhrase(tostring(suffix))
+                        breathe(breathLength)
+                    end
                 else
                     breathe(breathLength)
                     queuePhrase(tostring(suffix))
-                    breathe(breathLength)
                 end
-            else
-                breathe(breathLength)
-                queuePhrase(tostring(suffix))
+                -- If the distance call is too close to get called,
+                -- then prepend a linkword (e.g. "into") to the next call.
+                if suffix == "" then
+                    prefix = rcfg.linkWord
+                else
+                    prefix = ""
+                end
+                last = i
             end
-            -- If the distance call is too close to get called,
-            -- then prepend a linkword (e.g. "into") to the next call.
-            if suffix == "" then
-                prefix = rcfg.linkWord
-            else
-                prefix = ""
-            end
-            last = i
         end
     end
 end
@@ -936,12 +938,25 @@ M.onScenarioLoaded = function()
     scenario_waypoints = extensions.scenario_waypointsNoSound
 end
 
+-- M.onExtensionLoaded
+
 local function onUiReady()
     if rcfg == nil then return end
     guihooks.trigger("cfgToUI", rcfg)
     guihooks.trigger("infoToUI", rallyInfo)
 end
 
+-- Example
+--
+-- unloading extensions
+--
+-- local function uiHotlappingAppDestroyed()
+--   --log("I",logTag,"uiHotlappingAppDestroyed called.....")
+--   if not scenario_scenarios or not (scenario_scenarios and scenario_scenarios.getScenario()) then
+--     extensions.unload('core_hotlapping');
+--   end
+-- end
+--
 -- Interface --
 ---------------
 
