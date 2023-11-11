@@ -691,6 +691,10 @@ local function onRaceStart()
         guihooks.trigger('Message',
             { ttl = 120, msg = str, category = "align", icon = "flag" })
     end
+    guihooks.trigger("cfgToUI", rcfg)
+    guihooks.trigger("infoToUI", rallyInfo)
+    guihooks.trigger("showOpts")
+    guihooks.trigger("hideUiOpts")
 end
 
 local function onRaceWaypointReached(data)

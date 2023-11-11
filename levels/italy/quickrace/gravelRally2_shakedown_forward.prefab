@@ -4,7 +4,7 @@ $ThisPrefab = new SimGroup() {
    canSaveDynamicFields = "1";
       groupPosition = "0 0 0";
 
-   new SpawnSphere(gravelRally2_standing_spawn) {
+   new SpawnSphere(gravelRally2_shakedown_standing_spawn) {
       SpawnClass = "player";
       SpawnDatablock = "DefaultPlayerData";
       autoSpawn = "0";

@@ -5,7 +5,7 @@ $ThisPrefab = new SimGroup() {
       groupPosition = "0 0 0";
 
    new TSStatic() {
-      shapeName = "art/shapes/race/race_rally_finish_checkpoint_yellow.dae";
+      shapeName = "art/rally/race_rally_finish_checkpoint_yellow.dae";
       dynamic = "0";
       playAmbient = "1";
       meshCulling = "0";
@@ -28,7 +28,7 @@ $ThisPrefab = new SimGroup() {
          mode = "Ignore";
    };
    new TSStatic() {
-      shapeName = "art/shapes/race/race_rally_finish_checkpoint_yellow.dae";
+      shapeName = "art/rally/race_rally_finish_checkpoint_yellow.dae";
       dynamic = "0";
       playAmbient = "1";
       meshCulling = "0";
@@ -51,7 +51,7 @@ $ThisPrefab = new SimGroup() {
          mode = "Ignore";
    };
    new TSStatic() {
-      shapeName = "art/shapes/race/race_rally_finish_checkpoint_red.dae";
+      shapeName = "art/rally/race_rally_finish_checkpoint_red.dae";
       dynamic = "0";
       playAmbient = "1";
       meshCulling = "0";
@@ -74,7 +74,7 @@ $ThisPrefab = new SimGroup() {
          mode = "Ignore";
    };
    new TSStatic() {
-      shapeName = "art/shapes/race/race_rally_finish_checkpoint_red.dae";
+      shapeName = "art/rally/race_rally_finish_checkpoint_red.dae";
       dynamic = "0";
       playAmbient = "1";
       meshCulling = "0";
@@ -97,7 +97,7 @@ $ThisPrefab = new SimGroup() {
          mode = "Ignore";
    };
    new TSStatic() {
-      shapeName = "art/shapes/race/ut_race_caution_tape_barricade_a.DAE";
+      shapeName = "art/rally/ut_race_caution_tape_barricade_a.DAE";
       dynamic = "0";
       playAmbient = "1";
       meshCulling = "0";
@@ -120,7 +120,7 @@ $ThisPrefab = new SimGroup() {
          mode = "Ignore";
    };
    new TSStatic() {
-      shapeName = "art/shapes/race/ut_race_caution_tape_barricade_a.DAE";
+      shapeName = "art/rally/ut_race_caution_tape_barricade_a.DAE";
       dynamic = "0";
       playAmbient = "1";
       meshCulling = "0";
@@ -143,7 +143,7 @@ $ThisPrefab = new SimGroup() {
          mode = "Ignore";
    };
    new TSStatic() {
-      shapeName = "art/shapes/race/ut_race_caution_tape_barricade_a.DAE";
+      shapeName = "art/rally/ut_race_caution_tape_barricade_a.DAE";
       dynamic = "0";
       playAmbient = "1";
       meshCulling = "0";
@@ -166,7 +166,7 @@ $ThisPrefab = new SimGroup() {
          mode = "Ignore";
    };
    new TSStatic() {
-      shapeName = "art/shapes/race/ut_race_caution_tape_barricade_a.DAE";
+      shapeName = "art/rally/ut_race_caution_tape_barricade_a.DAE";
       dynamic = "0";
       playAmbient = "1";
       meshCulling = "0";
@@ -189,7 +189,7 @@ $ThisPrefab = new SimGroup() {
          mode = "Ignore";
    };
    new TSStatic() {
-      shapeName = "art/shapes/race/ut_race_caution_tape_barricade_a.DAE";
+      shapeName = "art/rally/ut_race_caution_tape_barricade_a.DAE";
       dynamic = "0";
       playAmbient = "1";
       meshCulling = "0";
@@ -213,7 +213,7 @@ $ThisPrefab = new SimGroup() {
          mode = "Ignore";
    };
    new TSStatic() {
-      shapeName = "art/shapes/race/ut_race_caution_tape_barricade_a.DAE";
+      shapeName = "art/rally/ut_race_caution_tape_barricade_a.DAE";
       dynamic = "0";
       playAmbient = "1";
       meshCulling = "0";
@@ -237,7 +237,7 @@ $ThisPrefab = new SimGroup() {
          mode = "Ignore";
    };
    new TSStatic() {
-      shapeName = "art/shapes/race/ut_race_caution_tape_barricade_a.DAE";
+      shapeName = "art/rally/ut_race_caution_tape_barricade_a.DAE";
       dynamic = "0";
       playAmbient = "1";
       meshCulling = "0";
@@ -261,7 +261,7 @@ $ThisPrefab = new SimGroup() {
          mode = "Ignore";
    };
    new TSStatic() {
-      shapeName = "art/shapes/race/ut_race_caution_tape_barricade_a.DAE";
+      shapeName = "art/rally/ut_race_caution_tape_barricade_a.DAE";
       dynamic = "0";
       playAmbient = "1";
       meshCulling = "0";
@@ -285,7 +285,7 @@ $ThisPrefab = new SimGroup() {
          mode = "Ignore";
    };
    new TSStatic() {
-      shapeName = "art/shapes/race/ut_race_caution_tape_barricade_a.DAE";
+      shapeName = "art/rally/ut_race_caution_tape_barricade_a.DAE";
       dynamic = "0";
       playAmbient = "1";
       meshCulling = "0";
@@ -309,7 +309,7 @@ $ThisPrefab = new SimGroup() {
          mode = "Ignore";
    };
    new TSStatic() {
-      shapeName = "art/shapes/race/ut_race_caution_tape_barricade_a.DAE";
+      shapeName = "art/rally/ut_race_caution_tape_barricade_a.DAE";
       dynamic = "0";
       playAmbient = "1";
       meshCulling = "0";
@@ -333,7 +333,7 @@ $ThisPrefab = new SimGroup() {
          mode = "Ignore";
    };
    new TSStatic() {
-      shapeName = "art/shapes/race/ut_race_caution_tape_barricade_a.DAE";
+      shapeName = "art/rally/ut_race_caution_tape_barricade_a.DAE";
       dynamic = "0";
       playAmbient = "1";
       meshCulling = "0";
@@ -357,7 +357,7 @@ $ThisPrefab = new SimGroup() {
          mode = "Ignore";
    };
    new TSStatic() {
-      shapeName = "art/shapes/race/ut_race_caution_tape_barricade_a.DAE";
+      shapeName = "art/rally/ut_race_caution_tape_barricade_a.DAE";
       dynamic = "0";
       playAmbient = "1";
       meshCulling = "0";
@@ -381,7 +381,7 @@ $ThisPrefab = new SimGroup() {
          mode = "Ignore";
    };
    new TSStatic() {
-      shapeName = "art/shapes/race/ut_race_caution_tape_barricade_a.DAE";
+      shapeName = "art/rally/ut_race_caution_tape_barricade_a.DAE";
       dynamic = "0";
       playAmbient = "1";
       meshCulling = "0";
@@ -405,7 +405,7 @@ $ThisPrefab = new SimGroup() {
          mode = "Ignore";
    };
    new TSStatic() {
-      shapeName = "art/shapes/race/ut_race_caution_tape_barricade_a.DAE";
+      shapeName = "art/rally/ut_race_caution_tape_barricade_a.DAE";
       dynamic = "0";
       playAmbient = "1";
       meshCulling = "0";
@@ -429,7 +429,7 @@ $ThisPrefab = new SimGroup() {
          mode = "Ignore";
    };
    new TSStatic() {
-      shapeName = "art/shapes/race/ut_race_caution_tape_barricade_a.DAE";
+      shapeName = "art/rally/ut_race_caution_tape_barricade_a.DAE";
       dynamic = "0";
       playAmbient = "1";
       meshCulling = "0";
@@ -453,7 +453,7 @@ $ThisPrefab = new SimGroup() {
          mode = "Ignore";
    };
    new TSStatic() {
-      shapeName = "art/shapes/race/ut_race_caution_tape_barricade_a.DAE";
+      shapeName = "art/rally/ut_race_caution_tape_barricade_a.DAE";
       dynamic = "0";
       playAmbient = "1";
       meshCulling = "0";
@@ -477,7 +477,7 @@ $ThisPrefab = new SimGroup() {
          mode = "Ignore";
    };
    new TSStatic() {
-      shapeName = "art/shapes/race/ut_race_caution_tape_barricade_a.DAE";
+      shapeName = "art/rally/ut_race_caution_tape_barricade_a.DAE";
       dynamic = "0";
       playAmbient = "1";
       meshCulling = "0";
@@ -501,7 +501,7 @@ $ThisPrefab = new SimGroup() {
          mode = "Ignore";
    };
    new TSStatic() {
-      shapeName = "art/shapes/race/ut_race_caution_tape_barricade_a.DAE";
+      shapeName = "art/rally/ut_race_caution_tape_barricade_a.DAE";
       dynamic = "0";
       playAmbient = "1";
       meshCulling = "0";
@@ -525,7 +525,7 @@ $ThisPrefab = new SimGroup() {
          mode = "Ignore";
    };
    new TSStatic() {
-      shapeName = "art/shapes/race/ut_race_caution_tape_barricade_a.DAE";
+      shapeName = "art/rally/ut_race_caution_tape_barricade_a.DAE";
       dynamic = "0";
       playAmbient = "1";
       meshCulling = "0";
@@ -549,7 +549,7 @@ $ThisPrefab = new SimGroup() {
          mode = "Ignore";
    };
    new TSStatic() {
-      shapeName = "art/shapes/race/ut_race_caution_tape_barricade_a.DAE";
+      shapeName = "art/rally/ut_race_caution_tape_barricade_a.DAE";
       dynamic = "0";
       playAmbient = "1";
       meshCulling = "0";
@@ -573,7 +573,7 @@ $ThisPrefab = new SimGroup() {
          mode = "Ignore";
    };
    new TSStatic() {
-      shapeName = "art/shapes/race/ut_race_caution_tape_barricade_a.DAE";
+      shapeName = "art/rally/ut_race_caution_tape_barricade_a.DAE";
       dynamic = "0";
       playAmbient = "1";
       meshCulling = "0";
@@ -597,7 +597,7 @@ $ThisPrefab = new SimGroup() {
          mode = "Ignore";
    };
    new TSStatic() {
-      shapeName = "art/shapes/race/ut_race_caution_tape_barricade_a.DAE";
+      shapeName = "art/rally/ut_race_caution_tape_barricade_a.DAE";
       dynamic = "0";
       playAmbient = "1";
       meshCulling = "0";
@@ -621,7 +621,7 @@ $ThisPrefab = new SimGroup() {
          mode = "Ignore";
    };
    new TSStatic() {
-      shapeName = "art/shapes/race/ut_race_caution_tape_barricade_a_curve_b.DAE";
+      shapeName = "art/rally/ut_race_caution_tape_barricade_a_curve_b.DAE";
       dynamic = "0";
       playAmbient = "1";
       meshCulling = "0";
@@ -645,7 +645,7 @@ $ThisPrefab = new SimGroup() {
          mode = "Ignore";
    };
    new TSStatic() {
-      shapeName = "art/shapes/race/ut_race_caution_tape_barricade_a.DAE";
+      shapeName = "art/rally/ut_race_caution_tape_barricade_a.DAE";
       dynamic = "0";
       playAmbient = "1";
       meshCulling = "0";
@@ -669,7 +669,7 @@ $ThisPrefab = new SimGroup() {
          mode = "Ignore";
    };
    new TSStatic() {
-      shapeName = "art/shapes/race/ut_race_caution_tape_barricade_a.DAE";
+      shapeName = "art/rally/ut_race_caution_tape_barricade_a.DAE";
       dynamic = "0";
       playAmbient = "1";
       meshCulling = "0";
@@ -693,7 +693,7 @@ $ThisPrefab = new SimGroup() {
          mode = "Ignore";
    };
    new TSStatic() {
-      shapeName = "art/shapes/race/ut_race_caution_tape_barricade_a.DAE";
+      shapeName = "art/rally/ut_race_caution_tape_barricade_a.DAE";
       dynamic = "0";
       playAmbient = "1";
       meshCulling = "0";

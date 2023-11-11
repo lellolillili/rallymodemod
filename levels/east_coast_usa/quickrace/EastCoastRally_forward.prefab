@@ -402,7 +402,7 @@ $ThisPrefab = new SimGroup() {
       canSave = "1";
       canSaveDynamicFields = "1";
       persistentId = "14cf9c63-62ff-4886-ab5b-96743c5ee89d";
-         pacenote = "late L3E";
+         pacenote = "L3E late ";
    };
    new BeamNGWaypoint(eastcoast_rally_wp29) {
       drawDebug = "0";

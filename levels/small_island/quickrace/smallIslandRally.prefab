@@ -641,7 +641,7 @@ $ThisPrefab = new SimGroup() {
       persistentId = "d830053d-cb11-41db-ac65-9d4b4b3d7fea";
    };
    new TSStatic() {
-      shapeName = "/levels/small_island/art/shapes/misc/containers_40_beamng.dae";
+      shapeName = "/evels/small_island/art/shapes/misc/containers_40_beamng.dae";
       dynamic = "0";
       playAmbient = "1";
       meshCulling = "0";
@@ -941,7 +941,7 @@ $ThisPrefab = new SimGroup() {
       persistentId = "18c24983-c715-49ab-a1af-ad35de548af6";
    };
    new TSStatic() {
-      shapeName = "/levels/small_island/art/shapes/buildings/si_small_shack.DAE";
+      shapeName = "levels/small_island/art/shapes/buildings/si_small_shack.DAE";
       dynamic = "0";
       playAmbient = "1";
       meshCulling = "0";
@@ -989,7 +989,7 @@ $ThisPrefab = new SimGroup() {
       persistentId = "acd8d80b-1dd1-41a7-8ca3-630d6e580e4a";
    };
    new TSStatic(res_banding_office1) {
-      shapeName = "/levels/small_island/art/shapes/buildings/si_res_small_building.dae";
+      shapeName = "levels/small_island/art/shapes/buildings/si_res_small_building.dae";
       dynamic = "0";
       playAmbient = "1";
       meshCulling = "0";
