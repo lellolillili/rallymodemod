@@ -493,7 +493,6 @@ local function createSuccessorGraph()
 
 end
 
-
 local function onScenarioRestarted(scenario)
   scenario.lapConfig = deepcopy(scenario.initialLapConfig)
   clearState()

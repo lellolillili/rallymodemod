@@ -29,7 +29,7 @@ $ThisPrefab = new SimGroup() {
          licenseText = "PENIS";
          scale = "1 1 1";
    };
-   new BeamNGWaypoint(point1) {
+   new BeamNGWaypoint(test_rallyWp_1) {
       drawDebug = "0";
       directionalWaypoint = "0";
       excludeFromMap = "0";
@@ -41,7 +41,7 @@ $ThisPrefab = new SimGroup() {
       canSaveDynamicFields = "1";
          pacenote = "L1E";
    };
-   new BeamNGWaypoint(point2) {
+   new BeamNGWaypoint(test_rallyWp_2) {
       drawDebug = "0";
       directionalWaypoint = "0";
       excludeFromMap = "0";
@@ -53,7 +53,7 @@ $ThisPrefab = new SimGroup() {
       canSaveDynamicFields = "1";
          pacenote = "empty";
    };
-   new BeamNGWaypoint(point3) {
+   new BeamNGWaypoint(test_rallyWp_3) {
       drawDebug = "0";
       directionalWaypoint = "0";
       excludeFromMap = "0";
@@ -65,7 +65,7 @@ $ThisPrefab = new SimGroup() {
       canSaveDynamicFields = "1";
          pacenote = "empty";
    };
-   new BeamNGWaypoint(point4) {
+   new BeamNGWaypoint(test_rallyWp_4) {
       drawDebug = "0";
       directionalWaypoint = "0";
       excludeFromMap = "0";
@@ -77,7 +77,7 @@ $ThisPrefab = new SimGroup() {
       canSaveDynamicFields = "1";
          pacenote = "empty";
    };
-   new BeamNGWaypoint(point5) {
+   new BeamNGWaypoint(test_rallyWp_5) {
       drawDebug = "0";
       directionalWaypoint = "0";
       excludeFromMap = "0";
@@ -89,7 +89,7 @@ $ThisPrefab = new SimGroup() {
       canSaveDynamicFields = "1";
          pacenote = "5 left";
    };
-   new BeamNGWaypoint(point6) {
+   new BeamNGWaypoint(test_rallyWp_6) {
       drawDebug = "0";
       directionalWaypoint = "0";
       excludeFromMap = "0";
@@ -101,7 +101,7 @@ $ThisPrefab = new SimGroup() {
       canSaveDynamicFields = "1";
          pacenote = "empty";
    };
-   new BeamNGWaypoint(point7) {
+   new BeamNGWaypoint(test_rallyWp_7) {
       drawDebug = "0";
       directionalWaypoint = "0";
       excludeFromMap = "0";
@@ -113,7 +113,7 @@ $ThisPrefab = new SimGroup() {
       canSaveDynamicFields = "1";
          pacenote = "empty";
    };
-   new BeamNGWaypoint(point8) {
+   new BeamNGWaypoint(test_rallyWp_8) {
       drawDebug = "0";
       directionalWaypoint = "0";
       excludeFromMap = "0";
@@ -125,7 +125,7 @@ $ThisPrefab = new SimGroup() {
       canSaveDynamicFields = "1";
          pacenote = "empty";
    };
-   new BeamNGWaypoint(point9) {
+   new BeamNGWaypoint(test_rallyWp_9) {
       drawDebug = "0";
       directionalWaypoint = "0";
       excludeFromMap = "0";
@@ -137,7 +137,7 @@ $ThisPrefab = new SimGroup() {
       canSaveDynamicFields = "1";
          pacenote = "2 left";
    };
-   new BeamNGWaypoint(point10) {
+   new BeamNGWaypoint(test_rallyWp_10) {
       drawDebug = "0";
       directionalWaypoint = "0";
       excludeFromMap = "0";
@@ -149,7 +149,7 @@ $ThisPrefab = new SimGroup() {
       canSaveDynamicFields = "1";
          pacenote = "3 left";
    };
-   new BeamNGWaypoint(point11) {
+   new BeamNGWaypoint(test_rallyWp_11) {
       drawDebug = "0";
       directionalWaypoint = "0";
       excludeFromMap = "0";
@@ -161,7 +161,7 @@ $ThisPrefab = new SimGroup() {
       canSaveDynamicFields = "1";
          pacenote = "4 left";
    };
-   new BeamNGWaypoint(point12) {
+   new BeamNGWaypoint(test_rallyWp_12) {
       drawDebug = "0";
       directionalWaypoint = "0";
       excludeFromMap = "0";
@@ -173,7 +173,7 @@ $ThisPrefab = new SimGroup() {
       canSaveDynamicFields = "1";
          pacenote = "empty";
    };
-   new BeamNGWaypoint(point13) {
+   new BeamNGWaypoint(test_rallyWp_13) {
       drawDebug = "0";
       directionalWaypoint = "0";
       excludeFromMap = "0";
@@ -185,7 +185,7 @@ $ThisPrefab = new SimGroup() {
       canSaveDynamicFields = "1";
          pacenote = "5 left";
    };
-   new BeamNGWaypoint(point14) {
+   new BeamNGWaypoint(test_rallyWp_14) {
       drawDebug = "0";
       directionalWaypoint = "0";
       excludeFromMap = "0";
@@ -197,7 +197,7 @@ $ThisPrefab = new SimGroup() {
       canSaveDynamicFields = "1";
          pacenote = "2 left";
    };
-   new BeamNGWaypoint(point15) {
+   new BeamNGWaypoint(test_rallyWp_15) {
       drawDebug = "0";
       directionalWaypoint = "0";
       excludeFromMap = "0";
@@ -209,7 +209,7 @@ $ThisPrefab = new SimGroup() {
       canSaveDynamicFields = "1";
          pacenote = "2 left";
    };
-   new BeamNGWaypoint(point16) {
+   new BeamNGWaypoint(test_rallyWp_16) {
       drawDebug = "0";
       directionalWaypoint = "0";
       excludeFromMap = "0";
@@ -221,7 +221,7 @@ $ThisPrefab = new SimGroup() {
       canSaveDynamicFields = "1";
          pacenote = "2 left";
    };
-   new BeamNGWaypoint(point17) {
+   new BeamNGWaypoint(test_rallyWp_17) {
       drawDebug = "0";
       directionalWaypoint = "0";
       excludeFromMap = "0";
@@ -233,7 +233,7 @@ $ThisPrefab = new SimGroup() {
       canSaveDynamicFields = "1";
          pacenote = "2 left";
    };
-   new BeamNGWaypoint(point18) {
+   new BeamNGWaypoint(test_rallyWp_18) {
       drawDebug = "0";
       directionalWaypoint = "0";
       excludeFromMap = "0";
@@ -245,7 +245,7 @@ $ThisPrefab = new SimGroup() {
       canSaveDynamicFields = "1";
          pacenote = "2 left";
    };
-   new BeamNGWaypoint(point19) {
+   new BeamNGWaypoint(test_rallyWp_19) {
       drawDebug = "0";
       directionalWaypoint = "0";
       excludeFromMap = "0";
@@ -257,7 +257,7 @@ $ThisPrefab = new SimGroup() {
       canSaveDynamicFields = "1";
          pacenote = "2 left";
    };
-   new BeamNGWaypoint(point20) {
+   new BeamNGWaypoint(test_rallyWp_20) {
       drawDebug = "0";
       directionalWaypoint = "0";
       excludeFromMap = "0";
@@ -269,7 +269,7 @@ $ThisPrefab = new SimGroup() {
       canSaveDynamicFields = "1";
          pacenote = "2 left";
    };
-   new BeamNGWaypoint(point21) {
+   new BeamNGWaypoint(test_rallyWp_21) {
       drawDebug = "0";
       directionalWaypoint = "0";
       excludeFromMap = "0";

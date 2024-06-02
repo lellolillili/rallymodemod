@@ -42,6 +42,7 @@ The following has a lot of useful information.
 dump(scenario_waypoints.state.branchGraph.mainPath)>
 ```
 
+
 and its n-th entry looks like this
 
 ```

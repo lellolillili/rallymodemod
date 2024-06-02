@@ -1,3 +1,19 @@
+# Write here or forget
+load the mod from freeroam. just launch from the console
+```
+extensions.loadAtRoot("ge/extensions/scenario/rallyMode", "scenario")
+```
+i think you can reload the extension like this
+```
+extensions.loadAtRoot("scenario_rallyMode")
+```
+
+
+# Things I'd like to know
+ * how do i reload the extension for debugging purposes? 
+ * can i add custom variables to the json files? I'd like to write the prefab prefix in there, for example.
+
+
 # Suggestions for Johnson
 
 "left/right/middle over jump"
